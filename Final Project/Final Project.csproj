@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA2B3485-4A77-4A30-A72A-EE6F79A5459F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Final_Project</RootNamespace>
+    <AssemblyName>Final Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Allergy_Hist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allergy_Hist.Designer.cs">
+      <DependentUpon>Allergy_Hist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Page.Designer.cs">
+      <DependentUpon>Main_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gen_Hist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gen_Hist.Designer.cs">
+      <DependentUpon>Gen_Hist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedsDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedsDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedsDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedsDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Med_Hist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med_Hist.Designer.cs">
+      <DependentUpon>Med_Hist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Gen_Hist.resx">
+      <DependentUpon>Gen_Hist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Page.resx">
+      <DependentUpon>Main_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="MedsDataSet.xsc">
+      <DependentUpon>MedsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedsDataSet.xss">
+      <DependentUpon>MedsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet1.xsc">
+      <DependentUpon>MedsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedsDataSet1.xss">
+      <DependentUpon>MedsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet2.xsc">
+      <DependentUpon>MedsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedsDataSet2.xss">
+      <DependentUpon>MedsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet3.xsc">
+      <DependentUpon>MedsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedsDataSet3.xss">
+      <DependentUpon>MedsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet4.xsc">
+      <DependentUpon>MedsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedsDataSet4.xss">
+      <DependentUpon>MedsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet5.xsc">
+      <DependentUpon>MedsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedsDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedsDataSet5.xss">
+      <DependentUpon>MedsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet6.xsc">
+      <DependentUpon>MedsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MedsDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedsDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedsDataSet6.xss">
+      <DependentUpon>MedsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Meds.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
