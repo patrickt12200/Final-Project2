@@ -25,19 +25,19 @@ namespace Final_Project
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'medsDataSet6.GenMed' table. You can move, or remove it, as needed.
-            this.genMedTableAdapter6.Fill(this.medsDataSet6.GenMed);
-            // TODO: This line of code loads data into the 'medsDataSet5.GenMed' table. You can move, or remove it, as needed.
-            this.genMedTableAdapter5.Fill(this.medsDataSet5.GenMed);
-            // TODO: This line of code loads data into the 'medsDataSet4.GenMed' table. You can move, or remove it, as needed.
-            this.genMedTableAdapter4.Fill(this.medsDataSet4.GenMed);
-            // TODO: This line of code loads data into the 'medsDataSet3.GenMed' table. You can move, or remove it, as needed.
-            this.genMedTableAdapter3.Fill(this.medsDataSet3.GenMed);
-            // TODO: This line of code loads data into the 'medsDataSet2.Selection' table. You can move, or remove it, as needed.
-            this.selectionTableAdapter2.Fill(this.medsDataSet2.Selection);
-            // TODO: This line of code loads data into the 'medsDataSet1.Selection' table. You can move, or remove it, as needed.
-            this.selectionTableAdapter1.Fill(this.medsDataSet1.Selection);
-            // TODO: This line of code loads data into the 'medsDataSet1.GenMed' table. You can move, or remove it, as needed.
-            this.genMedTableAdapter2.Fill(this.medsDataSet1.GenMed);
+            //this.genMedTableAdapter6.Fill(this.medsDataSet6.GenMed);
+            //// TODO: This line of code loads data into the 'medsDataSet5.GenMed' table. You can move, or remove it, as needed.
+            //this.genMedTableAdapter5.Fill(this.medsDataSet5.GenMed);
+            //// TODO: This line of code loads data into the 'medsDataSet4.GenMed' table. You can move, or remove it, as needed.
+            //this.genMedTableAdapter4.Fill(this.medsDataSet4.GenMed);
+            //// TODO: This line of code loads data into the 'medsDataSet3.GenMed' table. You can move, or remove it, as needed.
+            //this.genMedTableAdapter3.Fill(this.medsDataSet3.GenMed);
+            //// TODO: This line of code loads data into the 'medsDataSet2.Selection' table. You can move, or remove it, as needed.
+            //this.selectionTableAdapter2.Fill(this.medsDataSet2.Selection);
+            //// TODO: This line of code loads data into the 'medsDataSet1.Selection' table. You can move, or remove it, as needed.
+            //this.selectionTableAdapter1.Fill(this.medsDataSet1.Selection);
+            //// TODO: This line of code loads data into the 'medsDataSet1.GenMed' table. You can move, or remove it, as needed.
+            //this.genMedTableAdapter2.Fill(this.medsDataSet1.GenMed);
             // TODO: This line of code loads data into the 'medsDataSet.GenMed' table. You can move, or remove it, as needed.
             this.genMedTableAdapter.Fill(this.medsDataSet.GenMed);
             // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.

@@ -53,9 +53,25 @@ namespace Final_Project
             this.ReportBtn = new System.Windows.Forms.Button();
             this.Select_Pt = new System.Windows.Forms.Button();
             this.GenMedTable = new System.Windows.Forms.DataGridView();
-            this.genMedBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.medsDataSet1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.medsDataSet1 = new Final_Project.MedsDataSet1();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reasonForAdmissionReasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maritalStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.heightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bloodTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bloodPressureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tobaccoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.heartRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.breathingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surgeryHistoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.behavioralHxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drugUseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pregnanciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alcoholDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.smokerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genMedBindingSource9 = new System.Windows.Forms.BindingSource(this.components);
+            this.medsDataSet6 = new Final_Project.MedsDataSet6();
             this.Gen_Hist_Tb = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -108,6 +124,9 @@ namespace Final_Project
             this.Namelbl4 = new System.Windows.Forms.Label();
             this.Namelbl3 = new System.Windows.Forms.Label();
             this.Patient_IDlbl2 = new System.Windows.Forms.Label();
+            this.genMedBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.medsDataSet1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.medsDataSet1 = new Final_Project.MedsDataSet1();
             this.selectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medsDataSet = new Final_Project.MedsDataSet();
             this.genMedBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -136,25 +155,6 @@ namespace Final_Project
             this.medsDataSet5 = new Final_Project.MedsDataSet5();
             this.genMedBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
             this.genMedTableAdapter5 = new Final_Project.MedsDataSet5TableAdapters.GenMedTableAdapter();
-            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reasonForAdmissionReasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maritalStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.heightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bloodTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bloodPressureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tobaccoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.heartRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.breathingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surgeryHistoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.behavioralHxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drugUseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pregnanciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alcoholDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.smokerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medsDataSet6 = new Final_Project.MedsDataSet6();
-            this.genMedBindingSource9 = new System.Windows.Forms.BindingSource(this.components);
             this.genMedTableAdapter6 = new Final_Project.MedsDataSet6TableAdapters.GenMedTableAdapter();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
@@ -163,13 +163,15 @@ namespace Final_Project
             ((System.ComponentModel.ISupportInitialize)(this.medsDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GenMedTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1BindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet6)).BeginInit();
             this.Gen_Hist_Tb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabAllergies.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource)).BeginInit();
@@ -187,8 +189,6 @@ namespace Final_Project
             ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medsDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource9)).BeginInit();
             this.SuspendLayout();
             // 
             // New_PatientTb
@@ -393,20 +393,117 @@ namespace Final_Project
             this.GenMedTable.Size = new System.Drawing.Size(277, 110);
             this.GenMedTable.TabIndex = 52;
             // 
-            // genMedBindingSource3
+            // iDDataGridViewTextBoxColumn1
             // 
-            this.genMedBindingSource3.DataMember = "GenMed";
-            this.genMedBindingSource3.DataSource = this.medsDataSet1BindingSource1;
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
             // 
-            // medsDataSet1BindingSource1
+            // patientIDDataGridViewTextBoxColumn1
             // 
-            this.medsDataSet1BindingSource1.DataSource = this.medsDataSet1;
-            this.medsDataSet1BindingSource1.Position = 0;
+            this.patientIDDataGridViewTextBoxColumn1.DataPropertyName = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn1.HeaderText = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn1.Name = "patientIDDataGridViewTextBoxColumn1";
             // 
-            // medsDataSet1
+            // reasonForAdmissionReasonDataGridViewTextBoxColumn
             // 
-            this.medsDataSet1.DataSetName = "MedsDataSet1";
-            this.medsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.DataPropertyName = "Reason For Admission Reason";
+            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.HeaderText = "Reason For Admission Reason";
+            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.Name = "reasonForAdmissionReasonDataGridViewTextBoxColumn";
+            // 
+            // maritalStatusDataGridViewTextBoxColumn
+            // 
+            this.maritalStatusDataGridViewTextBoxColumn.DataPropertyName = "Marital Status";
+            this.maritalStatusDataGridViewTextBoxColumn.HeaderText = "Marital Status";
+            this.maritalStatusDataGridViewTextBoxColumn.Name = "maritalStatusDataGridViewTextBoxColumn";
+            // 
+            // heightDataGridViewTextBoxColumn
+            // 
+            this.heightDataGridViewTextBoxColumn.DataPropertyName = "Height";
+            this.heightDataGridViewTextBoxColumn.HeaderText = "Height";
+            this.heightDataGridViewTextBoxColumn.Name = "heightDataGridViewTextBoxColumn";
+            // 
+            // weightDataGridViewTextBoxColumn
+            // 
+            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
+            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
+            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
+            // 
+            // bloodTypeDataGridViewTextBoxColumn
+            // 
+            this.bloodTypeDataGridViewTextBoxColumn.DataPropertyName = "Blood Type";
+            this.bloodTypeDataGridViewTextBoxColumn.HeaderText = "Blood Type";
+            this.bloodTypeDataGridViewTextBoxColumn.Name = "bloodTypeDataGridViewTextBoxColumn";
+            // 
+            // bloodPressureDataGridViewTextBoxColumn
+            // 
+            this.bloodPressureDataGridViewTextBoxColumn.DataPropertyName = "Blood Pressure";
+            this.bloodPressureDataGridViewTextBoxColumn.HeaderText = "Blood Pressure";
+            this.bloodPressureDataGridViewTextBoxColumn.Name = "bloodPressureDataGridViewTextBoxColumn";
+            // 
+            // tobaccoDataGridViewTextBoxColumn
+            // 
+            this.tobaccoDataGridViewTextBoxColumn.DataPropertyName = "Tobacco";
+            this.tobaccoDataGridViewTextBoxColumn.HeaderText = "Tobacco";
+            this.tobaccoDataGridViewTextBoxColumn.Name = "tobaccoDataGridViewTextBoxColumn";
+            // 
+            // heartRateDataGridViewTextBoxColumn
+            // 
+            this.heartRateDataGridViewTextBoxColumn.DataPropertyName = "Heart Rate";
+            this.heartRateDataGridViewTextBoxColumn.HeaderText = "Heart Rate";
+            this.heartRateDataGridViewTextBoxColumn.Name = "heartRateDataGridViewTextBoxColumn";
+            // 
+            // breathingDataGridViewTextBoxColumn
+            // 
+            this.breathingDataGridViewTextBoxColumn.DataPropertyName = "Breathing";
+            this.breathingDataGridViewTextBoxColumn.HeaderText = "Breathing";
+            this.breathingDataGridViewTextBoxColumn.Name = "breathingDataGridViewTextBoxColumn";
+            // 
+            // surgeryHistoryDataGridViewTextBoxColumn
+            // 
+            this.surgeryHistoryDataGridViewTextBoxColumn.DataPropertyName = "Surgery History";
+            this.surgeryHistoryDataGridViewTextBoxColumn.HeaderText = "Surgery History";
+            this.surgeryHistoryDataGridViewTextBoxColumn.Name = "surgeryHistoryDataGridViewTextBoxColumn";
+            // 
+            // behavioralHxDataGridViewTextBoxColumn
+            // 
+            this.behavioralHxDataGridViewTextBoxColumn.DataPropertyName = "BehavioralHx";
+            this.behavioralHxDataGridViewTextBoxColumn.HeaderText = "BehavioralHx";
+            this.behavioralHxDataGridViewTextBoxColumn.Name = "behavioralHxDataGridViewTextBoxColumn";
+            // 
+            // drugUseDataGridViewTextBoxColumn
+            // 
+            this.drugUseDataGridViewTextBoxColumn.DataPropertyName = "Drug Use";
+            this.drugUseDataGridViewTextBoxColumn.HeaderText = "Drug Use";
+            this.drugUseDataGridViewTextBoxColumn.Name = "drugUseDataGridViewTextBoxColumn";
+            // 
+            // pregnanciesDataGridViewTextBoxColumn
+            // 
+            this.pregnanciesDataGridViewTextBoxColumn.DataPropertyName = "Pregnancies";
+            this.pregnanciesDataGridViewTextBoxColumn.HeaderText = "Pregnancies";
+            this.pregnanciesDataGridViewTextBoxColumn.Name = "pregnanciesDataGridViewTextBoxColumn";
+            // 
+            // alcoholDataGridViewTextBoxColumn
+            // 
+            this.alcoholDataGridViewTextBoxColumn.DataPropertyName = "Alcohol";
+            this.alcoholDataGridViewTextBoxColumn.HeaderText = "Alcohol";
+            this.alcoholDataGridViewTextBoxColumn.Name = "alcoholDataGridViewTextBoxColumn";
+            // 
+            // smokerDataGridViewTextBoxColumn
+            // 
+            this.smokerDataGridViewTextBoxColumn.DataPropertyName = "Smoker";
+            this.smokerDataGridViewTextBoxColumn.HeaderText = "Smoker";
+            this.smokerDataGridViewTextBoxColumn.Name = "smokerDataGridViewTextBoxColumn";
+            // 
+            // genMedBindingSource9
+            // 
+            this.genMedBindingSource9.DataMember = "GenMed";
+            this.genMedBindingSource9.DataSource = this.medsDataSet6;
+            // 
+            // medsDataSet6
+            // 
+            this.medsDataSet6.DataSetName = "MedsDataSet6";
+            this.medsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Gen_Hist_Tb
             // 
@@ -916,7 +1013,7 @@ namespace Final_Project
             // 
             this.Namelbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Namelbl4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Namelbl4.Location = new System.Drawing.Point(17, 60);
+            this.Namelbl4.Location = new System.Drawing.Point(11, 51);
             this.Namelbl4.Name = "Namelbl4";
             this.Namelbl4.Size = new System.Drawing.Size(112, 33);
             this.Namelbl4.TabIndex = 14;
@@ -926,7 +1023,7 @@ namespace Final_Project
             // 
             this.Namelbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Namelbl3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Namelbl3.Location = new System.Drawing.Point(17, 36);
+            this.Namelbl3.Location = new System.Drawing.Point(11, 27);
             this.Namelbl3.Name = "Namelbl3";
             this.Namelbl3.Size = new System.Drawing.Size(112, 33);
             this.Namelbl3.TabIndex = 13;
@@ -936,11 +1033,26 @@ namespace Final_Project
             // 
             this.Patient_IDlbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Patient_IDlbl2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Patient_IDlbl2.Location = new System.Drawing.Point(17, 14);
+            this.Patient_IDlbl2.Location = new System.Drawing.Point(11, 5);
             this.Patient_IDlbl2.Name = "Patient_IDlbl2";
             this.Patient_IDlbl2.Size = new System.Drawing.Size(139, 31);
             this.Patient_IDlbl2.TabIndex = 12;
             this.Patient_IDlbl2.Text = "Null";
+            // 
+            // genMedBindingSource3
+            // 
+            this.genMedBindingSource3.DataMember = "GenMed";
+            this.genMedBindingSource3.DataSource = this.medsDataSet1BindingSource1;
+            // 
+            // medsDataSet1BindingSource1
+            // 
+            this.medsDataSet1BindingSource1.DataSource = this.medsDataSet1;
+            this.medsDataSet1BindingSource1.Position = 0;
+            // 
+            // medsDataSet1
+            // 
+            this.medsDataSet1.DataSetName = "MedsDataSet1";
+            this.medsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // selectionBindingSource
             // 
@@ -1072,118 +1184,6 @@ namespace Final_Project
             // 
             this.genMedTableAdapter5.ClearBeforeFill = true;
             // 
-            // iDDataGridViewTextBoxColumn1
-            // 
-            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
-            // 
-            // patientIDDataGridViewTextBoxColumn1
-            // 
-            this.patientIDDataGridViewTextBoxColumn1.DataPropertyName = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn1.HeaderText = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn1.Name = "patientIDDataGridViewTextBoxColumn1";
-            // 
-            // reasonForAdmissionReasonDataGridViewTextBoxColumn
-            // 
-            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.DataPropertyName = "Reason For Admission Reason";
-            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.HeaderText = "Reason For Admission Reason";
-            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.Name = "reasonForAdmissionReasonDataGridViewTextBoxColumn";
-            // 
-            // maritalStatusDataGridViewTextBoxColumn
-            // 
-            this.maritalStatusDataGridViewTextBoxColumn.DataPropertyName = "Marital Status";
-            this.maritalStatusDataGridViewTextBoxColumn.HeaderText = "Marital Status";
-            this.maritalStatusDataGridViewTextBoxColumn.Name = "maritalStatusDataGridViewTextBoxColumn";
-            // 
-            // heightDataGridViewTextBoxColumn
-            // 
-            this.heightDataGridViewTextBoxColumn.DataPropertyName = "Height";
-            this.heightDataGridViewTextBoxColumn.HeaderText = "Height";
-            this.heightDataGridViewTextBoxColumn.Name = "heightDataGridViewTextBoxColumn";
-            // 
-            // weightDataGridViewTextBoxColumn
-            // 
-            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
-            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
-            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
-            // 
-            // bloodTypeDataGridViewTextBoxColumn
-            // 
-            this.bloodTypeDataGridViewTextBoxColumn.DataPropertyName = "Blood Type";
-            this.bloodTypeDataGridViewTextBoxColumn.HeaderText = "Blood Type";
-            this.bloodTypeDataGridViewTextBoxColumn.Name = "bloodTypeDataGridViewTextBoxColumn";
-            // 
-            // bloodPressureDataGridViewTextBoxColumn
-            // 
-            this.bloodPressureDataGridViewTextBoxColumn.DataPropertyName = "Blood Pressure";
-            this.bloodPressureDataGridViewTextBoxColumn.HeaderText = "Blood Pressure";
-            this.bloodPressureDataGridViewTextBoxColumn.Name = "bloodPressureDataGridViewTextBoxColumn";
-            // 
-            // tobaccoDataGridViewTextBoxColumn
-            // 
-            this.tobaccoDataGridViewTextBoxColumn.DataPropertyName = "Tobacco";
-            this.tobaccoDataGridViewTextBoxColumn.HeaderText = "Tobacco";
-            this.tobaccoDataGridViewTextBoxColumn.Name = "tobaccoDataGridViewTextBoxColumn";
-            // 
-            // heartRateDataGridViewTextBoxColumn
-            // 
-            this.heartRateDataGridViewTextBoxColumn.DataPropertyName = "Heart Rate";
-            this.heartRateDataGridViewTextBoxColumn.HeaderText = "Heart Rate";
-            this.heartRateDataGridViewTextBoxColumn.Name = "heartRateDataGridViewTextBoxColumn";
-            // 
-            // breathingDataGridViewTextBoxColumn
-            // 
-            this.breathingDataGridViewTextBoxColumn.DataPropertyName = "Breathing";
-            this.breathingDataGridViewTextBoxColumn.HeaderText = "Breathing";
-            this.breathingDataGridViewTextBoxColumn.Name = "breathingDataGridViewTextBoxColumn";
-            // 
-            // surgeryHistoryDataGridViewTextBoxColumn
-            // 
-            this.surgeryHistoryDataGridViewTextBoxColumn.DataPropertyName = "Surgery History";
-            this.surgeryHistoryDataGridViewTextBoxColumn.HeaderText = "Surgery History";
-            this.surgeryHistoryDataGridViewTextBoxColumn.Name = "surgeryHistoryDataGridViewTextBoxColumn";
-            // 
-            // behavioralHxDataGridViewTextBoxColumn
-            // 
-            this.behavioralHxDataGridViewTextBoxColumn.DataPropertyName = "BehavioralHx";
-            this.behavioralHxDataGridViewTextBoxColumn.HeaderText = "BehavioralHx";
-            this.behavioralHxDataGridViewTextBoxColumn.Name = "behavioralHxDataGridViewTextBoxColumn";
-            // 
-            // drugUseDataGridViewTextBoxColumn
-            // 
-            this.drugUseDataGridViewTextBoxColumn.DataPropertyName = "Drug Use";
-            this.drugUseDataGridViewTextBoxColumn.HeaderText = "Drug Use";
-            this.drugUseDataGridViewTextBoxColumn.Name = "drugUseDataGridViewTextBoxColumn";
-            // 
-            // pregnanciesDataGridViewTextBoxColumn
-            // 
-            this.pregnanciesDataGridViewTextBoxColumn.DataPropertyName = "Pregnancies";
-            this.pregnanciesDataGridViewTextBoxColumn.HeaderText = "Pregnancies";
-            this.pregnanciesDataGridViewTextBoxColumn.Name = "pregnanciesDataGridViewTextBoxColumn";
-            // 
-            // alcoholDataGridViewTextBoxColumn
-            // 
-            this.alcoholDataGridViewTextBoxColumn.DataPropertyName = "Alcohol";
-            this.alcoholDataGridViewTextBoxColumn.HeaderText = "Alcohol";
-            this.alcoholDataGridViewTextBoxColumn.Name = "alcoholDataGridViewTextBoxColumn";
-            // 
-            // smokerDataGridViewTextBoxColumn
-            // 
-            this.smokerDataGridViewTextBoxColumn.DataPropertyName = "Smoker";
-            this.smokerDataGridViewTextBoxColumn.HeaderText = "Smoker";
-            this.smokerDataGridViewTextBoxColumn.Name = "smokerDataGridViewTextBoxColumn";
-            // 
-            // medsDataSet6
-            // 
-            this.medsDataSet6.DataSetName = "MedsDataSet6";
-            this.medsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // genMedBindingSource9
-            // 
-            this.genMedBindingSource9.DataMember = "GenMed";
-            this.genMedBindingSource9.DataSource = this.medsDataSet6;
-            // 
             // genMedTableAdapter6
             // 
             this.genMedTableAdapter6.ClearBeforeFill = true;
@@ -1207,15 +1207,17 @@ namespace Final_Project
             ((System.ComponentModel.ISupportInitialize)(this.medsDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GenMedTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1BindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet6)).EndInit();
             this.Gen_Hist_Tb.ResumeLayout(false);
             this.Gen_Hist_Tb.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabAllergies.ResumeLayout(false);
             this.tabAllergies.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource)).EndInit();
@@ -1233,8 +1235,6 @@ namespace Final_Project
             ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medsDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource9)).EndInit();
             this.ResumeLayout(false);
 
         }
