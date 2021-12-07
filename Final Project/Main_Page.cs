@@ -24,26 +24,19 @@ namespace Final_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'medsDataSet6.GenMed' table. You can move, or remove it, as needed.
-            //this.genMedTableAdapter6.Fill(this.medsDataSet6.GenMed);
-            //// TODO: This line of code loads data into the 'medsDataSet5.GenMed' table. You can move, or remove it, as needed.
-            //this.genMedTableAdapter5.Fill(this.medsDataSet5.GenMed);
-            //// TODO: This line of code loads data into the 'medsDataSet4.GenMed' table. You can move, or remove it, as needed.
-            //this.genMedTableAdapter4.Fill(this.medsDataSet4.GenMed);
-            //// TODO: This line of code loads data into the 'medsDataSet3.GenMed' table. You can move, or remove it, as needed.
-            //this.genMedTableAdapter3.Fill(this.medsDataSet3.GenMed);
-            //// TODO: This line of code loads data into the 'medsDataSet2.Selection' table. You can move, or remove it, as needed.
-            //this.selectionTableAdapter2.Fill(this.medsDataSet2.Selection);
-            //// TODO: This line of code loads data into the 'medsDataSet1.Selection' table. You can move, or remove it, as needed.
-            //this.selectionTableAdapter1.Fill(this.medsDataSet1.Selection);
-            //// TODO: This line of code loads data into the 'medsDataSet1.GenMed' table. You can move, or remove it, as needed.
-            //this.genMedTableAdapter2.Fill(this.medsDataSet1.GenMed);
-            // TODO: This line of code loads data into the 'medsDataSet.GenMed' table. You can move, or remove it, as needed.
-            this.genMedTableAdapter.Fill(this.medsDataSet.GenMed);
-            // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.
-            this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
-            var tab = Gen_Hist_Tb;
+            // TODO: This line of code loads data into the 'medsDataSet1.Allergies' table. You can move, or remove it, as needed.
+            this.allergiesTableAdapter.Fill(this.medsDataSet1.Allergies);
+            // TODO: This line of code loads data into the 'medsDataSet1.GenMed' table. You can move, or remove it, as needed.
+            this.genMedTableAdapter.Fill(this.medsDataSet1.GenMed);
+            // TODO: This line of code loads data into the 'medsDataSet1.Selection' table. You can move, or remove it, as needed.
+            this.selectionTableAdapter.Fill(this.medsDataSet1.Selection);
+     
+
+
+            var tab1 = Gen_Hist_Tb;
+            var tab2 = tabAllergies;
             this.New_PatientTb.TabPages.Remove(Gen_Hist_Tb);
+            this.New_PatientTb.TabPages.Remove(tabAllergies);
 
             Gen_Hist_Tb.Visible = false;
             //Patient_Selection.Items.AddRange(MedsDataSet.SelectionDataTable)
@@ -108,7 +101,7 @@ namespace Final_Project
             try
             {
                 //Will save to DataBase 
-                this.selectionTableAdapter.Update(this.medsDataSet.Selection);
+                this.selectionTableAdapter.Update(this.medsDataSet1.Selection);
             }
             catch(Exception error)
             {
@@ -129,20 +122,20 @@ namespace Final_Project
         private void Undo_btn_F1_Click(object sender, EventArgs e)
         {
             //Will reload the table from the database, erasing unsaved edits.
-            this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
+            this.selectionTableAdapter.Fill(this.medsDataSet1.Selection);
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                //Will save to DataBase 
-                this.genMedTableAdapter.Update(this.medsDataSet.GenMed);
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(Convert.ToString(error.Message));
-            }
+            //try
+            //{
+            //    //Will save to DataBase 
+            //    this.genMedTableAdapter.Update(this.medsDataSet.GenMed);
+            //}
+            //catch (Exception error)
+            //{
+            //    MessageBox.Show(Convert.ToString(error.Message));
+            //}
         }
 
         private void Select_Pt_Click_1(object sender, EventArgs e)
@@ -152,7 +145,7 @@ namespace Final_Project
 
             // This is a proof of concept to pick what ID is selected to bring up information for the Patient on other pages.
             MessageBox.Show(Convert.ToString(Select_box.Rows[RowIndex].Cells[2].Value)); // messagebox for debug
-            var patientID = (Convert.ToString(Select_box.Rows[RowIndex].Cells[0].Value));
+            var patientID = (Convert.ToString(Select_box.Rows[RowIndex].Cells[3].Value));
             var FirstName = (Convert.ToString(Select_box.Rows[RowIndex].Cells[2].Value));
             var LastName = (Convert.ToString(Select_box.Rows[RowIndex].Cells[1].Value));
 
@@ -168,6 +161,7 @@ namespace Final_Project
                 {
                     this.New_PatientTb.TabPages.Add(Gen_Hist_Tb);  //re-adds tab
                     New_PatientTb.SelectedTab = Gen_Hist_Tb;
+                    New_PatientTb.TabPages.Add(tabAllergies);
                 }
 
                 //Updates Top Name And ID Labels
@@ -210,6 +204,11 @@ namespace Final_Project
                 PregBox.Text = preg;
                 var alcohol = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[16].Value));
                 AlcoholBox.Text = alcohol;
+
+                //Insert Data into Allergy Tab
+                MedsBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[2].Value));
+
+
             }
             catch(Exception error)
             {
@@ -222,7 +221,7 @@ namespace Final_Project
             try
             {
                 //Will save to DataBase 
-                this.selectionTableAdapter.Update(this.medsDataSet.Selection);
+                this.selectionTableAdapter.Update(this.medsDataSet1.Selection);
             }
             catch (Exception error)
             {

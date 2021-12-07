@@ -45,8 +45,15 @@ namespace Final_Project
             this.zIPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.field1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.selectionBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.medsDataSet2 = new Final_Project.MedsDataSet2();
+            this.selectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.medsDataSet1 = new Final_Project.MedsDataSet1();
+            this.AllergyTable = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foodsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allergiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TimeLbl = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -70,8 +77,7 @@ namespace Final_Project
             this.pregnanciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alcoholDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.smokerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genMedBindingSource9 = new System.Windows.Forms.BindingSource(this.components);
-            this.medsDataSet6 = new Final_Project.MedsDataSet6();
+            this.genMedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Gen_Hist_Tb = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -124,71 +130,27 @@ namespace Final_Project
             this.Namelbl4 = new System.Windows.Forms.Label();
             this.Namelbl3 = new System.Windows.Forms.Label();
             this.Patient_IDlbl2 = new System.Windows.Forms.Label();
-            this.genMedBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.medsDataSet1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.medsDataSet1 = new Final_Project.MedsDataSet1();
-            this.selectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.medsDataSet = new Final_Project.MedsDataSet();
-            this.genMedBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.selectionTableAdapter = new Final_Project.MedsDataSetTableAdapters.SelectionTableAdapter();
-            this.genMedTableAdapter = new Final_Project.MedsDataSetTableAdapters.GenMedTableAdapter();
-            this.genMedTableAdapter1 = new Final_Project.MedsDataSetTableAdapters.GenMedTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.medsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.genMedBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.genMedTableAdapter2 = new Final_Project.MedsDataSet1TableAdapters.GenMedTableAdapter();
-            this.genMedBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.selectionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.selectionTableAdapter1 = new Final_Project.MedsDataSet1TableAdapters.SelectionTableAdapter();
-            this.selectionBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.selectionTableAdapter2 = new Final_Project.MedsDataSet2TableAdapters.SelectionTableAdapter();
-            this.genMedBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.medsDataSet3 = new Final_Project.MedsDataSet3();
-            this.genMedBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.genMedTableAdapter3 = new Final_Project.MedsDataSet3TableAdapters.GenMedTableAdapter();
-            this.genMedBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
-            this.medsDataSet4 = new Final_Project.MedsDataSet4();
-            this.genMedBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
-            this.genMedTableAdapter4 = new Final_Project.MedsDataSet4TableAdapters.GenMedTableAdapter();
-            this.medsDataSet5 = new Final_Project.MedsDataSet5();
-            this.genMedBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
-            this.genMedTableAdapter5 = new Final_Project.MedsDataSet5TableAdapters.GenMedTableAdapter();
-            this.genMedTableAdapter6 = new Final_Project.MedsDataSet6TableAdapters.GenMedTableAdapter();
+            this.selectionTableAdapter = new Final_Project.MedsDataSet1TableAdapters.SelectionTableAdapter();
+            this.genMedTableAdapter = new Final_Project.MedsDataSet1TableAdapters.GenMedTableAdapter();
+            this.allergiesTableAdapter = new Final_Project.MedsDataSet1TableAdapters.AllergiesTableAdapter();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllergyTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allergiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GenMedTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource)).BeginInit();
             this.Gen_Hist_Tb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabAllergies.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1BindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource8)).BeginInit();
             this.SuspendLayout();
             // 
             // New_PatientTb
@@ -206,6 +168,7 @@ namespace Final_Project
             // 
             this.tabSelectAdd.AllowDrop = true;
             this.tabSelectAdd.Controls.Add(this.Select_box);
+            this.tabSelectAdd.Controls.Add(this.AllergyTable);
             this.tabSelectAdd.Controls.Add(this.TimeLbl);
             this.tabSelectAdd.Controls.Add(this.dateTimePicker1);
             this.tabSelectAdd.Controls.Add(this.pictureBox3);
@@ -237,8 +200,8 @@ namespace Final_Project
             this.zIPDataGridViewTextBoxColumn,
             this.cityDataGridViewTextBoxColumn,
             this.field1DataGridViewTextBoxColumn});
-            this.Select_box.DataSource = this.selectionBindingSource3;
-            this.Select_box.Location = new System.Drawing.Point(0, 200);
+            this.Select_box.DataSource = this.selectionBindingSource;
+            this.Select_box.Location = new System.Drawing.Point(6, 200);
             this.Select_box.Name = "Select_box";
             this.Select_box.Size = new System.Drawing.Size(887, 205);
             this.Select_box.TabIndex = 51;
@@ -309,15 +272,66 @@ namespace Final_Project
             this.field1DataGridViewTextBoxColumn.HeaderText = "Field1";
             this.field1DataGridViewTextBoxColumn.Name = "field1DataGridViewTextBoxColumn";
             // 
-            // selectionBindingSource3
+            // selectionBindingSource
             // 
-            this.selectionBindingSource3.DataMember = "Selection";
-            this.selectionBindingSource3.DataSource = this.medsDataSet2;
+            this.selectionBindingSource.DataMember = "Selection";
+            this.selectionBindingSource.DataSource = this.medsDataSet1;
             // 
-            // medsDataSet2
+            // medsDataSet1
             // 
-            this.medsDataSet2.DataSetName = "MedsDataSet2";
-            this.medsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.medsDataSet1.DataSetName = "MedsDataSet1";
+            this.medsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // AllergyTable
+            // 
+            this.AllergyTable.AutoGenerateColumns = false;
+            this.AllergyTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AllergyTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn2,
+            this.medsDataGridViewTextBoxColumn,
+            this.foodsDataGridViewTextBoxColumn,
+            this.commentsDataGridViewTextBoxColumn,
+            this.patientIdDataGridViewTextBoxColumn2});
+            this.AllergyTable.DataSource = this.allergiesBindingSource;
+            this.AllergyTable.Location = new System.Drawing.Point(295, 26);
+            this.AllergyTable.Name = "AllergyTable";
+            this.AllergyTable.Size = new System.Drawing.Size(295, 150);
+            this.AllergyTable.TabIndex = 53;
+            // 
+            // iDDataGridViewTextBoxColumn2
+            // 
+            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
+            // 
+            // medsDataGridViewTextBoxColumn
+            // 
+            this.medsDataGridViewTextBoxColumn.DataPropertyName = "Meds";
+            this.medsDataGridViewTextBoxColumn.HeaderText = "Meds";
+            this.medsDataGridViewTextBoxColumn.Name = "medsDataGridViewTextBoxColumn";
+            // 
+            // foodsDataGridViewTextBoxColumn
+            // 
+            this.foodsDataGridViewTextBoxColumn.DataPropertyName = "Foods";
+            this.foodsDataGridViewTextBoxColumn.HeaderText = "Foods";
+            this.foodsDataGridViewTextBoxColumn.Name = "foodsDataGridViewTextBoxColumn";
+            // 
+            // commentsDataGridViewTextBoxColumn
+            // 
+            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "Comments";
+            this.commentsDataGridViewTextBoxColumn.HeaderText = "Comments";
+            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
+            // 
+            // patientIdDataGridViewTextBoxColumn2
+            // 
+            this.patientIdDataGridViewTextBoxColumn2.DataPropertyName = "Patient_Id";
+            this.patientIdDataGridViewTextBoxColumn2.HeaderText = "Patient_Id";
+            this.patientIdDataGridViewTextBoxColumn2.Name = "patientIdDataGridViewTextBoxColumn2";
+            // 
+            // allergiesBindingSource
+            // 
+            this.allergiesBindingSource.DataMember = "Allergies";
+            this.allergiesBindingSource.DataSource = this.medsDataSet1;
             // 
             // TimeLbl
             // 
@@ -387,7 +401,7 @@ namespace Final_Project
             this.pregnanciesDataGridViewTextBoxColumn,
             this.alcoholDataGridViewTextBoxColumn,
             this.smokerDataGridViewTextBoxColumn});
-            this.GenMedTable.DataSource = this.genMedBindingSource9;
+            this.GenMedTable.DataSource = this.genMedBindingSource;
             this.GenMedTable.Location = new System.Drawing.Point(6, 200);
             this.GenMedTable.Name = "GenMedTable";
             this.GenMedTable.Size = new System.Drawing.Size(277, 110);
@@ -495,15 +509,10 @@ namespace Final_Project
             this.smokerDataGridViewTextBoxColumn.HeaderText = "Smoker";
             this.smokerDataGridViewTextBoxColumn.Name = "smokerDataGridViewTextBoxColumn";
             // 
-            // genMedBindingSource9
+            // genMedBindingSource
             // 
-            this.genMedBindingSource9.DataMember = "GenMed";
-            this.genMedBindingSource9.DataSource = this.medsDataSet6;
-            // 
-            // medsDataSet6
-            // 
-            this.medsDataSet6.DataSetName = "MedsDataSet6";
-            this.medsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.genMedBindingSource.DataMember = "GenMed";
+            this.genMedBindingSource.DataSource = this.medsDataSet1;
             // 
             // Gen_Hist_Tb
             // 
@@ -1039,48 +1048,6 @@ namespace Final_Project
             this.Patient_IDlbl2.TabIndex = 12;
             this.Patient_IDlbl2.Text = "Null";
             // 
-            // genMedBindingSource3
-            // 
-            this.genMedBindingSource3.DataMember = "GenMed";
-            this.genMedBindingSource3.DataSource = this.medsDataSet1BindingSource1;
-            // 
-            // medsDataSet1BindingSource1
-            // 
-            this.medsDataSet1BindingSource1.DataSource = this.medsDataSet1;
-            this.medsDataSet1BindingSource1.Position = 0;
-            // 
-            // medsDataSet1
-            // 
-            this.medsDataSet1.DataSetName = "MedsDataSet1";
-            this.medsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // selectionBindingSource
-            // 
-            this.selectionBindingSource.DataMember = "Selection";
-            this.selectionBindingSource.DataSource = this.medsDataSet;
-            // 
-            // medsDataSet
-            // 
-            this.medsDataSet.DataSetName = "MedsDataSet";
-            this.medsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // genMedBindingSource
-            // 
-            this.genMedBindingSource.DataMember = "GenMed";
-            this.genMedBindingSource.DataSource = this.medsDataSet;
-            // 
-            // selectionTableAdapter
-            // 
-            this.selectionTableAdapter.ClearBeforeFill = true;
-            // 
-            // genMedTableAdapter
-            // 
-            this.genMedTableAdapter.ClearBeforeFill = true;
-            // 
-            // genMedTableAdapter1
-            // 
-            this.genMedTableAdapter1.ClearBeforeFill = true;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -1095,98 +1062,17 @@ namespace Final_Project
             // 
             this.timer1.Interval = 1000;
             // 
-            // medsDataSet1BindingSource
+            // selectionTableAdapter
             // 
-            this.medsDataSet1BindingSource.DataSource = this.medsDataSet1;
-            this.medsDataSet1BindingSource.Position = 0;
+            this.selectionTableAdapter.ClearBeforeFill = true;
             // 
-            // genMedBindingSource1
+            // genMedTableAdapter
             // 
-            this.genMedBindingSource1.DataMember = "GenMed";
-            this.genMedBindingSource1.DataSource = this.medsDataSet1BindingSource1;
+            this.genMedTableAdapter.ClearBeforeFill = true;
             // 
-            // genMedTableAdapter2
+            // allergiesTableAdapter
             // 
-            this.genMedTableAdapter2.ClearBeforeFill = true;
-            // 
-            // genMedBindingSource2
-            // 
-            this.genMedBindingSource2.DataMember = "GenMed";
-            this.genMedBindingSource2.DataSource = this.medsDataSet1BindingSource1;
-            // 
-            // selectionBindingSource1
-            // 
-            this.selectionBindingSource1.DataMember = "Selection";
-            this.selectionBindingSource1.DataSource = this.medsDataSet1BindingSource1;
-            // 
-            // selectionTableAdapter1
-            // 
-            this.selectionTableAdapter1.ClearBeforeFill = true;
-            // 
-            // selectionBindingSource2
-            // 
-            this.selectionBindingSource2.DataMember = "Selection";
-            this.selectionBindingSource2.DataSource = this.medsDataSet1BindingSource;
-            // 
-            // selectionTableAdapter2
-            // 
-            this.selectionTableAdapter2.ClearBeforeFill = true;
-            // 
-            // genMedBindingSource4
-            // 
-            this.genMedBindingSource4.DataMember = "GenMed";
-            this.genMedBindingSource4.DataSource = this.medsDataSet1BindingSource1;
-            // 
-            // medsDataSet3
-            // 
-            this.medsDataSet3.DataSetName = "MedsDataSet3";
-            this.medsDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // genMedBindingSource5
-            // 
-            this.genMedBindingSource5.DataMember = "GenMed";
-            this.genMedBindingSource5.DataSource = this.medsDataSet3;
-            // 
-            // genMedTableAdapter3
-            // 
-            this.genMedTableAdapter3.ClearBeforeFill = true;
-            // 
-            // genMedBindingSource6
-            // 
-            this.genMedBindingSource6.DataMember = "GenMed";
-            this.genMedBindingSource6.DataSource = this.medsDataSet1BindingSource1;
-            // 
-            // medsDataSet4
-            // 
-            this.medsDataSet4.DataSetName = "MedsDataSet4";
-            this.medsDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // genMedBindingSource7
-            // 
-            this.genMedBindingSource7.DataMember = "GenMed";
-            this.genMedBindingSource7.DataSource = this.medsDataSet4;
-            // 
-            // genMedTableAdapter4
-            // 
-            this.genMedTableAdapter4.ClearBeforeFill = true;
-            // 
-            // medsDataSet5
-            // 
-            this.medsDataSet5.DataSetName = "MedsDataSet5";
-            this.medsDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // genMedBindingSource8
-            // 
-            this.genMedBindingSource8.DataMember = "GenMed";
-            this.genMedBindingSource8.DataSource = this.medsDataSet5;
-            // 
-            // genMedTableAdapter5
-            // 
-            this.genMedTableAdapter5.ClearBeforeFill = true;
-            // 
-            // genMedTableAdapter6
-            // 
-            this.genMedTableAdapter6.ClearBeforeFill = true;
+            this.allergiesTableAdapter.ClearBeforeFill = true;
             // 
             // Main_Page
             // 
@@ -1194,7 +1080,7 @@ namespace Final_Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(1316, 633);
+            this.ClientSize = new System.Drawing.Size(1316, 798);
             this.Controls.Add(this.New_PatientTb);
             this.Name = "Main_Page";
             this.Text = "Home";
@@ -1203,55 +1089,31 @@ namespace Final_Project
             this.tabSelectAdd.ResumeLayout(false);
             this.tabSelectAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllergyTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allergiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GenMedTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource)).EndInit();
             this.Gen_Hist_Tb.ResumeLayout(false);
             this.Gen_Hist_Tb.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabAllergies.ResumeLayout(false);
             this.tabAllergies.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1BindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource8)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private MedsDataSet medsDataSet;
-        private System.Windows.Forms.BindingSource selectionBindingSource;
-        private MedsDataSetTableAdapters.SelectionTableAdapter selectionTableAdapter;
         private System.Windows.Forms.TabControl New_PatientTb;
         private System.Windows.Forms.TabPage tabSelectAdd;
         private System.Windows.Forms.Button Select_Pt;
         private System.Windows.Forms.TabPage Gen_Hist_Tb;
-        private System.Windows.Forms.BindingSource genMedBindingSource;
-        private MedsDataSetTableAdapters.GenMedTableAdapter genMedTableAdapter;
         private System.Windows.Forms.Button Save_Gen;
         private System.Windows.Forms.Label Patient_IdLbl;
-        private MedsDataSetTableAdapters.GenMedTableAdapter genMedTableAdapter1;
         private System.Windows.Forms.TabPage tabAllergies;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label NameLbl1;
@@ -1308,19 +1170,11 @@ namespace Final_Project
         private System.Windows.Forms.Label TimeLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingSource medsDataSet1BindingSource1;
         private MedsDataSet1 medsDataSet1;
-        private System.Windows.Forms.BindingSource medsDataSet1BindingSource;
-        private System.Windows.Forms.BindingSource genMedBindingSource1;
-        private MedsDataSet1TableAdapters.GenMedTableAdapter genMedTableAdapter2;
-        private System.Windows.Forms.BindingSource genMedBindingSource2;
-        private System.Windows.Forms.BindingSource selectionBindingSource1;
-        private MedsDataSet1TableAdapters.SelectionTableAdapter selectionTableAdapter1;
         private System.Windows.Forms.DataGridView Select_box;
-        private System.Windows.Forms.BindingSource selectionBindingSource2;
-        private MedsDataSet2 medsDataSet2;
-        private System.Windows.Forms.BindingSource selectionBindingSource3;
-        private MedsDataSet2TableAdapters.SelectionTableAdapter selectionTableAdapter2;
+        private System.Windows.Forms.DataGridView GenMedTable;
+        private System.Windows.Forms.BindingSource selectionBindingSource;
+        private MedsDataSet1TableAdapters.SelectionTableAdapter selectionTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
@@ -1332,19 +1186,8 @@ namespace Final_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn zIPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn field1DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView GenMedTable;
-        private System.Windows.Forms.BindingSource genMedBindingSource3;
-        private System.Windows.Forms.BindingSource genMedBindingSource4;
-        private MedsDataSet3 medsDataSet3;
-        private System.Windows.Forms.BindingSource genMedBindingSource5;
-        private MedsDataSet3TableAdapters.GenMedTableAdapter genMedTableAdapter3;
-        private System.Windows.Forms.BindingSource genMedBindingSource6;
-        private MedsDataSet4 medsDataSet4;
-        private System.Windows.Forms.BindingSource genMedBindingSource7;
-        private MedsDataSet4TableAdapters.GenMedTableAdapter genMedTableAdapter4;
-        private MedsDataSet5 medsDataSet5;
-        private System.Windows.Forms.BindingSource genMedBindingSource8;
-        private MedsDataSet5TableAdapters.GenMedTableAdapter genMedTableAdapter5;
+        private System.Windows.Forms.BindingSource genMedBindingSource;
+        private MedsDataSet1TableAdapters.GenMedTableAdapter genMedTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn reasonForAdmissionReasonDataGridViewTextBoxColumn;
@@ -1362,9 +1205,14 @@ namespace Final_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn pregnanciesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alcoholDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn smokerDataGridViewTextBoxColumn;
-        private MedsDataSet6 medsDataSet6;
-        private System.Windows.Forms.BindingSource genMedBindingSource9;
-        private MedsDataSet6TableAdapters.GenMedTableAdapter genMedTableAdapter6;
+        private System.Windows.Forms.DataGridView AllergyTable;
+        private System.Windows.Forms.BindingSource allergiesBindingSource;
+        private MedsDataSet1TableAdapters.AllergiesTableAdapter allergiesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn foodsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientIdDataGridViewTextBoxColumn2;
     }
 }
 
