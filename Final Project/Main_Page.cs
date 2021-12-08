@@ -223,6 +223,8 @@ namespace Final_Project
 
                 //Insert Data into Allergy Tab
                 MedsBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[2].Value));
+                FoodsBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[3].Value));
+                AllergenCommentBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[4].Value));
 
 
             }
@@ -348,7 +350,16 @@ namespace Final_Project
 
         private void Main_save_Click(object sender, EventArgs e)
         {
-            this.selectionTableAdapter.Update(this.medsDataSet1.Selection);
+            try
+            {
+                this.selectionTableAdapter.Update(this.medsDataSet1.Selection);
+
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
         }
 
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)

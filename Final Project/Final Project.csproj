@@ -70,6 +70,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MedsDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="MedsDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -126,14 +127,17 @@
     </Compile>
     <None Include="MedsDataSet.xsc">
       <DependentUpon>MedsDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="MedsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>MedsDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="MedsDataSet.xss">
       <DependentUpon>MedsDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="MedsDataSet1.xsc">
       <DependentUpon>MedsDataSet1.xsd</DependentUpon>
