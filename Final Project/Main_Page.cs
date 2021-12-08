@@ -17,10 +17,6 @@ namespace Final_Project
             InitializeComponent();
         }
 
-        private void Patient_Selection_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //To be removed
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -30,18 +26,7 @@ namespace Final_Project
             this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
             // TODO: This line of code loads data into the 'medsDataSet.Allergies' table. You can move, or remove it, as needed.
             this.allergiesTableAdapter.Fill(this.medsDataSet.Allergies);
-            // TODO: This line of code loads data into the 'medsDataSet.GenMed' table. You can move, or remove it, as needed.
-            this.genMedTableAdapter.Fill(this.medsDataSet.GenMed);
-            // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.
-            this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
-            // TODO: This line of code loads data into the 'medsDataSet.Allergies' table. You can move, or remove it, as needed.
-            this.allergiesTableAdapter.Fill(this.medsDataSet.Allergies);
-            // TODO: This line of code loads data into the 'medsDataSet.Allergies' table. You can move, or remove it, as needed.
-            this.allergiesTableAdapter.Fill(this.medsDataSet.Allergies);
-            // TODO: This line of code loads data into the 'medsDataSet.GenMed' table. You can move, or remove it, as needed.
-            this.genMedTableAdapter.Fill(this.medsDataSet.GenMed);
-            // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.
-            this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
+            
 
             AdmissionRichBox.Enabled = false;
             MaritalBox.Enabled = false;
@@ -65,7 +50,7 @@ namespace Final_Project
             var tab2 = tabAllergies;
             this.New_PatientTb.TabPages.Remove(Gen_Hist_Tb);
             this.New_PatientTb.TabPages.Remove(tabAllergies);
-            GenMedTable.Visible = false;
+            GenMedTable.Visible = true;
             AllergyTable.Visible = false;
 
             Gen_Hist_Tb.Visible = false;
@@ -74,6 +59,9 @@ namespace Final_Project
             //Starts Clock
             timer1.Tick += new EventHandler(this.t_Tick);
             timer1.Start();
+
+
+           
 
         }
 
@@ -121,51 +109,40 @@ namespace Final_Project
             TimeLbl.Text = time;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //to be removed
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //Will save to DataBase 
-                this.selectionTableAdapter.Update(this.medsDataSet.Selection);
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show(Convert.ToString(error.Message));
-            }
-          
-        }
-
-        private void Select_Pt_Click(object sender, EventArgs e)
-        {
-            //Select any cell in the row and it will auto select the ID of the patient 
-            int RowIndex = Select_box.CurrentCell.RowIndex;
-
-            // This is a proof of concept to pick what ID is selected to bring up information for the Patient on other pages.
-            MessageBox.Show(Convert.ToString(Select_box.Rows[RowIndex].Cells[2].Value)); // messagebox for debug
-        }
-
-        private void Undo_btn_F1_Click(object sender, EventArgs e)
-        {
-            //Will reload the table from the database, erasing unsaved edits.
-            this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    //Will save to DataBase 
-            //    this.genMedTableAdapter.Update(this.medsDataSet.GenMed);
-            //}
-            //catch (Exception error)
-            //{
-            //    MessageBox.Show(Convert.ToString(error.Message));
-            //}
+
+            try
+            {
+                //Will save to DataBase 
+                int RowIndex = Select_box.CurrentCell.RowIndex;
+                GenMedTable.Rows[RowIndex].Cells[2].Value = AdmissionRichBox.Text;
+                //MessageBox.Show(RowIndex + AdmissionRichBox.Text);
+                GenMedTable.Rows[RowIndex].Cells[3].Value = MaritalBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[4].Value = HeightBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[5].Value = WeightBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[6].Value = SmokerBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[7].Value = BloodBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[8].Value = PressBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[9].Value = TobaccoBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[10].Value = HeartBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[11].Value = BreathBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[12].Value = SurgRichBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[13].Value = BehaveBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[14].Value = DrugBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[15].Value = PregBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[16].Value = AlcoholBox.Text;
+
+
+
+               this.genMedTableAdapter.Update(this.medsDataSet.GenMed);
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(Convert.ToString(error.Message));
+            }
         }
 
         private void Select_Pt_Click_1(object sender, EventArgs e)
@@ -203,11 +180,13 @@ namespace Final_Project
                 Namelbl4.Text = FirstName;
 
                 // Inserts Data Into General Medical Table
+                
+                var AdmitReason = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[2].Value));
+                AdmissionRichBox.Text = AdmitReason;
 
                 var MaritalStatus = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[3].Value));
                 MaritalBox.Text = MaritalStatus;
-                var AdmitReason = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[2].Value));
-                AdmissionRichBox.Text = AdmitReason;
+
                 var Height = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[4].Value));
                 HeightBox.Text = Height;
                 var Weight = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[5].Value));
@@ -248,18 +227,6 @@ namespace Final_Project
             }
         }
 
-        private void Save_Button_F1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //Will save to DataBase 
-                this.selectionTableAdapter.Update(this.medsDataSet.Selection);
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(Convert.ToString(error.Message));
-            }
-        }
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
@@ -313,27 +280,7 @@ namespace Final_Project
         ////        UpdateBtn.Enabled = true; //leave as last operation
         ////}
 
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Patient_IdLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
         {
 
         }
@@ -345,20 +292,50 @@ namespace Final_Project
 
         private void ModifyBtn_Click(object sender, EventArgs e)
         {
+
+            AdmissionRichBox.ReadOnly = false;
             AdmissionRichBox.Enabled = true;
+
+            MaritalBox.ReadOnly = false;
             MaritalBox.Enabled = true;
+
+            HeightBox.ReadOnly = false;
             HeightBox.Enabled = true;
+
+            WeightBox.ReadOnly = false;
             WeightBox.Enabled = true;
+
+            SmokerBox.ReadOnly = false;
             SmokerBox.Enabled = true;
+
+            BloodBox.ReadOnly = false;
             BloodBox.Enabled = true;
+
+            PressBox.ReadOnly = false;
             PressBox.Enabled = true;
+
+            TobaccoBox.ReadOnly = false;
             TobaccoBox.Enabled = true;
+
+            HeartBox.ReadOnly = false;
             HeartBox.Enabled = true;
+
+            BreathBox.ReadOnly = false;
             BreathBox.Enabled = true;
+
+            SurgRichBox.ReadOnly = false;
             SurgRichBox.Enabled = true;
+
+            BehaveBox.ReadOnly = false;
             BehaveBox.Enabled = true;
+
+            DrugBox.ReadOnly = false;
             DrugBox.Enabled = true;
+
+            PregBox.ReadOnly = false;
             PregBox.Enabled = true;
+
+            AlcoholBox.ReadOnly = false;
             AlcoholBox.Enabled = true;
         }
 
@@ -389,6 +366,17 @@ namespace Final_Project
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void saveAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            // TODO: This line of code loads data into the 'medsDataSet.GenMed' table. You can move, or remove it, as needed.
+            genMedTableAdapter.Update(medsDataSet.GenMed);
+            // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.
+            selectionTableAdapter.Update(medsDataSet.Selection);
+            // TODO: This line of code loads data into the 'medsDataSet.Allergies' table. You can move, or remove it, as needed.
+            allergiesTableAdapter.Update(medsDataSet.Allergies);
         }
     }
 }
