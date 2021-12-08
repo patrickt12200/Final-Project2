@@ -350,5 +350,20 @@ namespace Final_Project
         {
             this.selectionTableAdapter.Update(this.medsDataSet1.Selection);
         }
+
+        private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'medsDataSet1.Allergies' table. You can move, or remove it, as needed.
+            this.allergiesTableAdapter.Fill(this.medsDataSet1.Allergies);
+            // TODO: This line of code loads data into the 'medsDataSet1.GenMed' table. You can move, or remove it, as needed.
+            this.genMedTableAdapter.Fill(this.medsDataSet1.GenMed);
+            // TODO: This line of code loads data into the 'medsDataSet1.Selection' table. You can move, or remove it, as needed.
+            this.selectionTableAdapter.Fill(this.medsDataSet1.Selection);
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

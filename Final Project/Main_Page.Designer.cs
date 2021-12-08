@@ -33,6 +33,7 @@ namespace Final_Project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Page));
             this.New_PatientTb = new System.Windows.Forms.TabControl();
             this.tabSelectAdd = new System.Windows.Forms.TabPage();
+            this.Main_save = new System.Windows.Forms.Button();
             this.Select_box = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -137,7 +138,10 @@ namespace Final_Project
             this.genMedTableAdapter = new Final_Project.MedsDataSet1TableAdapters.GenMedTableAdapter();
             this.allergiesTableAdapter = new Final_Project.MedsDataSet1TableAdapters.AllergiesTableAdapter();
             this.allergiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.Main_save = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
@@ -154,6 +158,7 @@ namespace Final_Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allergiesBindingSource1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // New_PatientTb
@@ -187,6 +192,16 @@ namespace Final_Project
             this.tabSelectAdd.Text = "Select/Admit_Patient";
             this.tabSelectAdd.UseVisualStyleBackColor = true;
             this.tabSelectAdd.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // Main_save
+            // 
+            this.Main_save.Location = new System.Drawing.Point(208, 448);
+            this.Main_save.Name = "Main_save";
+            this.Main_save.Size = new System.Drawing.Size(75, 23);
+            this.Main_save.TabIndex = 54;
+            this.Main_save.Text = "Save";
+            this.Main_save.UseVisualStyleBackColor = true;
+            this.Main_save.Click += new System.EventHandler(this.Main_save_Click);
             // 
             // Select_box
             // 
@@ -1084,15 +1099,38 @@ namespace Final_Project
             this.allergiesBindingSource1.DataMember = "Allergies";
             this.allergiesBindingSource1.DataSource = this.medsDataSet1;
             // 
-            // Main_save
+            // menuStrip1
             // 
-            this.Main_save.Location = new System.Drawing.Point(208, 448);
-            this.Main_save.Name = "Main_save";
-            this.Main_save.Size = new System.Drawing.Size(75, 23);
-            this.Main_save.TabIndex = 54;
-            this.Main_save.Text = "Save";
-            this.Main_save.UseVisualStyleBackColor = true;
-            this.Main_save.Click += new System.EventHandler(this.Main_save_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1316, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reloadToolStripMenuItem,
+            this.quitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // reloadToolStripMenuItem
+            // 
+            this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reloadToolStripMenuItem.Text = "Reload";
+            this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
+            // 
+            // quitToolStripMenuItem
+            // 
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // Main_Page
             // 
@@ -1102,6 +1140,8 @@ namespace Final_Project
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(1316, 798);
             this.Controls.Add(this.New_PatientTb);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main_Page";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1124,7 +1164,10 @@ namespace Final_Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.allergiesBindingSource1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1236,6 +1279,10 @@ namespace Final_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn patientIdDataGridViewTextBoxColumn2;
         private System.Windows.Forms.BindingSource allergiesBindingSource1;
         private System.Windows.Forms.Button Main_save;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reloadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
     }
 }
 
