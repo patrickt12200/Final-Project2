@@ -136,6 +136,8 @@ namespace Final_Project
             this.selectionTableAdapter = new Final_Project.MedsDataSet1TableAdapters.SelectionTableAdapter();
             this.genMedTableAdapter = new Final_Project.MedsDataSet1TableAdapters.GenMedTableAdapter();
             this.allergiesTableAdapter = new Final_Project.MedsDataSet1TableAdapters.AllergiesTableAdapter();
+            this.allergiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.Main_save = new System.Windows.Forms.Button();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
@@ -151,6 +153,7 @@ namespace Final_Project
             this.tabAllergies.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allergiesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // New_PatientTb
@@ -167,6 +170,7 @@ namespace Final_Project
             // tabSelectAdd
             // 
             this.tabSelectAdd.AllowDrop = true;
+            this.tabSelectAdd.Controls.Add(this.Main_save);
             this.tabSelectAdd.Controls.Add(this.Select_box);
             this.tabSelectAdd.Controls.Add(this.AllergyTable);
             this.tabSelectAdd.Controls.Add(this.TimeLbl);
@@ -882,6 +886,7 @@ namespace Final_Project
             this.ModifyBtn.TabIndex = 12;
             this.ModifyBtn.Text = "Modify";
             this.ModifyBtn.UseVisualStyleBackColor = true;
+            this.ModifyBtn.Click += new System.EventHandler(this.ModifyBtn_Click);
             // 
             // NameLbl2
             // 
@@ -1074,6 +1079,21 @@ namespace Final_Project
             // 
             this.allergiesTableAdapter.ClearBeforeFill = true;
             // 
+            // allergiesBindingSource1
+            // 
+            this.allergiesBindingSource1.DataMember = "Allergies";
+            this.allergiesBindingSource1.DataSource = this.medsDataSet1;
+            // 
+            // Main_save
+            // 
+            this.Main_save.Location = new System.Drawing.Point(208, 448);
+            this.Main_save.Name = "Main_save";
+            this.Main_save.Size = new System.Drawing.Size(75, 23);
+            this.Main_save.TabIndex = 54;
+            this.Main_save.Text = "Save";
+            this.Main_save.UseVisualStyleBackColor = true;
+            this.Main_save.Click += new System.EventHandler(this.Main_save_Click);
+            // 
             // Main_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1103,6 +1123,7 @@ namespace Final_Project
             this.tabAllergies.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allergiesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1213,6 +1234,8 @@ namespace Final_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn foodsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientIdDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.BindingSource allergiesBindingSource1;
+        private System.Windows.Forms.Button Main_save;
     }
 }
 

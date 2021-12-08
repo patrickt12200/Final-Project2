@@ -30,7 +30,23 @@ namespace Final_Project
             this.genMedTableAdapter.Fill(this.medsDataSet1.GenMed);
             // TODO: This line of code loads data into the 'medsDataSet1.Selection' table. You can move, or remove it, as needed.
             this.selectionTableAdapter.Fill(this.medsDataSet1.Selection);
-     
+
+            AdmissionRichBox.Enabled = false;
+            MaritalBox.Enabled = false;
+            HeightBox.Enabled = false;
+            WeightBox.Enabled = false;
+            SmokerBox.Enabled = false;
+            BloodBox.Enabled = false;
+            PressBox.Enabled = false;
+            TobaccoBox.Enabled = false;
+            HeartBox.Enabled = false;
+            BreathBox.Enabled = false;
+            SurgRichBox.Enabled = false;
+            BehaveBox.Enabled = false;
+            DrugBox.Enabled = false;
+            PregBox.Enabled = false;
+            AlcoholBox.Enabled = false;
+
 
 
             var tab1 = Gen_Hist_Tb;
@@ -309,6 +325,30 @@ namespace Final_Project
         private void Gen_Hist_Tb_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ModifyBtn_Click(object sender, EventArgs e)
+        {
+            AdmissionRichBox.Enabled = true;
+            MaritalBox.Enabled = true;
+            HeightBox.Enabled = true;
+            WeightBox.Enabled = true;
+            SmokerBox.Enabled = true;
+            BloodBox.Enabled = true;
+            PressBox.Enabled = true;
+            TobaccoBox.Enabled = true;
+            HeartBox.Enabled = true;
+            BreathBox.Enabled = true;
+            SurgRichBox.Enabled = true;
+            BehaveBox.Enabled = true;
+            DrugBox.Enabled = true;
+            PregBox.Enabled = true;
+            AlcoholBox.Enabled = true;
+        }
+
+        private void Main_save_Click(object sender, EventArgs e)
+        {
+            this.selectionTableAdapter.Update(this.medsDataSet1.Selection);
         }
     }
 }
