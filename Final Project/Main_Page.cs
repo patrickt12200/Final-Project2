@@ -24,12 +24,24 @@ namespace Final_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'medsDataSet1.Allergies' table. You can move, or remove it, as needed.
-            this.allergiesTableAdapter.Fill(this.medsDataSet1.Allergies);
-            // TODO: This line of code loads data into the 'medsDataSet1.GenMed' table. You can move, or remove it, as needed.
-            this.genMedTableAdapter.Fill(this.medsDataSet1.GenMed);
-            // TODO: This line of code loads data into the 'medsDataSet1.Selection' table. You can move, or remove it, as needed.
-            this.selectionTableAdapter.Fill(this.medsDataSet1.Selection);
+            // TODO: This line of code loads data into the 'medsDataSet.GenMed' table. You can move, or remove it, as needed.
+            this.genMedTableAdapter.Fill(this.medsDataSet.GenMed);
+            // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.
+            this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
+            // TODO: This line of code loads data into the 'medsDataSet.Allergies' table. You can move, or remove it, as needed.
+            this.allergiesTableAdapter.Fill(this.medsDataSet.Allergies);
+            // TODO: This line of code loads data into the 'medsDataSet.GenMed' table. You can move, or remove it, as needed.
+            this.genMedTableAdapter.Fill(this.medsDataSet.GenMed);
+            // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.
+            this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
+            // TODO: This line of code loads data into the 'medsDataSet.Allergies' table. You can move, or remove it, as needed.
+            this.allergiesTableAdapter.Fill(this.medsDataSet.Allergies);
+            // TODO: This line of code loads data into the 'medsDataSet.Allergies' table. You can move, or remove it, as needed.
+            this.allergiesTableAdapter.Fill(this.medsDataSet.Allergies);
+            // TODO: This line of code loads data into the 'medsDataSet.GenMed' table. You can move, or remove it, as needed.
+            this.genMedTableAdapter.Fill(this.medsDataSet.GenMed);
+            // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.
+            this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
 
             AdmissionRichBox.Enabled = false;
             MaritalBox.Enabled = false;
@@ -53,6 +65,8 @@ namespace Final_Project
             var tab2 = tabAllergies;
             this.New_PatientTb.TabPages.Remove(Gen_Hist_Tb);
             this.New_PatientTb.TabPages.Remove(tabAllergies);
+            GenMedTable.Visible = false;
+            AllergyTable.Visible = false;
 
             Gen_Hist_Tb.Visible = false;
             //Patient_Selection.Items.AddRange(MedsDataSet.SelectionDataTable)
@@ -117,7 +131,7 @@ namespace Final_Project
             try
             {
                 //Will save to DataBase 
-                this.selectionTableAdapter.Update(this.medsDataSet1.Selection);
+                this.selectionTableAdapter.Update(this.medsDataSet.Selection);
             }
             catch(Exception error)
             {
@@ -138,7 +152,7 @@ namespace Final_Project
         private void Undo_btn_F1_Click(object sender, EventArgs e)
         {
             //Will reload the table from the database, erasing unsaved edits.
-            this.selectionTableAdapter.Fill(this.medsDataSet1.Selection);
+            this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -239,7 +253,7 @@ namespace Final_Project
             try
             {
                 //Will save to DataBase 
-                this.selectionTableAdapter.Update(this.medsDataSet1.Selection);
+                this.selectionTableAdapter.Update(this.medsDataSet.Selection);
             }
             catch (Exception error)
             {
@@ -352,7 +366,7 @@ namespace Final_Project
         {
             try
             {
-                this.selectionTableAdapter.Update(this.medsDataSet1.Selection);
+                this.selectionTableAdapter.Update(this.medsDataSet.Selection);
 
             }
             catch(Exception err)
@@ -364,12 +378,12 @@ namespace Final_Project
 
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'medsDataSet1.Allergies' table. You can move, or remove it, as needed.
-            this.allergiesTableAdapter.Fill(this.medsDataSet1.Allergies);
-            // TODO: This line of code loads data into the 'medsDataSet1.GenMed' table. You can move, or remove it, as needed.
-            this.genMedTableAdapter.Fill(this.medsDataSet1.GenMed);
-            // TODO: This line of code loads data into the 'medsDataSet1.Selection' table. You can move, or remove it, as needed.
-            this.selectionTableAdapter.Fill(this.medsDataSet1.Selection);
+            // TODO: This line of code loads data into the 'medsDataSet.Allergies' table. You can move, or remove it, as needed.
+            this.allergiesTableAdapter.Fill(this.medsDataSet.Allergies);
+            // TODO: This line of code loads data into the 'medsDataSet.GenMed' table. You can move, or remove it, as needed.
+            this.genMedTableAdapter.Fill(this.medsDataSet.GenMed);
+            // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.
+            this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
