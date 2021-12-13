@@ -33,12 +33,11 @@ namespace Final_Project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Page));
             this.New_PatientTb = new System.Windows.Forms.TabControl();
             this.tabSelectAdd = new System.Windows.Forms.TabPage();
-            this.Main_save = new System.Windows.Forms.Button();
             this.Select_box = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.socialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.streetAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,26 +46,16 @@ namespace Final_Project
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.field1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.selectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.medsDataSet1 = new Final_Project.MedsDataSet1();
-            this.AllergyTable = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foodsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.allergiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.TimeLbl = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.ReportBtn = new System.Windows.Forms.Button();
-            this.Select_Pt = new System.Windows.Forms.Button();
+            this.medsDataSet = new Final_Project.MedsDataSet();
+            this.Main_save = new System.Windows.Forms.Button();
             this.GenMedTable = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reasonForAdmissionReasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maritalStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.heightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Smoker = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bloodTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bloodPressureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tobaccoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,8 +66,19 @@ namespace Final_Project
             this.drugUseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pregnanciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alcoholDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.smokerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genMedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AllergyTable = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foodsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allergiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TimeLbl = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.ReportBtn = new System.Windows.Forms.Button();
+            this.Select_Pt = new System.Windows.Forms.Button();
             this.Gen_Hist_Tb = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -118,7 +118,6 @@ namespace Final_Project
             this.NameLbl2 = new System.Windows.Forms.Label();
             this.NameLbl1 = new System.Windows.Forms.Label();
             this.Patient_IdLbl = new System.Windows.Forms.Label();
-            this.Save_Gen = new System.Windows.Forms.Button();
             this.tabAllergies = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.AllergenCommentBox = new System.Windows.Forms.RichTextBox();
@@ -134,30 +133,30 @@ namespace Final_Project
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.selectionTableAdapter = new Final_Project.MedsDataSet1TableAdapters.SelectionTableAdapter();
-            this.genMedTableAdapter = new Final_Project.MedsDataSet1TableAdapters.GenMedTableAdapter();
-            this.allergiesTableAdapter = new Final_Project.MedsDataSet1TableAdapters.AllergiesTableAdapter();
-            this.allergiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allergiesTableAdapter = new Final_Project.MedsDataSetTableAdapters.AllergiesTableAdapter();
+            this.selectionTableAdapter = new Final_Project.MedsDataSetTableAdapters.SelectionTableAdapter();
+            this.genMedTableAdapter = new Final_Project.MedsDataSetTableAdapters.GenMedTableAdapter();
+            this.GenMedSave = new System.Windows.Forms.Button();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenMedTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllergyTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allergiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GenMedTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource)).BeginInit();
             this.Gen_Hist_Tb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabAllergies.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allergiesBindingSource1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,15 +174,15 @@ namespace Final_Project
             // tabSelectAdd
             // 
             this.tabSelectAdd.AllowDrop = true;
-            this.tabSelectAdd.Controls.Add(this.Main_save);
             this.tabSelectAdd.Controls.Add(this.Select_box);
+            this.tabSelectAdd.Controls.Add(this.Main_save);
+            this.tabSelectAdd.Controls.Add(this.GenMedTable);
             this.tabSelectAdd.Controls.Add(this.AllergyTable);
             this.tabSelectAdd.Controls.Add(this.TimeLbl);
             this.tabSelectAdd.Controls.Add(this.dateTimePicker1);
             this.tabSelectAdd.Controls.Add(this.pictureBox3);
             this.tabSelectAdd.Controls.Add(this.ReportBtn);
             this.tabSelectAdd.Controls.Add(this.Select_Pt);
-            this.tabSelectAdd.Controls.Add(this.GenMedTable);
             this.tabSelectAdd.Location = new System.Drawing.Point(4, 22);
             this.tabSelectAdd.Name = "tabSelectAdd";
             this.tabSelectAdd.Padding = new System.Windows.Forms.Padding(3);
@@ -193,25 +192,15 @@ namespace Final_Project
             this.tabSelectAdd.UseVisualStyleBackColor = true;
             this.tabSelectAdd.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // Main_save
-            // 
-            this.Main_save.Location = new System.Drawing.Point(208, 448);
-            this.Main_save.Name = "Main_save";
-            this.Main_save.Size = new System.Drawing.Size(75, 23);
-            this.Main_save.TabIndex = 54;
-            this.Main_save.Text = "Save";
-            this.Main_save.UseVisualStyleBackColor = true;
-            this.Main_save.Click += new System.EventHandler(this.Main_save_Click);
-            // 
             // Select_box
             // 
             this.Select_box.AutoGenerateColumns = false;
             this.Select_box.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Select_box.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
+            this.iDDataGridViewTextBoxColumn1,
             this.lastNameDataGridViewTextBoxColumn,
             this.firstNameDataGridViewTextBoxColumn,
-            this.patientIDDataGridViewTextBoxColumn,
+            this.patientIDDataGridViewTextBoxColumn1,
             this.dateOfBirthDataGridViewTextBoxColumn,
             this.socialDataGridViewTextBoxColumn,
             this.streetAddressDataGridViewTextBoxColumn,
@@ -220,16 +209,16 @@ namespace Final_Project
             this.cityDataGridViewTextBoxColumn,
             this.field1DataGridViewTextBoxColumn});
             this.Select_box.DataSource = this.selectionBindingSource;
-            this.Select_box.Location = new System.Drawing.Point(6, 200);
+            this.Select_box.Location = new System.Drawing.Point(6, 208);
             this.Select_box.Name = "Select_box";
             this.Select_box.Size = new System.Drawing.Size(887, 205);
-            this.Select_box.TabIndex = 51;
+            this.Select_box.TabIndex = 55;
             // 
-            // iDDataGridViewTextBoxColumn
+            // iDDataGridViewTextBoxColumn1
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
@@ -243,11 +232,11 @@ namespace Final_Project
             this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
             // 
-            // patientIDDataGridViewTextBoxColumn
+            // patientIDDataGridViewTextBoxColumn1
             // 
-            this.patientIDDataGridViewTextBoxColumn.DataPropertyName = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn.HeaderText = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn.Name = "patientIDDataGridViewTextBoxColumn";
+            this.patientIDDataGridViewTextBoxColumn1.DataPropertyName = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn1.HeaderText = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn1.Name = "patientIDDataGridViewTextBoxColumn1";
             // 
             // dateOfBirthDataGridViewTextBoxColumn
             // 
@@ -294,121 +283,35 @@ namespace Final_Project
             // selectionBindingSource
             // 
             this.selectionBindingSource.DataMember = "Selection";
-            this.selectionBindingSource.DataSource = this.medsDataSet1;
+            this.selectionBindingSource.DataSource = this.medsDataSet;
             // 
-            // medsDataSet1
+            // medsDataSet
             // 
-            this.medsDataSet1.DataSetName = "MedsDataSet1";
-            this.medsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.medsDataSet.DataSetName = "MedsDataSet";
+            this.medsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // AllergyTable
+            // Main_save
             // 
-            this.AllergyTable.AutoGenerateColumns = false;
-            this.AllergyTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AllergyTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn2,
-            this.medsDataGridViewTextBoxColumn,
-            this.foodsDataGridViewTextBoxColumn,
-            this.commentsDataGridViewTextBoxColumn,
-            this.patientIdDataGridViewTextBoxColumn2});
-            this.AllergyTable.DataSource = this.allergiesBindingSource;
-            this.AllergyTable.Location = new System.Drawing.Point(295, 26);
-            this.AllergyTable.Name = "AllergyTable";
-            this.AllergyTable.Size = new System.Drawing.Size(295, 150);
-            this.AllergyTable.TabIndex = 53;
-            // 
-            // iDDataGridViewTextBoxColumn2
-            // 
-            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
-            // 
-            // medsDataGridViewTextBoxColumn
-            // 
-            this.medsDataGridViewTextBoxColumn.DataPropertyName = "Meds";
-            this.medsDataGridViewTextBoxColumn.HeaderText = "Meds";
-            this.medsDataGridViewTextBoxColumn.Name = "medsDataGridViewTextBoxColumn";
-            // 
-            // foodsDataGridViewTextBoxColumn
-            // 
-            this.foodsDataGridViewTextBoxColumn.DataPropertyName = "Foods";
-            this.foodsDataGridViewTextBoxColumn.HeaderText = "Foods";
-            this.foodsDataGridViewTextBoxColumn.Name = "foodsDataGridViewTextBoxColumn";
-            // 
-            // commentsDataGridViewTextBoxColumn
-            // 
-            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "Comments";
-            this.commentsDataGridViewTextBoxColumn.HeaderText = "Comments";
-            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
-            // 
-            // patientIdDataGridViewTextBoxColumn2
-            // 
-            this.patientIdDataGridViewTextBoxColumn2.DataPropertyName = "Patient_Id";
-            this.patientIdDataGridViewTextBoxColumn2.HeaderText = "Patient_Id";
-            this.patientIdDataGridViewTextBoxColumn2.Name = "patientIdDataGridViewTextBoxColumn2";
-            // 
-            // allergiesBindingSource
-            // 
-            this.allergiesBindingSource.DataMember = "Allergies";
-            this.allergiesBindingSource.DataSource = this.medsDataSet1;
-            // 
-            // TimeLbl
-            // 
-            this.TimeLbl.AutoSize = true;
-            this.TimeLbl.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLbl.Location = new System.Drawing.Point(3, 3);
-            this.TimeLbl.Name = "TimeLbl";
-            this.TimeLbl.Size = new System.Drawing.Size(221, 61);
-            this.TimeLbl.TabIndex = 50;
-            this.TimeLbl.Text = "00:00:00";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 67);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(202, 20);
-            this.dateTimePicker1.TabIndex = 49;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(748, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(148, 131);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 48;
-            this.pictureBox3.TabStop = false;
-            // 
-            // ReportBtn
-            // 
-            this.ReportBtn.Location = new System.Drawing.Point(99, 448);
-            this.ReportBtn.Name = "ReportBtn";
-            this.ReportBtn.Size = new System.Drawing.Size(99, 23);
-            this.ReportBtn.TabIndex = 8;
-            this.ReportBtn.Text = "Generate Report";
-            this.ReportBtn.UseVisualStyleBackColor = true;
-            // 
-            // Select_Pt
-            // 
-            this.Select_Pt.Location = new System.Drawing.Point(6, 448);
-            this.Select_Pt.Name = "Select_Pt";
-            this.Select_Pt.Size = new System.Drawing.Size(75, 23);
-            this.Select_Pt.TabIndex = 7;
-            this.Select_Pt.Text = "Select";
-            this.Select_Pt.UseVisualStyleBackColor = true;
-            this.Select_Pt.Click += new System.EventHandler(this.Select_Pt_Click_1);
+            this.Main_save.Location = new System.Drawing.Point(208, 448);
+            this.Main_save.Name = "Main_save";
+            this.Main_save.Size = new System.Drawing.Size(75, 23);
+            this.Main_save.TabIndex = 54;
+            this.Main_save.Text = "Save";
+            this.Main_save.UseVisualStyleBackColor = true;
+            this.Main_save.Click += new System.EventHandler(this.Main_save_Click);
             // 
             // GenMedTable
             // 
             this.GenMedTable.AutoGenerateColumns = false;
             this.GenMedTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GenMedTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn1,
-            this.patientIDDataGridViewTextBoxColumn1,
+            this.iDDataGridViewTextBoxColumn2,
+            this.patientIDDataGridViewTextBoxColumn2,
             this.reasonForAdmissionReasonDataGridViewTextBoxColumn,
             this.maritalStatusDataGridViewTextBoxColumn,
             this.heightDataGridViewTextBoxColumn,
             this.weightDataGridViewTextBoxColumn,
+            this.Smoker,
             this.bloodTypeDataGridViewTextBoxColumn,
             this.bloodPressureDataGridViewTextBoxColumn,
             this.tobaccoDataGridViewTextBoxColumn,
@@ -418,25 +321,24 @@ namespace Final_Project
             this.behavioralHxDataGridViewTextBoxColumn,
             this.drugUseDataGridViewTextBoxColumn,
             this.pregnanciesDataGridViewTextBoxColumn,
-            this.alcoholDataGridViewTextBoxColumn,
-            this.smokerDataGridViewTextBoxColumn});
+            this.alcoholDataGridViewTextBoxColumn});
             this.GenMedTable.DataSource = this.genMedBindingSource;
-            this.GenMedTable.Location = new System.Drawing.Point(6, 200);
+            this.GenMedTable.Location = new System.Drawing.Point(14, 93);
             this.GenMedTable.Name = "GenMedTable";
-            this.GenMedTable.Size = new System.Drawing.Size(277, 110);
+            this.GenMedTable.Size = new System.Drawing.Size(350, 196);
             this.GenMedTable.TabIndex = 52;
             // 
-            // iDDataGridViewTextBoxColumn1
+            // iDDataGridViewTextBoxColumn2
             // 
-            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
             // 
-            // patientIDDataGridViewTextBoxColumn1
+            // patientIDDataGridViewTextBoxColumn2
             // 
-            this.patientIDDataGridViewTextBoxColumn1.DataPropertyName = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn1.HeaderText = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn1.Name = "patientIDDataGridViewTextBoxColumn1";
+            this.patientIDDataGridViewTextBoxColumn2.DataPropertyName = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn2.HeaderText = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn2.Name = "patientIDDataGridViewTextBoxColumn2";
             // 
             // reasonForAdmissionReasonDataGridViewTextBoxColumn
             // 
@@ -461,6 +363,12 @@ namespace Final_Project
             this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
             this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
             this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
+            // 
+            // Smoker
+            // 
+            this.Smoker.DataPropertyName = "Smoker";
+            this.Smoker.HeaderText = "Smoker";
+            this.Smoker.Name = "Smoker";
             // 
             // bloodTypeDataGridViewTextBoxColumn
             // 
@@ -522,20 +430,112 @@ namespace Final_Project
             this.alcoholDataGridViewTextBoxColumn.HeaderText = "Alcohol";
             this.alcoholDataGridViewTextBoxColumn.Name = "alcoholDataGridViewTextBoxColumn";
             // 
-            // smokerDataGridViewTextBoxColumn
-            // 
-            this.smokerDataGridViewTextBoxColumn.DataPropertyName = "Smoker";
-            this.smokerDataGridViewTextBoxColumn.HeaderText = "Smoker";
-            this.smokerDataGridViewTextBoxColumn.Name = "smokerDataGridViewTextBoxColumn";
-            // 
             // genMedBindingSource
             // 
             this.genMedBindingSource.DataMember = "GenMed";
-            this.genMedBindingSource.DataSource = this.medsDataSet1;
+            this.genMedBindingSource.DataSource = this.medsDataSet;
+            // 
+            // AllergyTable
+            // 
+            this.AllergyTable.AutoGenerateColumns = false;
+            this.AllergyTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AllergyTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.medsDataGridViewTextBoxColumn,
+            this.foodsDataGridViewTextBoxColumn,
+            this.commentsDataGridViewTextBoxColumn,
+            this.patientIdDataGridViewTextBoxColumn});
+            this.AllergyTable.DataSource = this.allergiesBindingSource;
+            this.AllergyTable.Location = new System.Drawing.Point(598, 105);
+            this.AllergyTable.Name = "AllergyTable";
+            this.AllergyTable.Size = new System.Drawing.Size(295, 150);
+            this.AllergyTable.TabIndex = 53;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            // 
+            // medsDataGridViewTextBoxColumn
+            // 
+            this.medsDataGridViewTextBoxColumn.DataPropertyName = "Meds";
+            this.medsDataGridViewTextBoxColumn.HeaderText = "Meds";
+            this.medsDataGridViewTextBoxColumn.Name = "medsDataGridViewTextBoxColumn";
+            // 
+            // foodsDataGridViewTextBoxColumn
+            // 
+            this.foodsDataGridViewTextBoxColumn.DataPropertyName = "Foods";
+            this.foodsDataGridViewTextBoxColumn.HeaderText = "Foods";
+            this.foodsDataGridViewTextBoxColumn.Name = "foodsDataGridViewTextBoxColumn";
+            // 
+            // commentsDataGridViewTextBoxColumn
+            // 
+            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "Comments";
+            this.commentsDataGridViewTextBoxColumn.HeaderText = "Comments";
+            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
+            // 
+            // patientIdDataGridViewTextBoxColumn
+            // 
+            this.patientIdDataGridViewTextBoxColumn.DataPropertyName = "Patient_Id";
+            this.patientIdDataGridViewTextBoxColumn.HeaderText = "Patient_Id";
+            this.patientIdDataGridViewTextBoxColumn.Name = "patientIdDataGridViewTextBoxColumn";
+            // 
+            // allergiesBindingSource
+            // 
+            this.allergiesBindingSource.DataMember = "Allergies";
+            this.allergiesBindingSource.DataSource = this.medsDataSet;
+            // 
+            // TimeLbl
+            // 
+            this.TimeLbl.AutoSize = true;
+            this.TimeLbl.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeLbl.Location = new System.Drawing.Point(3, 3);
+            this.TimeLbl.Name = "TimeLbl";
+            this.TimeLbl.Size = new System.Drawing.Size(221, 61);
+            this.TimeLbl.TabIndex = 50;
+            this.TimeLbl.Text = "00:00:00";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(14, 67);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(202, 20);
+            this.dateTimePicker1.TabIndex = 49;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(748, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(148, 131);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 48;
+            this.pictureBox3.TabStop = false;
+            // 
+            // ReportBtn
+            // 
+            this.ReportBtn.Location = new System.Drawing.Point(99, 448);
+            this.ReportBtn.Name = "ReportBtn";
+            this.ReportBtn.Size = new System.Drawing.Size(99, 23);
+            this.ReportBtn.TabIndex = 8;
+            this.ReportBtn.Text = "Generate Report";
+            this.ReportBtn.UseVisualStyleBackColor = true;
+            // 
+            // Select_Pt
+            // 
+            this.Select_Pt.Location = new System.Drawing.Point(6, 448);
+            this.Select_Pt.Name = "Select_Pt";
+            this.Select_Pt.Size = new System.Drawing.Size(75, 23);
+            this.Select_Pt.TabIndex = 7;
+            this.Select_Pt.Text = "Select";
+            this.Select_Pt.UseVisualStyleBackColor = true;
+            this.Select_Pt.Click += new System.EventHandler(this.Select_Pt_Click_1);
             // 
             // Gen_Hist_Tb
             // 
             this.Gen_Hist_Tb.AllowDrop = true;
+            this.Gen_Hist_Tb.Controls.Add(this.GenMedSave);
             this.Gen_Hist_Tb.Controls.Add(this.label1);
             this.Gen_Hist_Tb.Controls.Add(this.pictureBox1);
             this.Gen_Hist_Tb.Controls.Add(this.CommentsLbl);
@@ -574,7 +574,6 @@ namespace Final_Project
             this.Gen_Hist_Tb.Controls.Add(this.NameLbl2);
             this.Gen_Hist_Tb.Controls.Add(this.NameLbl1);
             this.Gen_Hist_Tb.Controls.Add(this.Patient_IdLbl);
-            this.Gen_Hist_Tb.Controls.Add(this.Save_Gen);
             this.Gen_Hist_Tb.Location = new System.Drawing.Point(4, 22);
             this.Gen_Hist_Tb.Name = "Gen_Hist_Tb";
             this.Gen_Hist_Tb.Padding = new System.Windows.Forms.Padding(3);
@@ -934,16 +933,6 @@ namespace Final_Project
             this.Patient_IdLbl.Text = "Null";
             this.Patient_IdLbl.Click += new System.EventHandler(this.Patient_IdLbl_Click);
             // 
-            // Save_Gen
-            // 
-            this.Save_Gen.Location = new System.Drawing.Point(70, 435);
-            this.Save_Gen.Name = "Save_Gen";
-            this.Save_Gen.Size = new System.Drawing.Size(75, 23);
-            this.Save_Gen.TabIndex = 7;
-            this.Save_Gen.Text = "Save";
-            this.Save_Gen.UseVisualStyleBackColor = true;
-            this.Save_Gen.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // tabAllergies
             // 
             this.tabAllergies.Controls.Add(this.label2);
@@ -1082,23 +1071,6 @@ namespace Final_Project
             // 
             this.timer1.Interval = 1000;
             // 
-            // selectionTableAdapter
-            // 
-            this.selectionTableAdapter.ClearBeforeFill = true;
-            // 
-            // genMedTableAdapter
-            // 
-            this.genMedTableAdapter.ClearBeforeFill = true;
-            // 
-            // allergiesTableAdapter
-            // 
-            this.allergiesTableAdapter.ClearBeforeFill = true;
-            // 
-            // allergiesBindingSource1
-            // 
-            this.allergiesBindingSource1.DataMember = "Allergies";
-            this.allergiesBindingSource1.DataSource = this.medsDataSet1;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1112,25 +1084,56 @@ namespace Final_Project
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveAllToolStripMenuItem,
             this.reloadToolStripMenuItem,
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // saveAllToolStripMenuItem
+            // 
+            this.saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
+            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.saveAllToolStripMenuItem.Text = "Save All";
+            this.saveAllToolStripMenuItem.ToolTipText = "May Be Destructive!!!";
+            this.saveAllToolStripMenuItem.Click += new System.EventHandler(this.saveAllToolStripMenuItem_Click);
+            // 
             // reloadToolStripMenuItem
             // 
             this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
-            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.reloadToolStripMenuItem.Text = "Reload";
             this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+            // 
+            // allergiesTableAdapter
+            // 
+            this.allergiesTableAdapter.ClearBeforeFill = true;
+            // 
+            // selectionTableAdapter
+            // 
+            this.selectionTableAdapter.ClearBeforeFill = true;
+            // 
+            // genMedTableAdapter
+            // 
+            this.genMedTableAdapter.ClearBeforeFill = true;
+            // 
+            // GenMedSave
+            // 
+            this.GenMedSave.Location = new System.Drawing.Point(48, 432);
+            this.GenMedSave.Name = "GenMedSave";
+            this.GenMedSave.Size = new System.Drawing.Size(75, 23);
+            this.GenMedSave.TabIndex = 52;
+            this.GenMedSave.Text = "Save";
+            this.GenMedSave.UseVisualStyleBackColor = true;
+            this.GenMedSave.Click += new System.EventHandler(this.GenMedSave_Click);
             // 
             // Main_Page
             // 
@@ -1150,12 +1153,12 @@ namespace Final_Project
             this.tabSelectAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenMedTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllergyTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.allergiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GenMedTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genMedBindingSource)).EndInit();
             this.Gen_Hist_Tb.ResumeLayout(false);
             this.Gen_Hist_Tb.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1163,7 +1166,6 @@ namespace Final_Project
             this.tabAllergies.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allergiesBindingSource1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -1176,7 +1178,6 @@ namespace Final_Project
         private System.Windows.Forms.TabPage tabSelectAdd;
         private System.Windows.Forms.Button Select_Pt;
         private System.Windows.Forms.TabPage Gen_Hist_Tb;
-        private System.Windows.Forms.Button Save_Gen;
         private System.Windows.Forms.Label Patient_IdLbl;
         private System.Windows.Forms.TabPage tabAllergies;
         private System.Windows.Forms.ErrorProvider errorProvider1;
@@ -1234,15 +1235,28 @@ namespace Final_Project
         private System.Windows.Forms.Label TimeLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private MedsDataSet1 medsDataSet1;
-        private System.Windows.Forms.DataGridView Select_box;
         private System.Windows.Forms.DataGridView GenMedTable;
-        private System.Windows.Forms.BindingSource selectionBindingSource;
-        private MedsDataSet1TableAdapters.SelectionTableAdapter selectionTableAdapter;
+        private System.Windows.Forms.DataGridView AllergyTable;
+        private System.Windows.Forms.Button Main_save;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reloadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.DataGridView Select_box;
+        private MedsDataSet medsDataSet;
+        private System.Windows.Forms.BindingSource allergiesBindingSource;
+        private MedsDataSetTableAdapters.AllergiesTableAdapter allergiesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn foodsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource selectionBindingSource;
+        private MedsDataSetTableAdapters.SelectionTableAdapter selectionTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn socialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn streetAddressDataGridViewTextBoxColumn;
@@ -1251,13 +1265,15 @@ namespace Final_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn field1DataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource genMedBindingSource;
-        private MedsDataSet1TableAdapters.GenMedTableAdapter genMedTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientIDDataGridViewTextBoxColumn1;
+        private MedsDataSetTableAdapters.GenMedTableAdapter genMedTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem saveAllToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientIDDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn reasonForAdmissionReasonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maritalStatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn heightDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Smoker;
         private System.Windows.Forms.DataGridViewTextBoxColumn bloodTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bloodPressureDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tobaccoDataGridViewTextBoxColumn;
@@ -1268,21 +1284,7 @@ namespace Final_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn drugUseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pregnanciesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alcoholDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn smokerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView AllergyTable;
-        private System.Windows.Forms.BindingSource allergiesBindingSource;
-        private MedsDataSet1TableAdapters.AllergiesTableAdapter allergiesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn medsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn foodsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientIdDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.BindingSource allergiesBindingSource1;
-        private System.Windows.Forms.Button Main_save;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reloadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.Button GenMedSave;
     }
 }
 

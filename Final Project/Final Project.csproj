@@ -48,71 +48,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Allergy_Hist.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Allergy_Hist.Designer.cs">
-      <DependentUpon>Allergy_Hist.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main_Page.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main_Page.Designer.cs">
       <DependentUpon>Main_Page.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gen_Hist.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gen_Hist.Designer.cs">
-      <DependentUpon>Gen_Hist.cs</DependentUpon>
-    </Compile>
     <Compile Include="MedsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MedsDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="MedsDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MedsDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MedsDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MedsDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MedsDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MedsDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MedsDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MedsDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MedsDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MedsDataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MedsDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MedsDataSet6.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Med_Hist.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Med_Hist.Designer.cs">
-      <DependentUpon>Med_Hist.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Gen_Hist.resx">
-      <DependentUpon>Gen_Hist.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main_Page.resx">
       <DependentUpon>Main_Page.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,83 +75,14 @@
     </Compile>
     <None Include="MedsDataSet.xsc">
       <DependentUpon>MedsDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="MedsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>MedsDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="MedsDataSet.xss">
       <DependentUpon>MedsDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="MedsDataSet1.xsc">
-      <DependentUpon>MedsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="MedsDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MedsDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MedsDataSet1.xss">
-      <DependentUpon>MedsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="MedsDataSet2.xsc">
-      <DependentUpon>MedsDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="MedsDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MedsDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MedsDataSet2.xss">
-      <DependentUpon>MedsDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="MedsDataSet3.xsc">
-      <DependentUpon>MedsDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="MedsDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MedsDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MedsDataSet3.xss">
-      <DependentUpon>MedsDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="MedsDataSet4.xsc">
-      <DependentUpon>MedsDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="MedsDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MedsDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MedsDataSet4.xss">
-      <DependentUpon>MedsDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="MedsDataSet5.xsc">
-      <DependentUpon>MedsDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="MedsDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MedsDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MedsDataSet5.xss">
-      <DependentUpon>MedsDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="MedsDataSet6.xsc">
-      <DependentUpon>MedsDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="MedsDataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MedsDataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MedsDataSet6.xss">
-      <DependentUpon>MedsDataSet6.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -217,11 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Meds.accdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
