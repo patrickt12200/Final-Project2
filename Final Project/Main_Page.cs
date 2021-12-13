@@ -113,36 +113,6 @@ namespace Final_Project
         private void button1_Click_1(object sender, EventArgs e)
         {
 
-            try
-            {
-                //Will save to DataBase 
-                int RowIndex = Select_box.CurrentCell.RowIndex;
-                GenMedTable.Rows[RowIndex].Cells[2].Value = AdmissionRichBox.Text;
-                //MessageBox.Show(RowIndex + AdmissionRichBox.Text);
-                GenMedTable.Rows[RowIndex].Cells[3].Value = MaritalBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[4].Value = HeightBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[5].Value = WeightBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[6].Value = SmokerBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[7].Value = BloodBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[8].Value = PressBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[9].Value = TobaccoBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[10].Value = HeartBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[11].Value = BreathBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[12].Value = SurgRichBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[13].Value = BehaveBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[14].Value = DrugBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[15].Value = PregBox.Text;
-                GenMedTable.Rows[RowIndex].Cells[16].Value = AlcoholBox.Text;
-
-
-
-               this.genMedTableAdapter.Update(this.medsDataSet.GenMed);
-
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(Convert.ToString(error.Message));
-            }
         }
 
         private void Select_Pt_Click_1(object sender, EventArgs e)
@@ -377,6 +347,43 @@ namespace Final_Project
             selectionTableAdapter.Update(medsDataSet.Selection);
             // TODO: This line of code loads data into the 'medsDataSet.Allergies' table. You can move, or remove it, as needed.
             allergiesTableAdapter.Update(medsDataSet.Allergies);
+        }
+
+        private void GenMedSave_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                //Will save to DataBase 
+                int RowIndex = Select_box.CurrentCell.RowIndex;
+                GenMedTable.Rows[RowIndex].Cells[2].Value = AdmissionRichBox.Text;
+                //MessageBox.Show(RowIndex + AdmissionRichBox.Text);
+                GenMedTable.Rows[RowIndex].Cells[3].Value = MaritalBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[4].Value = HeightBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[5].Value = WeightBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[6].Value = SmokerBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[7].Value = BloodBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[8].Value = PressBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[9].Value = TobaccoBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[10].Value = HeartBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[11].Value = BreathBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[12].Value = SurgRichBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[13].Value = BehaveBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[14].Value = DrugBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[15].Value = PregBox.Text;
+                GenMedTable.Rows[RowIndex].Cells[16].Value = AlcoholBox.Text;
+
+
+
+                this.genMedTableAdapter.Update(this.medsDataSet.GenMed);
+
+            }
+
+            catch (Exception error)
+            {
+                MessageBox.Show("Update failed");
+                MessageBox.Show(Convert.ToString(error.Message));
+            }
         }
     }
 }

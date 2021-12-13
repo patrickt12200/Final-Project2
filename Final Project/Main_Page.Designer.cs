@@ -49,6 +49,23 @@ namespace Final_Project
             this.medsDataSet = new Final_Project.MedsDataSet();
             this.Main_save = new System.Windows.Forms.Button();
             this.GenMedTable = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reasonForAdmissionReasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maritalStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.heightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Smoker = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bloodTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bloodPressureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tobaccoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.heartRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.breathingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surgeryHistoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.behavioralHxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drugUseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pregnanciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alcoholDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genMedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AllergyTable = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,7 +118,6 @@ namespace Final_Project
             this.NameLbl2 = new System.Windows.Forms.Label();
             this.NameLbl1 = new System.Windows.Forms.Label();
             this.Patient_IdLbl = new System.Windows.Forms.Label();
-            this.Save_Gen = new System.Windows.Forms.Button();
             this.tabAllergies = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.AllergenCommentBox = new System.Windows.Forms.RichTextBox();
@@ -119,29 +135,13 @@ namespace Final_Project
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allergiesTableAdapter = new Final_Project.MedsDataSetTableAdapters.AllergiesTableAdapter();
             this.selectionTableAdapter = new Final_Project.MedsDataSetTableAdapters.SelectionTableAdapter();
             this.genMedTableAdapter = new Final_Project.MedsDataSetTableAdapters.GenMedTableAdapter();
-            this.saveAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reasonForAdmissionReasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maritalStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.heightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Smoker = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bloodTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bloodPressureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tobaccoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.heartRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.breathingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surgeryHistoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.behavioralHxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drugUseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pregnanciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alcoholDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GenMedSave = new System.Windows.Forms.Button();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
@@ -328,6 +328,108 @@ namespace Final_Project
             this.GenMedTable.Size = new System.Drawing.Size(350, 196);
             this.GenMedTable.TabIndex = 52;
             // 
+            // iDDataGridViewTextBoxColumn2
+            // 
+            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
+            // 
+            // patientIDDataGridViewTextBoxColumn2
+            // 
+            this.patientIDDataGridViewTextBoxColumn2.DataPropertyName = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn2.HeaderText = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn2.Name = "patientIDDataGridViewTextBoxColumn2";
+            // 
+            // reasonForAdmissionReasonDataGridViewTextBoxColumn
+            // 
+            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.DataPropertyName = "Reason For Admission Reason";
+            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.HeaderText = "Reason For Admission Reason";
+            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.Name = "reasonForAdmissionReasonDataGridViewTextBoxColumn";
+            // 
+            // maritalStatusDataGridViewTextBoxColumn
+            // 
+            this.maritalStatusDataGridViewTextBoxColumn.DataPropertyName = "Marital Status";
+            this.maritalStatusDataGridViewTextBoxColumn.HeaderText = "Marital Status";
+            this.maritalStatusDataGridViewTextBoxColumn.Name = "maritalStatusDataGridViewTextBoxColumn";
+            // 
+            // heightDataGridViewTextBoxColumn
+            // 
+            this.heightDataGridViewTextBoxColumn.DataPropertyName = "Height";
+            this.heightDataGridViewTextBoxColumn.HeaderText = "Height";
+            this.heightDataGridViewTextBoxColumn.Name = "heightDataGridViewTextBoxColumn";
+            // 
+            // weightDataGridViewTextBoxColumn
+            // 
+            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
+            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
+            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
+            // 
+            // Smoker
+            // 
+            this.Smoker.DataPropertyName = "Smoker";
+            this.Smoker.HeaderText = "Smoker";
+            this.Smoker.Name = "Smoker";
+            // 
+            // bloodTypeDataGridViewTextBoxColumn
+            // 
+            this.bloodTypeDataGridViewTextBoxColumn.DataPropertyName = "Blood Type";
+            this.bloodTypeDataGridViewTextBoxColumn.HeaderText = "Blood Type";
+            this.bloodTypeDataGridViewTextBoxColumn.Name = "bloodTypeDataGridViewTextBoxColumn";
+            // 
+            // bloodPressureDataGridViewTextBoxColumn
+            // 
+            this.bloodPressureDataGridViewTextBoxColumn.DataPropertyName = "Blood Pressure";
+            this.bloodPressureDataGridViewTextBoxColumn.HeaderText = "Blood Pressure";
+            this.bloodPressureDataGridViewTextBoxColumn.Name = "bloodPressureDataGridViewTextBoxColumn";
+            // 
+            // tobaccoDataGridViewTextBoxColumn
+            // 
+            this.tobaccoDataGridViewTextBoxColumn.DataPropertyName = "Tobacco";
+            this.tobaccoDataGridViewTextBoxColumn.HeaderText = "Tobacco";
+            this.tobaccoDataGridViewTextBoxColumn.Name = "tobaccoDataGridViewTextBoxColumn";
+            // 
+            // heartRateDataGridViewTextBoxColumn
+            // 
+            this.heartRateDataGridViewTextBoxColumn.DataPropertyName = "Heart Rate";
+            this.heartRateDataGridViewTextBoxColumn.HeaderText = "Heart Rate";
+            this.heartRateDataGridViewTextBoxColumn.Name = "heartRateDataGridViewTextBoxColumn";
+            // 
+            // breathingDataGridViewTextBoxColumn
+            // 
+            this.breathingDataGridViewTextBoxColumn.DataPropertyName = "Breathing";
+            this.breathingDataGridViewTextBoxColumn.HeaderText = "Breathing";
+            this.breathingDataGridViewTextBoxColumn.Name = "breathingDataGridViewTextBoxColumn";
+            // 
+            // surgeryHistoryDataGridViewTextBoxColumn
+            // 
+            this.surgeryHistoryDataGridViewTextBoxColumn.DataPropertyName = "Surgery History";
+            this.surgeryHistoryDataGridViewTextBoxColumn.HeaderText = "Surgery History";
+            this.surgeryHistoryDataGridViewTextBoxColumn.Name = "surgeryHistoryDataGridViewTextBoxColumn";
+            // 
+            // behavioralHxDataGridViewTextBoxColumn
+            // 
+            this.behavioralHxDataGridViewTextBoxColumn.DataPropertyName = "BehavioralHx";
+            this.behavioralHxDataGridViewTextBoxColumn.HeaderText = "BehavioralHx";
+            this.behavioralHxDataGridViewTextBoxColumn.Name = "behavioralHxDataGridViewTextBoxColumn";
+            // 
+            // drugUseDataGridViewTextBoxColumn
+            // 
+            this.drugUseDataGridViewTextBoxColumn.DataPropertyName = "Drug Use";
+            this.drugUseDataGridViewTextBoxColumn.HeaderText = "Drug Use";
+            this.drugUseDataGridViewTextBoxColumn.Name = "drugUseDataGridViewTextBoxColumn";
+            // 
+            // pregnanciesDataGridViewTextBoxColumn
+            // 
+            this.pregnanciesDataGridViewTextBoxColumn.DataPropertyName = "Pregnancies";
+            this.pregnanciesDataGridViewTextBoxColumn.HeaderText = "Pregnancies";
+            this.pregnanciesDataGridViewTextBoxColumn.Name = "pregnanciesDataGridViewTextBoxColumn";
+            // 
+            // alcoholDataGridViewTextBoxColumn
+            // 
+            this.alcoholDataGridViewTextBoxColumn.DataPropertyName = "Alcohol";
+            this.alcoholDataGridViewTextBoxColumn.HeaderText = "Alcohol";
+            this.alcoholDataGridViewTextBoxColumn.Name = "alcoholDataGridViewTextBoxColumn";
+            // 
             // genMedBindingSource
             // 
             this.genMedBindingSource.DataMember = "GenMed";
@@ -433,6 +535,7 @@ namespace Final_Project
             // Gen_Hist_Tb
             // 
             this.Gen_Hist_Tb.AllowDrop = true;
+            this.Gen_Hist_Tb.Controls.Add(this.GenMedSave);
             this.Gen_Hist_Tb.Controls.Add(this.label1);
             this.Gen_Hist_Tb.Controls.Add(this.pictureBox1);
             this.Gen_Hist_Tb.Controls.Add(this.CommentsLbl);
@@ -471,7 +574,6 @@ namespace Final_Project
             this.Gen_Hist_Tb.Controls.Add(this.NameLbl2);
             this.Gen_Hist_Tb.Controls.Add(this.NameLbl1);
             this.Gen_Hist_Tb.Controls.Add(this.Patient_IdLbl);
-            this.Gen_Hist_Tb.Controls.Add(this.Save_Gen);
             this.Gen_Hist_Tb.Location = new System.Drawing.Point(4, 22);
             this.Gen_Hist_Tb.Name = "Gen_Hist_Tb";
             this.Gen_Hist_Tb.Padding = new System.Windows.Forms.Padding(3);
@@ -831,16 +933,6 @@ namespace Final_Project
             this.Patient_IdLbl.Text = "Null";
             this.Patient_IdLbl.Click += new System.EventHandler(this.Patient_IdLbl_Click);
             // 
-            // Save_Gen
-            // 
-            this.Save_Gen.Location = new System.Drawing.Point(70, 435);
-            this.Save_Gen.Name = "Save_Gen";
-            this.Save_Gen.Size = new System.Drawing.Size(75, 23);
-            this.Save_Gen.TabIndex = 7;
-            this.Save_Gen.Text = "Save";
-            this.Save_Gen.UseVisualStyleBackColor = true;
-            this.Save_Gen.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // tabAllergies
             // 
             this.tabAllergies.Controls.Add(this.label2);
@@ -999,17 +1091,25 @@ namespace Final_Project
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // saveAllToolStripMenuItem
+            // 
+            this.saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
+            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.saveAllToolStripMenuItem.Text = "Save All";
+            this.saveAllToolStripMenuItem.ToolTipText = "May Be Destructive!!!";
+            this.saveAllToolStripMenuItem.Click += new System.EventHandler(this.saveAllToolStripMenuItem_Click);
+            // 
             // reloadToolStripMenuItem
             // 
             this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
-            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.reloadToolStripMenuItem.Text = "Reload";
             this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -1025,115 +1125,15 @@ namespace Final_Project
             // 
             this.genMedTableAdapter.ClearBeforeFill = true;
             // 
-            // saveAllToolStripMenuItem
+            // GenMedSave
             // 
-            this.saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
-            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saveAllToolStripMenuItem.Text = "Save All";
-            this.saveAllToolStripMenuItem.ToolTipText = "May Be Destructive!!!";
-            this.saveAllToolStripMenuItem.Click += new System.EventHandler(this.saveAllToolStripMenuItem_Click);
-            // 
-            // iDDataGridViewTextBoxColumn2
-            // 
-            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
-            // 
-            // patientIDDataGridViewTextBoxColumn2
-            // 
-            this.patientIDDataGridViewTextBoxColumn2.DataPropertyName = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn2.HeaderText = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn2.Name = "patientIDDataGridViewTextBoxColumn2";
-            // 
-            // reasonForAdmissionReasonDataGridViewTextBoxColumn
-            // 
-            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.DataPropertyName = "Reason For Admission Reason";
-            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.HeaderText = "Reason For Admission Reason";
-            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.Name = "reasonForAdmissionReasonDataGridViewTextBoxColumn";
-            // 
-            // maritalStatusDataGridViewTextBoxColumn
-            // 
-            this.maritalStatusDataGridViewTextBoxColumn.DataPropertyName = "Marital Status";
-            this.maritalStatusDataGridViewTextBoxColumn.HeaderText = "Marital Status";
-            this.maritalStatusDataGridViewTextBoxColumn.Name = "maritalStatusDataGridViewTextBoxColumn";
-            // 
-            // heightDataGridViewTextBoxColumn
-            // 
-            this.heightDataGridViewTextBoxColumn.DataPropertyName = "Height";
-            this.heightDataGridViewTextBoxColumn.HeaderText = "Height";
-            this.heightDataGridViewTextBoxColumn.Name = "heightDataGridViewTextBoxColumn";
-            // 
-            // weightDataGridViewTextBoxColumn
-            // 
-            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
-            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
-            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
-            // 
-            // Smoker
-            // 
-            this.Smoker.DataPropertyName = "Smoker";
-            this.Smoker.HeaderText = "Smoker";
-            this.Smoker.Name = "Smoker";
-            // 
-            // bloodTypeDataGridViewTextBoxColumn
-            // 
-            this.bloodTypeDataGridViewTextBoxColumn.DataPropertyName = "Blood Type";
-            this.bloodTypeDataGridViewTextBoxColumn.HeaderText = "Blood Type";
-            this.bloodTypeDataGridViewTextBoxColumn.Name = "bloodTypeDataGridViewTextBoxColumn";
-            // 
-            // bloodPressureDataGridViewTextBoxColumn
-            // 
-            this.bloodPressureDataGridViewTextBoxColumn.DataPropertyName = "Blood Pressure";
-            this.bloodPressureDataGridViewTextBoxColumn.HeaderText = "Blood Pressure";
-            this.bloodPressureDataGridViewTextBoxColumn.Name = "bloodPressureDataGridViewTextBoxColumn";
-            // 
-            // tobaccoDataGridViewTextBoxColumn
-            // 
-            this.tobaccoDataGridViewTextBoxColumn.DataPropertyName = "Tobacco";
-            this.tobaccoDataGridViewTextBoxColumn.HeaderText = "Tobacco";
-            this.tobaccoDataGridViewTextBoxColumn.Name = "tobaccoDataGridViewTextBoxColumn";
-            // 
-            // heartRateDataGridViewTextBoxColumn
-            // 
-            this.heartRateDataGridViewTextBoxColumn.DataPropertyName = "Heart Rate";
-            this.heartRateDataGridViewTextBoxColumn.HeaderText = "Heart Rate";
-            this.heartRateDataGridViewTextBoxColumn.Name = "heartRateDataGridViewTextBoxColumn";
-            // 
-            // breathingDataGridViewTextBoxColumn
-            // 
-            this.breathingDataGridViewTextBoxColumn.DataPropertyName = "Breathing";
-            this.breathingDataGridViewTextBoxColumn.HeaderText = "Breathing";
-            this.breathingDataGridViewTextBoxColumn.Name = "breathingDataGridViewTextBoxColumn";
-            // 
-            // surgeryHistoryDataGridViewTextBoxColumn
-            // 
-            this.surgeryHistoryDataGridViewTextBoxColumn.DataPropertyName = "Surgery History";
-            this.surgeryHistoryDataGridViewTextBoxColumn.HeaderText = "Surgery History";
-            this.surgeryHistoryDataGridViewTextBoxColumn.Name = "surgeryHistoryDataGridViewTextBoxColumn";
-            // 
-            // behavioralHxDataGridViewTextBoxColumn
-            // 
-            this.behavioralHxDataGridViewTextBoxColumn.DataPropertyName = "BehavioralHx";
-            this.behavioralHxDataGridViewTextBoxColumn.HeaderText = "BehavioralHx";
-            this.behavioralHxDataGridViewTextBoxColumn.Name = "behavioralHxDataGridViewTextBoxColumn";
-            // 
-            // drugUseDataGridViewTextBoxColumn
-            // 
-            this.drugUseDataGridViewTextBoxColumn.DataPropertyName = "Drug Use";
-            this.drugUseDataGridViewTextBoxColumn.HeaderText = "Drug Use";
-            this.drugUseDataGridViewTextBoxColumn.Name = "drugUseDataGridViewTextBoxColumn";
-            // 
-            // pregnanciesDataGridViewTextBoxColumn
-            // 
-            this.pregnanciesDataGridViewTextBoxColumn.DataPropertyName = "Pregnancies";
-            this.pregnanciesDataGridViewTextBoxColumn.HeaderText = "Pregnancies";
-            this.pregnanciesDataGridViewTextBoxColumn.Name = "pregnanciesDataGridViewTextBoxColumn";
-            // 
-            // alcoholDataGridViewTextBoxColumn
-            // 
-            this.alcoholDataGridViewTextBoxColumn.DataPropertyName = "Alcohol";
-            this.alcoholDataGridViewTextBoxColumn.HeaderText = "Alcohol";
-            this.alcoholDataGridViewTextBoxColumn.Name = "alcoholDataGridViewTextBoxColumn";
+            this.GenMedSave.Location = new System.Drawing.Point(48, 432);
+            this.GenMedSave.Name = "GenMedSave";
+            this.GenMedSave.Size = new System.Drawing.Size(75, 23);
+            this.GenMedSave.TabIndex = 52;
+            this.GenMedSave.Text = "Save";
+            this.GenMedSave.UseVisualStyleBackColor = true;
+            this.GenMedSave.Click += new System.EventHandler(this.GenMedSave_Click);
             // 
             // Main_Page
             // 
@@ -1178,7 +1178,6 @@ namespace Final_Project
         private System.Windows.Forms.TabPage tabSelectAdd;
         private System.Windows.Forms.Button Select_Pt;
         private System.Windows.Forms.TabPage Gen_Hist_Tb;
-        private System.Windows.Forms.Button Save_Gen;
         private System.Windows.Forms.Label Patient_IdLbl;
         private System.Windows.Forms.TabPage tabAllergies;
         private System.Windows.Forms.ErrorProvider errorProvider1;
@@ -1285,6 +1284,7 @@ namespace Final_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn drugUseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pregnanciesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alcoholDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button GenMedSave;
     }
 }
 
