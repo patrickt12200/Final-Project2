@@ -50,7 +50,7 @@ namespace Final_Project
             var tab2 = tabAllergies;
             this.New_PatientTb.TabPages.Remove(Gen_Hist_Tb);
             this.New_PatientTb.TabPages.Remove(tabAllergies);
-            GenMedTable.Visible = true;
+            GenMedTable.Visible = false;
             AllergyTable.Visible = false;
 
             Gen_Hist_Tb.Visible = false;
@@ -107,6 +107,8 @@ namespace Final_Project
 
             //update label
             TimeLbl.Text = time;
+            TimeLbl2.Text = time;
+            TimeLbl3.Text = time;
         }
 
 
@@ -185,9 +187,9 @@ namespace Final_Project
                 AlcoholBox.Text = alcohol;
 
                 //Insert Data into Allergy Tab
-                MedsBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[2].Value));
-                FoodsBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[3].Value));
-                AllergenCommentBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[4].Value));
+                MedsBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[1].Value));
+                FoodsBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[2].Value));
+                AllergenCommentBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[3].Value));
 
 
             }
@@ -377,7 +379,7 @@ namespace Final_Project
 
                 //System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
                 int i = 0;
-                while ( i!= 20)
+                while ( i!= 30)
                 {
                     genMedTableAdapter.Update(medsDataSet.GenMed);
                     i += 1;
@@ -403,6 +405,22 @@ namespace Final_Project
 
             System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
             this.AllergyTable.Rows[RowIndex].Cells[1].Value = MedsBox.Text;
+            this.AllergyTable.Rows[RowIndex].Cells[2].Value = FoodsBox.Text;
+            this.AllergyTable.Rows[RowIndex].Cells[3].Value = AllergenCommentBox.Text;
+
+            //allergiesTableAdapter.Update(medsDataSet.Allergies);
+            //allergiesTableAdapter.Update(medsDataSet.Allergies);
+            //allergiesTableAdapter.Update(medsDataSet.Allergies);
+            //allergiesTableAdapter.Update(medsDataSet.Allergies);
+            //allergiesTableAdapter.Update(medsDataSet.Allergies);
+            //allergiesTableAdapter.Update(medsDataSet.Allergies);
+
+            int i = 0;
+            while (i != 30)
+            {
+                allergiesTableAdapter.Update(medsDataSet.Allergies);
+                i += 1;
+            }
 
         }
     }

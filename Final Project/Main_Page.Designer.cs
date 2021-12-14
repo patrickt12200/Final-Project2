@@ -80,7 +80,8 @@ namespace Final_Project
             this.ReportBtn = new System.Windows.Forms.Button();
             this.Select_Pt = new System.Windows.Forms.Button();
             this.Gen_Hist_Tb = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
+            this.GenMedSave = new System.Windows.Forms.Button();
+            this.TimeLbl2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CommentsLbl = new System.Windows.Forms.Label();
             this.SurgRichBox = new System.Windows.Forms.RichTextBox();
@@ -119,7 +120,8 @@ namespace Final_Project
             this.NameLbl1 = new System.Windows.Forms.Label();
             this.Patient_IdLbl = new System.Windows.Forms.Label();
             this.tabAllergies = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Allergy_Save = new System.Windows.Forms.Button();
+            this.TimeLbl3 = new System.Windows.Forms.Label();
             this.AllergenCommentBox = new System.Windows.Forms.RichTextBox();
             this.FoodsBox = new System.Windows.Forms.RichTextBox();
             this.MedsBox = new System.Windows.Forms.RichTextBox();
@@ -141,8 +143,6 @@ namespace Final_Project
             this.allergiesTableAdapter = new Final_Project.MedsDataSetTableAdapters.AllergiesTableAdapter();
             this.selectionTableAdapter = new Final_Project.MedsDataSetTableAdapters.SelectionTableAdapter();
             this.genMedTableAdapter = new Final_Project.MedsDataSetTableAdapters.GenMedTableAdapter();
-            this.GenMedSave = new System.Windows.Forms.Button();
-            this.Allergy_Save = new System.Windows.Forms.Button();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
@@ -447,9 +447,9 @@ namespace Final_Project
             this.commentsDataGridViewTextBoxColumn,
             this.patientIdDataGridViewTextBoxColumn});
             this.AllergyTable.DataSource = this.allergiesBindingSource;
-            this.AllergyTable.Location = new System.Drawing.Point(598, 105);
+            this.AllergyTable.Location = new System.Drawing.Point(351, 6);
             this.AllergyTable.Name = "AllergyTable";
-            this.AllergyTable.Size = new System.Drawing.Size(295, 150);
+            this.AllergyTable.Size = new System.Drawing.Size(542, 150);
             this.AllergyTable.TabIndex = 53;
             // 
             // iDDataGridViewTextBoxColumn
@@ -537,7 +537,7 @@ namespace Final_Project
             // 
             this.Gen_Hist_Tb.AllowDrop = true;
             this.Gen_Hist_Tb.Controls.Add(this.GenMedSave);
-            this.Gen_Hist_Tb.Controls.Add(this.label1);
+            this.Gen_Hist_Tb.Controls.Add(this.TimeLbl2);
             this.Gen_Hist_Tb.Controls.Add(this.pictureBox1);
             this.Gen_Hist_Tb.Controls.Add(this.CommentsLbl);
             this.Gen_Hist_Tb.Controls.Add(this.SurgRichBox);
@@ -584,15 +584,25 @@ namespace Final_Project
             this.Gen_Hist_Tb.UseVisualStyleBackColor = true;
             this.Gen_Hist_Tb.Click += new System.EventHandler(this.Gen_Hist_Tb_Click);
             // 
-            // label1
+            // GenMedSave
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(521, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 61);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "00:00:00";
+            this.GenMedSave.Location = new System.Drawing.Point(48, 432);
+            this.GenMedSave.Name = "GenMedSave";
+            this.GenMedSave.Size = new System.Drawing.Size(75, 23);
+            this.GenMedSave.TabIndex = 52;
+            this.GenMedSave.Text = "Save";
+            this.GenMedSave.UseVisualStyleBackColor = true;
+            this.GenMedSave.Click += new System.EventHandler(this.GenMedSave_Click);
+            // 
+            // TimeLbl2
+            // 
+            this.TimeLbl2.AutoSize = true;
+            this.TimeLbl2.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeLbl2.Location = new System.Drawing.Point(521, 3);
+            this.TimeLbl2.Name = "TimeLbl2";
+            this.TimeLbl2.Size = new System.Drawing.Size(221, 61);
+            this.TimeLbl2.TabIndex = 51;
+            this.TimeLbl2.Text = "00:00:00";
             // 
             // pictureBox1
             // 
@@ -937,7 +947,7 @@ namespace Final_Project
             // tabAllergies
             // 
             this.tabAllergies.Controls.Add(this.Allergy_Save);
-            this.tabAllergies.Controls.Add(this.label2);
+            this.tabAllergies.Controls.Add(this.TimeLbl3);
             this.tabAllergies.Controls.Add(this.AllergenCommentBox);
             this.tabAllergies.Controls.Add(this.FoodsBox);
             this.tabAllergies.Controls.Add(this.MedsBox);
@@ -955,15 +965,25 @@ namespace Final_Project
             this.tabAllergies.Text = "Allergies";
             this.tabAllergies.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // Allergy_Save
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(521, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 61);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "00:00:00";
+            this.Allergy_Save.Location = new System.Drawing.Point(728, 167);
+            this.Allergy_Save.Name = "Allergy_Save";
+            this.Allergy_Save.Size = new System.Drawing.Size(75, 23);
+            this.Allergy_Save.TabIndex = 55;
+            this.Allergy_Save.Text = "Save";
+            this.Allergy_Save.UseVisualStyleBackColor = true;
+            this.Allergy_Save.Click += new System.EventHandler(this.Allergy_Save_Click);
+            // 
+            // TimeLbl3
+            // 
+            this.TimeLbl3.AutoSize = true;
+            this.TimeLbl3.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeLbl3.Location = new System.Drawing.Point(521, 3);
+            this.TimeLbl3.Name = "TimeLbl3";
+            this.TimeLbl3.Size = new System.Drawing.Size(221, 61);
+            this.TimeLbl3.TabIndex = 54;
+            this.TimeLbl3.Text = "00:00:00";
             // 
             // AllergenCommentBox
             // 
@@ -1127,26 +1147,6 @@ namespace Final_Project
             // 
             this.genMedTableAdapter.ClearBeforeFill = true;
             // 
-            // GenMedSave
-            // 
-            this.GenMedSave.Location = new System.Drawing.Point(48, 432);
-            this.GenMedSave.Name = "GenMedSave";
-            this.GenMedSave.Size = new System.Drawing.Size(75, 23);
-            this.GenMedSave.TabIndex = 52;
-            this.GenMedSave.Text = "Save";
-            this.GenMedSave.UseVisualStyleBackColor = true;
-            this.GenMedSave.Click += new System.EventHandler(this.GenMedSave_Click);
-            // 
-            // Allergy_Save
-            // 
-            this.Allergy_Save.Location = new System.Drawing.Point(728, 167);
-            this.Allergy_Save.Name = "Allergy_Save";
-            this.Allergy_Save.Size = new System.Drawing.Size(75, 23);
-            this.Allergy_Save.TabIndex = 55;
-            this.Allergy_Save.Text = "Save";
-            this.Allergy_Save.UseVisualStyleBackColor = true;
-            this.Allergy_Save.Click += new System.EventHandler(this.Allergy_Save_Click);
-            // 
             // Main_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1245,8 +1245,8 @@ namespace Final_Project
         private System.Windows.Forms.Label AllergCommentsLbl;
         private System.Windows.Forms.Label FoodsLbl2;
         private System.Windows.Forms.Label TimeLbl;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label TimeLbl2;
+        private System.Windows.Forms.Label TimeLbl3;
         private System.Windows.Forms.DataGridView GenMedTable;
         private System.Windows.Forms.DataGridView AllergyTable;
         private System.Windows.Forms.Button Main_save;
