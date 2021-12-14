@@ -191,6 +191,11 @@ namespace Final_Project
                 FoodsBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[2].Value));
                 AllergenCommentBox.Text = (Convert.ToString(AllergyTable.Rows[RowIndex].Cells[3].Value));
 
+                if(GenMedTable.Rows[RowIndex].Cells[2].Value == null)
+                {
+                    GenMedTable.Rows.Add(RowIndex);
+                }
+
 
             }
             catch(Exception error)
