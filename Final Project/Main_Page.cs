@@ -314,6 +314,7 @@ namespace Final_Project
             try
             {
                 this.selectionTableAdapter.Update(this.medsDataSet.Selection);
+                //this.genMedTableAdapter.Update(this.medsDataSet.GenMed);
 
             }
             catch(Exception err)
@@ -374,8 +375,18 @@ namespace Final_Project
                 GenMedTable.Rows[RowIndex].Cells[16].Value = AlcoholBox.Text;
 
 
+                //System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
+                int i = 0;
+                while ( i!= 20)
+                {
+                    genMedTableAdapter.Update(medsDataSet.GenMed);
+                    i += 1;
+                }
+                
+       
 
-                this.genMedTableAdapter.Update(this.medsDataSet.GenMed);
+
+
 
             }
 
@@ -384,6 +395,15 @@ namespace Final_Project
                 MessageBox.Show("Update failed");
                 MessageBox.Show(Convert.ToString(error.Message));
             }
+        }
+
+        private void Allergy_Save_Click(object sender, EventArgs e)
+        {
+            int RowIndex = Select_box.CurrentCell.RowIndex;
+
+            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
+            this.AllergyTable.Rows[RowIndex].Cells[1].Value = MedsBox.Text;
+
         }
     }
 }

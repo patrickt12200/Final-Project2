@@ -142,6 +142,7 @@ namespace Final_Project
             this.selectionTableAdapter = new Final_Project.MedsDataSetTableAdapters.SelectionTableAdapter();
             this.genMedTableAdapter = new Final_Project.MedsDataSetTableAdapters.GenMedTableAdapter();
             this.GenMedSave = new System.Windows.Forms.Button();
+            this.Allergy_Save = new System.Windows.Forms.Button();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
@@ -325,7 +326,7 @@ namespace Final_Project
             this.GenMedTable.DataSource = this.genMedBindingSource;
             this.GenMedTable.Location = new System.Drawing.Point(14, 93);
             this.GenMedTable.Name = "GenMedTable";
-            this.GenMedTable.Size = new System.Drawing.Size(350, 196);
+            this.GenMedTable.Size = new System.Drawing.Size(578, 196);
             this.GenMedTable.TabIndex = 52;
             // 
             // iDDataGridViewTextBoxColumn2
@@ -935,6 +936,7 @@ namespace Final_Project
             // 
             // tabAllergies
             // 
+            this.tabAllergies.Controls.Add(this.Allergy_Save);
             this.tabAllergies.Controls.Add(this.label2);
             this.tabAllergies.Controls.Add(this.AllergenCommentBox);
             this.tabAllergies.Controls.Add(this.FoodsBox);
@@ -1135,6 +1137,16 @@ namespace Final_Project
             this.GenMedSave.UseVisualStyleBackColor = true;
             this.GenMedSave.Click += new System.EventHandler(this.GenMedSave_Click);
             // 
+            // Allergy_Save
+            // 
+            this.Allergy_Save.Location = new System.Drawing.Point(728, 167);
+            this.Allergy_Save.Name = "Allergy_Save";
+            this.Allergy_Save.Size = new System.Drawing.Size(75, 23);
+            this.Allergy_Save.TabIndex = 55;
+            this.Allergy_Save.Text = "Save";
+            this.Allergy_Save.UseVisualStyleBackColor = true;
+            this.Allergy_Save.Click += new System.EventHandler(this.Allergy_Save_Click);
+            // 
             // Main_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1285,6 +1297,7 @@ namespace Final_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn pregnanciesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alcoholDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button GenMedSave;
+        private System.Windows.Forms.Button Allergy_Save;
     }
 }
 
