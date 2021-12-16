@@ -36,6 +36,17 @@ namespace Final_Project
             this.Search = new System.Windows.Forms.Button();
             this.ID_Search = new System.Windows.Forms.TextBox();
             this.Select_box = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.socialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.streetAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zIPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.field1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.selectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medsDataSet = new Final_Project.MedsDataSet();
             this.Main_save = new System.Windows.Forms.Button();
@@ -134,17 +145,6 @@ namespace Final_Project
             this.allergiesTableAdapter = new Final_Project.MedsDataSetTableAdapters.AllergiesTableAdapter();
             this.selectionTableAdapter = new Final_Project.MedsDataSetTableAdapters.SelectionTableAdapter();
             this.genMedTableAdapter = new Final_Project.MedsDataSetTableAdapters.GenMedTableAdapter();
-            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.socialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.streetAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zIPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.field1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
@@ -165,6 +165,7 @@ namespace Final_Project
             // 
             // New_PatientTb
             // 
+            this.New_PatientTb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.New_PatientTb.Controls.Add(this.tabSelectAdd);
             this.New_PatientTb.Controls.Add(this.Gen_Hist_Tb);
             this.New_PatientTb.Controls.Add(this.tabAllergies);
@@ -199,6 +200,7 @@ namespace Final_Project
             // 
             // Search
             // 
+            this.Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Search.Location = new System.Drawing.Point(783, 443);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(89, 23);
@@ -209,6 +211,7 @@ namespace Final_Project
             // 
             // ID_Search
             // 
+            this.ID_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ID_Search.Location = new System.Drawing.Point(667, 445);
             this.ID_Search.Name = "ID_Search";
             this.ID_Search.Size = new System.Drawing.Size(100, 20);
@@ -216,6 +219,9 @@ namespace Final_Project
             // 
             // Select_box
             // 
+            this.Select_box.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Select_box.AutoGenerateColumns = false;
             this.Select_box.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.Select_box.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -237,6 +243,83 @@ namespace Final_Project
             this.Select_box.Size = new System.Drawing.Size(887, 205);
             this.Select_box.TabIndex = 55;
             // 
+            // iDDataGridViewTextBoxColumn1
+            // 
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.MinimumWidth = 2;
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn1.Visible = false;
+            this.iDDataGridViewTextBoxColumn1.Width = 2;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // patientIDDataGridViewTextBoxColumn1
+            // 
+            this.patientIDDataGridViewTextBoxColumn1.DataPropertyName = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn1.HeaderText = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn1.Name = "patientIDDataGridViewTextBoxColumn1";
+            this.patientIDDataGridViewTextBoxColumn1.Width = 65;
+            // 
+            // dateOfBirthDataGridViewTextBoxColumn
+            // 
+            this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "Date Of Birth";
+            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "Date Of Birth";
+            this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
+            this.dateOfBirthDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // socialDataGridViewTextBoxColumn
+            // 
+            this.socialDataGridViewTextBoxColumn.DataPropertyName = "Social";
+            this.socialDataGridViewTextBoxColumn.HeaderText = "Social";
+            this.socialDataGridViewTextBoxColumn.Name = "socialDataGridViewTextBoxColumn";
+            // 
+            // streetAddressDataGridViewTextBoxColumn
+            // 
+            this.streetAddressDataGridViewTextBoxColumn.DataPropertyName = "Street Address";
+            this.streetAddressDataGridViewTextBoxColumn.HeaderText = "Street Address";
+            this.streetAddressDataGridViewTextBoxColumn.Name = "streetAddressDataGridViewTextBoxColumn";
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            // 
+            // zIPDataGridViewTextBoxColumn
+            // 
+            this.zIPDataGridViewTextBoxColumn.DataPropertyName = "ZIP";
+            this.zIPDataGridViewTextBoxColumn.HeaderText = "ZIP";
+            this.zIPDataGridViewTextBoxColumn.Name = "zIPDataGridViewTextBoxColumn";
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // field1DataGridViewTextBoxColumn
+            // 
+            this.field1DataGridViewTextBoxColumn.DataPropertyName = "Field1";
+            this.field1DataGridViewTextBoxColumn.HeaderText = "Field1";
+            this.field1DataGridViewTextBoxColumn.MinimumWidth = 2;
+            this.field1DataGridViewTextBoxColumn.Name = "field1DataGridViewTextBoxColumn";
+            this.field1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.field1DataGridViewTextBoxColumn.Visible = false;
+            this.field1DataGridViewTextBoxColumn.Width = 2;
+            // 
             // selectionBindingSource
             // 
             this.selectionBindingSource.DataMember = "Selection";
@@ -249,6 +332,7 @@ namespace Final_Project
             // 
             // Main_save
             // 
+            this.Main_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Main_save.Location = new System.Drawing.Point(208, 448);
             this.Main_save.Name = "Main_save";
             this.Main_save.Size = new System.Drawing.Size(75, 23);
@@ -445,6 +529,9 @@ namespace Final_Project
             // 
             // TimeLbl
             // 
+            this.TimeLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TimeLbl.AutoSize = true;
             this.TimeLbl.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLbl.Location = new System.Drawing.Point(3, 3);
@@ -455,6 +542,9 @@ namespace Final_Project
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Location = new System.Drawing.Point(14, 67);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(202, 20);
@@ -462,6 +552,7 @@ namespace Final_Project
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(748, 3);
             this.pictureBox3.Name = "pictureBox3";
@@ -472,6 +563,7 @@ namespace Final_Project
             // 
             // ReportBtn
             // 
+            this.ReportBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ReportBtn.Location = new System.Drawing.Point(99, 448);
             this.ReportBtn.Name = "ReportBtn";
             this.ReportBtn.Size = new System.Drawing.Size(99, 23);
@@ -481,6 +573,7 @@ namespace Final_Project
             // 
             // Select_Pt
             // 
+            this.Select_Pt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Select_Pt.Location = new System.Drawing.Point(6, 448);
             this.Select_Pt.Name = "Select_Pt";
             this.Select_Pt.Size = new System.Drawing.Size(75, 23);
@@ -542,6 +635,7 @@ namespace Final_Project
             // 
             // GenMedSave
             // 
+            this.GenMedSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GenMedSave.Location = new System.Drawing.Point(48, 432);
             this.GenMedSave.Name = "GenMedSave";
             this.GenMedSave.Size = new System.Drawing.Size(75, 23);
@@ -552,6 +646,7 @@ namespace Final_Project
             // 
             // TimeLbl2
             // 
+            this.TimeLbl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.TimeLbl2.AutoSize = true;
             this.TimeLbl2.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLbl2.Location = new System.Drawing.Point(521, 3);
@@ -562,6 +657,7 @@ namespace Final_Project
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(748, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -572,6 +668,7 @@ namespace Final_Project
             // 
             // CommentsLbl
             // 
+            this.CommentsLbl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.CommentsLbl.AutoSize = true;
             this.CommentsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CommentsLbl.Location = new System.Drawing.Point(725, 435);
@@ -582,6 +679,7 @@ namespace Final_Project
             // 
             // SurgRichBox
             // 
+            this.SurgRichBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SurgRichBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.SurgRichBox.HideSelection = false;
             this.SurgRichBox.Location = new System.Drawing.Point(627, 93);
@@ -593,6 +691,7 @@ namespace Final_Project
             // 
             // AdmissionRichBox
             // 
+            this.AdmissionRichBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.AdmissionRichBox.Location = new System.Drawing.Point(155, 93);
             this.AdmissionRichBox.Name = "AdmissionRichBox";
             this.AdmissionRichBox.ReadOnly = true;
@@ -602,6 +701,7 @@ namespace Final_Project
             // 
             // AlcoholLbl
             // 
+            this.AlcoholLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AlcoholLbl.AutoSize = true;
             this.AlcoholLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AlcoholLbl.Location = new System.Drawing.Point(536, 308);
@@ -612,6 +712,7 @@ namespace Final_Project
             // 
             // PregLbl
             // 
+            this.PregLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.PregLbl.AutoSize = true;
             this.PregLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PregLbl.Location = new System.Drawing.Point(513, 256);
@@ -622,6 +723,7 @@ namespace Final_Project
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(528, 215);
@@ -632,6 +734,7 @@ namespace Final_Project
             // 
             // BehaveLbl
             // 
+            this.BehaveLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BehaveLbl.AutoSize = true;
             this.BehaveLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BehaveLbl.Location = new System.Drawing.Point(536, 166);
@@ -642,6 +745,7 @@ namespace Final_Project
             // 
             // SurgLbl
             // 
+            this.SurgLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SurgLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SurgLbl.Location = new System.Drawing.Point(536, 93);
             this.SurgLbl.Name = "SurgLbl";
@@ -651,6 +755,7 @@ namespace Final_Project
             // 
             // AlcoholBox
             // 
+            this.AlcoholBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AlcoholBox.Location = new System.Drawing.Point(627, 308);
             this.AlcoholBox.Name = "AlcoholBox";
             this.AlcoholBox.ReadOnly = true;
@@ -659,6 +764,7 @@ namespace Final_Project
             // 
             // PregBox
             // 
+            this.PregBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.PregBox.Location = new System.Drawing.Point(627, 256);
             this.PregBox.Name = "PregBox";
             this.PregBox.ReadOnly = true;
@@ -667,6 +773,7 @@ namespace Final_Project
             // 
             // DrugBox
             // 
+            this.DrugBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.DrugBox.Location = new System.Drawing.Point(627, 215);
             this.DrugBox.Name = "DrugBox";
             this.DrugBox.ReadOnly = true;
@@ -675,6 +782,7 @@ namespace Final_Project
             // 
             // BehaveBox
             // 
+            this.BehaveBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BehaveBox.Location = new System.Drawing.Point(627, 166);
             this.BehaveBox.Name = "BehaveBox";
             this.BehaveBox.ReadOnly = true;
@@ -683,6 +791,7 @@ namespace Final_Project
             // 
             // BreathLbl
             // 
+            this.BreathLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BreathLbl.AutoSize = true;
             this.BreathLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BreathLbl.Location = new System.Drawing.Point(305, 310);
@@ -693,6 +802,7 @@ namespace Final_Project
             // 
             // RateLbl
             // 
+            this.RateLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RateLbl.AutoSize = true;
             this.RateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RateLbl.Location = new System.Drawing.Point(305, 258);
@@ -703,6 +813,7 @@ namespace Final_Project
             // 
             // TobLbl
             // 
+            this.TobLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TobLbl.AutoSize = true;
             this.TobLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TobLbl.Location = new System.Drawing.Point(305, 213);
@@ -713,6 +824,7 @@ namespace Final_Project
             // 
             // BloodPresLbl
             // 
+            this.BloodPresLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BloodPresLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BloodPresLbl.Location = new System.Drawing.Point(305, 149);
             this.BloodPresLbl.Name = "BloodPresLbl";
@@ -722,6 +834,7 @@ namespace Final_Project
             // 
             // BloodLbl
             // 
+            this.BloodLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BloodLbl.AutoSize = true;
             this.BloodLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BloodLbl.Location = new System.Drawing.Point(303, 119);
@@ -732,6 +845,7 @@ namespace Final_Project
             // 
             // SmokeLbl
             // 
+            this.SmokeLbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.SmokeLbl.AutoSize = true;
             this.SmokeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SmokeLbl.Location = new System.Drawing.Point(79, 312);
@@ -742,6 +856,7 @@ namespace Final_Project
             // 
             // WeightLbl
             // 
+            this.WeightLbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.WeightLbl.AutoSize = true;
             this.WeightLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WeightLbl.Location = new System.Drawing.Point(80, 256);
@@ -752,6 +867,7 @@ namespace Final_Project
             // 
             // HeightLbl
             // 
+            this.HeightLbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.HeightLbl.AutoSize = true;
             this.HeightLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeightLbl.Location = new System.Drawing.Point(83, 215);
@@ -762,6 +878,7 @@ namespace Final_Project
             // 
             // MaritalLbl
             // 
+            this.MaritalLbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.MaritalLbl.AutoSize = true;
             this.MaritalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaritalLbl.Location = new System.Drawing.Point(32, 166);
@@ -772,6 +889,7 @@ namespace Final_Project
             // 
             // AdmitLbl
             // 
+            this.AdmitLbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.AdmitLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdmitLbl.Location = new System.Drawing.Point(32, 93);
             this.AdmitLbl.Name = "AdmitLbl";
@@ -781,6 +899,7 @@ namespace Final_Project
             // 
             // BreathBox
             // 
+            this.BreathBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BreathBox.Location = new System.Drawing.Point(407, 312);
             this.BreathBox.Name = "BreathBox";
             this.BreathBox.ReadOnly = true;
@@ -789,6 +908,7 @@ namespace Final_Project
             // 
             // HeartBox
             // 
+            this.HeartBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.HeartBox.Location = new System.Drawing.Point(407, 258);
             this.HeartBox.Name = "HeartBox";
             this.HeartBox.ReadOnly = true;
@@ -797,6 +917,7 @@ namespace Final_Project
             // 
             // TobaccoBox
             // 
+            this.TobaccoBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TobaccoBox.Location = new System.Drawing.Point(407, 215);
             this.TobaccoBox.Name = "TobaccoBox";
             this.TobaccoBox.ReadOnly = true;
@@ -805,6 +926,7 @@ namespace Final_Project
             // 
             // PressBox
             // 
+            this.PressBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PressBox.Location = new System.Drawing.Point(407, 166);
             this.PressBox.Name = "PressBox";
             this.PressBox.ReadOnly = true;
@@ -813,6 +935,7 @@ namespace Final_Project
             // 
             // BloodBox
             // 
+            this.BloodBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BloodBox.Location = new System.Drawing.Point(407, 121);
             this.BloodBox.Name = "BloodBox";
             this.BloodBox.ReadOnly = true;
@@ -821,6 +944,7 @@ namespace Final_Project
             // 
             // CommentsBox
             // 
+            this.CommentsBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.CommentsBox.Location = new System.Drawing.Point(324, 362);
             this.CommentsBox.Name = "CommentsBox";
             this.CommentsBox.Size = new System.Drawing.Size(395, 96);
@@ -829,6 +953,7 @@ namespace Final_Project
             // 
             // SmokerBox
             // 
+            this.SmokerBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.SmokerBox.Location = new System.Drawing.Point(155, 312);
             this.SmokerBox.Name = "SmokerBox";
             this.SmokerBox.ReadOnly = true;
@@ -837,6 +962,7 @@ namespace Final_Project
             // 
             // WeightBox
             // 
+            this.WeightBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.WeightBox.Location = new System.Drawing.Point(155, 258);
             this.WeightBox.Name = "WeightBox";
             this.WeightBox.ReadOnly = true;
@@ -845,6 +971,7 @@ namespace Final_Project
             // 
             // HeightBox
             // 
+            this.HeightBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.HeightBox.Location = new System.Drawing.Point(155, 215);
             this.HeightBox.Name = "HeightBox";
             this.HeightBox.ReadOnly = true;
@@ -853,6 +980,7 @@ namespace Final_Project
             // 
             // MaritalBox
             // 
+            this.MaritalBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.MaritalBox.Location = new System.Drawing.Point(155, 166);
             this.MaritalBox.Name = "MaritalBox";
             this.MaritalBox.ReadOnly = true;
@@ -861,6 +989,7 @@ namespace Final_Project
             // 
             // ModifyBtn
             // 
+            this.ModifyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ModifyBtn.Location = new System.Drawing.Point(180, 435);
             this.ModifyBtn.Name = "ModifyBtn";
             this.ModifyBtn.Size = new System.Drawing.Size(75, 23);
@@ -923,6 +1052,7 @@ namespace Final_Project
             // 
             // Allergy_Save
             // 
+            this.Allergy_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Allergy_Save.Location = new System.Drawing.Point(728, 167);
             this.Allergy_Save.Name = "Allergy_Save";
             this.Allergy_Save.Size = new System.Drawing.Size(75, 23);
@@ -933,6 +1063,7 @@ namespace Final_Project
             // 
             // TimeLbl3
             // 
+            this.TimeLbl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TimeLbl3.AutoSize = true;
             this.TimeLbl3.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLbl3.Location = new System.Drawing.Point(521, 3);
@@ -943,6 +1074,7 @@ namespace Final_Project
             // 
             // AllergenCommentBox
             // 
+            this.AllergenCommentBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.AllergenCommentBox.Location = new System.Drawing.Point(59, 357);
             this.AllergenCommentBox.Name = "AllergenCommentBox";
             this.AllergenCommentBox.Size = new System.Drawing.Size(648, 108);
@@ -951,6 +1083,7 @@ namespace Final_Project
             // 
             // FoodsBox
             // 
+            this.FoodsBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FoodsBox.Location = new System.Drawing.Point(442, 167);
             this.FoodsBox.Name = "FoodsBox";
             this.FoodsBox.Size = new System.Drawing.Size(265, 173);
@@ -959,6 +1092,7 @@ namespace Final_Project
             // 
             // MedsBox
             // 
+            this.MedsBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.MedsBox.Location = new System.Drawing.Point(59, 167);
             this.MedsBox.Name = "MedsBox";
             this.MedsBox.Size = new System.Drawing.Size(265, 173);
@@ -967,6 +1101,7 @@ namespace Final_Project
             // 
             // AllergCommentsLbl
             // 
+            this.AllergCommentsLbl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.AllergCommentsLbl.AutoSize = true;
             this.AllergCommentsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AllergCommentsLbl.Location = new System.Drawing.Point(724, 445);
@@ -977,6 +1112,7 @@ namespace Final_Project
             // 
             // FoodsLbl2
             // 
+            this.FoodsLbl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FoodsLbl2.AutoSize = true;
             this.FoodsLbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FoodsLbl2.Location = new System.Drawing.Point(438, 144);
@@ -987,6 +1123,7 @@ namespace Final_Project
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(748, 3);
             this.pictureBox2.Name = "pictureBox2";
@@ -997,6 +1134,7 @@ namespace Final_Project
             // 
             // Med2Lbl
             // 
+            this.Med2Lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Med2Lbl.AutoSize = true;
             this.Med2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Med2Lbl.Location = new System.Drawing.Point(55, 144);
@@ -1072,7 +1210,7 @@ namespace Final_Project
             // saveAllToolStripMenuItem
             // 
             this.saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
-            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.saveAllToolStripMenuItem.Text = "Save All";
             this.saveAllToolStripMenuItem.ToolTipText = "May Be Destructive!!!";
             this.saveAllToolStripMenuItem.Click += new System.EventHandler(this.saveAllToolStripMenuItem_Click);
@@ -1080,7 +1218,7 @@ namespace Final_Project
             // reloadToolStripMenuItem
             // 
             this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
-            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.reloadToolStripMenuItem.Text = "Reload Database";
             this.reloadToolStripMenuItem.ToolTipText = "Will refresh all datatables ";
             this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
@@ -1088,7 +1226,7 @@ namespace Final_Project
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -1104,94 +1242,19 @@ namespace Final_Project
             // 
             this.genMedTableAdapter.ClearBeforeFill = true;
             // 
-            // iDDataGridViewTextBoxColumn1
-            // 
-            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn1.MinimumWidth = 2;
-            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
-            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn1.Visible = false;
-            this.iDDataGridViewTextBoxColumn1.Width = 2;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // patientIDDataGridViewTextBoxColumn1
-            // 
-            this.patientIDDataGridViewTextBoxColumn1.DataPropertyName = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn1.HeaderText = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn1.Name = "patientIDDataGridViewTextBoxColumn1";
-            this.patientIDDataGridViewTextBoxColumn1.Width = 65;
-            // 
-            // dateOfBirthDataGridViewTextBoxColumn
-            // 
-            this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "Date Of Birth";
-            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "Date Of Birth";
-            this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
-            this.dateOfBirthDataGridViewTextBoxColumn.Width = 75;
-            // 
-            // socialDataGridViewTextBoxColumn
-            // 
-            this.socialDataGridViewTextBoxColumn.DataPropertyName = "Social";
-            this.socialDataGridViewTextBoxColumn.HeaderText = "Social";
-            this.socialDataGridViewTextBoxColumn.Name = "socialDataGridViewTextBoxColumn";
-            // 
-            // streetAddressDataGridViewTextBoxColumn
-            // 
-            this.streetAddressDataGridViewTextBoxColumn.DataPropertyName = "Street Address";
-            this.streetAddressDataGridViewTextBoxColumn.HeaderText = "Street Address";
-            this.streetAddressDataGridViewTextBoxColumn.Name = "streetAddressDataGridViewTextBoxColumn";
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            // 
-            // zIPDataGridViewTextBoxColumn
-            // 
-            this.zIPDataGridViewTextBoxColumn.DataPropertyName = "ZIP";
-            this.zIPDataGridViewTextBoxColumn.HeaderText = "ZIP";
-            this.zIPDataGridViewTextBoxColumn.Name = "zIPDataGridViewTextBoxColumn";
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            this.cityDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // field1DataGridViewTextBoxColumn
-            // 
-            this.field1DataGridViewTextBoxColumn.DataPropertyName = "Field1";
-            this.field1DataGridViewTextBoxColumn.HeaderText = "Field1";
-            this.field1DataGridViewTextBoxColumn.MinimumWidth = 2;
-            this.field1DataGridViewTextBoxColumn.Name = "field1DataGridViewTextBoxColumn";
-            this.field1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.field1DataGridViewTextBoxColumn.Visible = false;
-            this.field1DataGridViewTextBoxColumn.Width = 2;
-            // 
             // Main_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1316, 798);
             this.Controls.Add(this.New_PatientTb);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main_Page";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.New_PatientTb.ResumeLayout(false);

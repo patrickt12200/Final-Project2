@@ -120,12 +120,6 @@
   <metadata name="selectionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>6, 57</value>
   </metadata>
-  <metadata name="selectionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>6, 57</value>
-  </metadata>
-  <metadata name="medsDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1184, 57</value>
-  </metadata>
   <metadata name="medsDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1184, 57</value>
   </metadata>
@@ -134,15 +128,6 @@
   </metadata>
   <metadata name="genMedBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>199, 59</value>
-  </metadata>
-  <metadata name="Smoker.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="genMedBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>199, 59</value>
-  </metadata>
-  <metadata name="allergiesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>352, 62</value>
   </metadata>
   <metadata name="allergiesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>352, 62</value>
@@ -1153,6 +1138,47 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1069, 57</value>
   </metadata>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIBAAAAEAIABoCAAAFgAAACgAAAAgAAAAIAAAAAEAIAAAAAAAAAgAACMuAAAjLgAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//
+        /wCqzeEAxd7rDaW/z0Cyzt8atNDhANTr9gLy+/4F////Af///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AADu8u4Akqq5AKW/zydmdH+wTldg85Wsu3XJ6PkfrcfXQX2RnrCNo7Ja////Acfj9AAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAMfh7wAAAAAAeImWjCstMv8gHyP/VWBq8X2Rn9xtfYnaZHJ+/258iNusxtcgq8fXAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAvNnrAN3//w9bZ3HFHx8j/x8eIv8eHSH/TFVe/1Rfaf9qeIL/aHJ795u1
+        xXC20eAQob7QAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPb//wCEmqkAmbHASj5ES/QdHCD/Hh0h/y4wNv9OWGH/Wmdy/2t8
+        iP9kcn3/Ympy+3qKlqPB4fISrsvbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAudXlANr8/w9odoG0JCQp/x8eIv8eHSD/OT9G/1ll
+        b/+cuMn/iaGx/2Bsdv+1vcP/oKSo/n+RnoIAAAAAwNrpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMfi7wD///8Ff5KffTU4P/seHSD/Hx4i/x4d
+        If8lJSr/SVFa/63M4P+w0OT/nrnL/8PR2v+mqaz/dIWRmv///wK/2ekAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAx9znAD1aiwD///8AttLiFXeIlII5PkX0HBoe/x0c
+        IP8kJCn/JSYq/x4dIf8iIib/cIKP/6rJ3P91gIj/iIiL/4CLlN6lwNEsnLXFAOLo7wAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADF3OgAKlFvALDN31Z6jZvORU1V+zc7
+        Qv9DSlL/Ulxm/0xVXv8qKzD/JCUp/yQkKP84O0D/k6e1/6CkqP9obXL5hZupagAAAADS7/wAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMPb6QCryt0AttXoMoyj
+        stZjcn3/YG55/1Rgav88Qkn/LzI4/0JJUf9IUVn/cn2F/01NUf8yNDj/Kyou/05YYd3B3/EeuNTlAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM3o
+        9wBSX2oAlq28QFVfad0xNDv/PkVM/1djbf9hcHv/OkBH/yorMP9NVFv/KCgt/xsaHf8vMTf/d4mVlP//
+        /wS92ekAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAANLr+AD///8Crcnbf4WbqvlicXz/Q0tT/yosMf8zNz7/S1Ve/zI2PP8iIif/OkBG+nOE
+        kKa72OgZqMTVAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAw9vqALra7ADD4vUNlKu6UnCAjKFvgI3xaHiE/15rdv5MVV7yYm962HGC
+        j8GMobBizer4DbbV5gD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADK5/cA0e39CrbU5lCUrb1piJ2rXpu0
+        wzvL6PYZ2fP/DgAA7QD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP///////Ef///gD///4A///8AH///AA///gAP//wAB//4AA//8AAf//AAH//4AB//+A
+        A///wAf///Af//////8=
+</value>
+  </data>
   <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1262, 18</value>
   </metadata>
