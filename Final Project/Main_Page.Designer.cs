@@ -143,6 +143,8 @@ namespace Final_Project
             this.allergiesTableAdapter = new Final_Project.MedsDataSetTableAdapters.AllergiesTableAdapter();
             this.selectionTableAdapter = new Final_Project.MedsDataSetTableAdapters.SelectionTableAdapter();
             this.genMedTableAdapter = new Final_Project.MedsDataSetTableAdapters.GenMedTableAdapter();
+            this.ID_Search = new System.Windows.Forms.TextBox();
+            this.Search = new System.Windows.Forms.Button();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
@@ -175,6 +177,8 @@ namespace Final_Project
             // tabSelectAdd
             // 
             this.tabSelectAdd.AllowDrop = true;
+            this.tabSelectAdd.Controls.Add(this.Search);
+            this.tabSelectAdd.Controls.Add(this.ID_Search);
             this.tabSelectAdd.Controls.Add(this.Select_box);
             this.tabSelectAdd.Controls.Add(this.Main_save);
             this.tabSelectAdd.Controls.Add(this.GenMedTable);
@@ -447,7 +451,7 @@ namespace Final_Project
             this.commentsDataGridViewTextBoxColumn,
             this.patientIdDataGridViewTextBoxColumn});
             this.AllergyTable.DataSource = this.allergiesBindingSource;
-            this.AllergyTable.Location = new System.Drawing.Point(351, 6);
+            this.AllergyTable.Location = new System.Drawing.Point(361, 93);
             this.AllergyTable.Name = "AllergyTable";
             this.AllergyTable.Size = new System.Drawing.Size(542, 150);
             this.AllergyTable.TabIndex = 53;
@@ -626,7 +630,7 @@ namespace Final_Project
             // 
             // SurgRichBox
             // 
-            this.SurgRichBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.SurgRichBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.SurgRichBox.HideSelection = false;
             this.SurgRichBox.Location = new System.Drawing.Point(627, 93);
             this.SurgRichBox.Name = "SurgRichBox";
@@ -1147,6 +1151,23 @@ namespace Final_Project
             // 
             this.genMedTableAdapter.ClearBeforeFill = true;
             // 
+            // ID_Search
+            // 
+            this.ID_Search.Location = new System.Drawing.Point(667, 445);
+            this.ID_Search.Name = "ID_Search";
+            this.ID_Search.Size = new System.Drawing.Size(100, 20);
+            this.ID_Search.TabIndex = 56;
+            // 
+            // Search
+            // 
+            this.Search.Location = new System.Drawing.Point(783, 443);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(89, 23);
+            this.Search.TabIndex = 57;
+            this.Search.Text = "Search by ID";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
+            // 
             // Main_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1298,6 +1319,8 @@ namespace Final_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn alcoholDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button GenMedSave;
         private System.Windows.Forms.Button Allergy_Save;
+        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.TextBox ID_Search;
     }
 }
 
