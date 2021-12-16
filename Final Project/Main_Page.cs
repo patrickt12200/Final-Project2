@@ -339,6 +339,11 @@ namespace Final_Project
             this.genMedTableAdapter.Fill(this.medsDataSet.GenMed);
             // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.
             this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
+            this.New_PatientTb.TabPages.Remove(Gen_Hist_Tb);
+            this.New_PatientTb.TabPages.Remove(tabAllergies);
+
+
+
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -348,13 +353,18 @@ namespace Final_Project
 
         private void saveAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            // TODO: This line of code loads data into the 'medsDataSet.GenMed' table. You can move, or remove it, as needed.
-            genMedTableAdapter.Update(medsDataSet.GenMed);
-            // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.
-            selectionTableAdapter.Update(medsDataSet.Selection);
-            // TODO: This line of code loads data into the 'medsDataSet.Allergies' table. You can move, or remove it, as needed.
-            allergiesTableAdapter.Update(medsDataSet.Allergies);
+            int i = 0;
+           while( i != 30)
+            {
+                genMedTableAdapter.Update(medsDataSet.GenMed);
+
+                selectionTableAdapter.Update(medsDataSet.Selection);
+
+                allergiesTableAdapter.Update(medsDataSet.Allergies);
+                i += 1;
+            } 
+           
+
         }
 
         private void GenMedSave_Click(object sender, EventArgs e)

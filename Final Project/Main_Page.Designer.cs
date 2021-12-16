@@ -280,7 +280,7 @@ namespace Final_Project
             this.pregnanciesDataGridViewTextBoxColumn,
             this.alcoholDataGridViewTextBoxColumn});
             this.GenMedTable.DataSource = this.genMedBindingSource;
-            this.GenMedTable.Location = new System.Drawing.Point(14, 93);
+            this.GenMedTable.Location = new System.Drawing.Point(3, 208);
             this.GenMedTable.Name = "GenMedTable";
             this.GenMedTable.Size = new System.Drawing.Size(578, 196);
             this.GenMedTable.TabIndex = 52;
@@ -403,7 +403,7 @@ namespace Final_Project
             this.commentsDataGridViewTextBoxColumn,
             this.patientIdDataGridViewTextBoxColumn});
             this.AllergyTable.DataSource = this.allergiesBindingSource;
-            this.AllergyTable.Location = new System.Drawing.Point(361, 93);
+            this.AllergyTable.Location = new System.Drawing.Point(354, 208);
             this.AllergyTable.Name = "AllergyTable";
             this.AllergyTable.Size = new System.Drawing.Size(542, 150);
             this.AllergyTable.TabIndex = 53;
@@ -1080,8 +1080,9 @@ namespace Final_Project
             // reloadToolStripMenuItem
             // 
             this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
-            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.reloadToolStripMenuItem.Text = "Reload";
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reloadToolStripMenuItem.Text = "Reload Database";
+            this.reloadToolStripMenuItem.ToolTipText = "Will refresh all datatables ";
             this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
