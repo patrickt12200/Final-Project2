@@ -428,5 +428,69 @@ namespace Final_Project
             }
 
         }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            string IdENT = ID_Search.Text;
+
+            bool checkedPassed1 = false;
+            bool checkedPassed2 = false;
+            string Existing_Patient = "";
+
+            //MessageBox.Show(Convert.ToString(IdENT));
+
+            if (Convert.ToInt32(IdENT) <= (Select_box.Rows.Count -2))
+            {
+                if (checkedPassed1 != true)
+                {
+                    for (int i = 0; i <= Select_box.Rows.Count;)
+                    {
+
+                        //MessageBox.Show(Select_box.Rows[i].Cells[j].Value.ToString());
+                        try
+                        {
+                            if (IdENT == Select_box.Rows[i].Cells[3].Value.ToString())
+                            {
+                                Existing_Patient += Select_box.Rows[i].Cells[3].Value.ToString();
+                                MessageBox.Show("Found Patient:" + Existing_Patient);
+                                Select_box.ClearSelection();
+                                Select_box.Rows[i].Selected = true;
+
+                                checkedPassed1 = true;
+                                break;
+                            }
+                        }
+                        catch (Exception err)
+                        {
+                            MessageBox.Show("ID: " + IdENT + " Does not exist");
+                            //MessageBox.Show(Convert.ToString(err.Message));
+                            break;
+                        }
+                        i++;
+
+                        //}
+                        //for (int i = 0; i < Select_box.Rows.Count; i++)
+                        //{
+                        //    for (int j = 0; i < Select_box.Columns.Count; j++)
+                        //    {
+                        //        if (Select_box.Rows[i].Cells[j].Value != null && LastNameENT == Select_box.Rows[i].Cells[j].Value.ToString())
+                        //        {
+                        //            MessageBox.Show("The value already existed in DataGridView.");
+                        //        }
+                        //    }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("ID does not exist!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("That Value is too high or is not a valid character!");
+            }
+           
+        }
     }
 }
