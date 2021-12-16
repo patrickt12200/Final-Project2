@@ -33,18 +33,9 @@ namespace Final_Project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Page));
             this.New_PatientTb = new System.Windows.Forms.TabControl();
             this.tabSelectAdd = new System.Windows.Forms.TabPage();
+            this.Search = new System.Windows.Forms.Button();
+            this.ID_Search = new System.Windows.Forms.TextBox();
             this.Select_box = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.socialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.streetAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zIPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.field1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.selectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medsDataSet = new Final_Project.MedsDataSet();
             this.Main_save = new System.Windows.Forms.Button();
@@ -143,8 +134,17 @@ namespace Final_Project
             this.allergiesTableAdapter = new Final_Project.MedsDataSetTableAdapters.AllergiesTableAdapter();
             this.selectionTableAdapter = new Final_Project.MedsDataSetTableAdapters.SelectionTableAdapter();
             this.genMedTableAdapter = new Final_Project.MedsDataSetTableAdapters.GenMedTableAdapter();
-            this.ID_Search = new System.Windows.Forms.TextBox();
-            this.Search = new System.Windows.Forms.Button();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.socialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.streetAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zIPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.field1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
@@ -197,9 +197,27 @@ namespace Final_Project
             this.tabSelectAdd.UseVisualStyleBackColor = true;
             this.tabSelectAdd.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // Search
+            // 
+            this.Search.Location = new System.Drawing.Point(783, 443);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(89, 23);
+            this.Search.TabIndex = 57;
+            this.Search.Text = "Search by ID";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
+            // 
+            // ID_Search
+            // 
+            this.ID_Search.Location = new System.Drawing.Point(667, 445);
+            this.ID_Search.Name = "ID_Search";
+            this.ID_Search.Size = new System.Drawing.Size(100, 20);
+            this.ID_Search.TabIndex = 56;
+            // 
             // Select_box
             // 
             this.Select_box.AutoGenerateColumns = false;
+            this.Select_box.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.Select_box.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Select_box.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn1,
@@ -218,72 +236,6 @@ namespace Final_Project
             this.Select_box.Name = "Select_box";
             this.Select_box.Size = new System.Drawing.Size(887, 205);
             this.Select_box.TabIndex = 55;
-            // 
-            // iDDataGridViewTextBoxColumn1
-            // 
-            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // patientIDDataGridViewTextBoxColumn1
-            // 
-            this.patientIDDataGridViewTextBoxColumn1.DataPropertyName = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn1.HeaderText = "Patient_ID";
-            this.patientIDDataGridViewTextBoxColumn1.Name = "patientIDDataGridViewTextBoxColumn1";
-            // 
-            // dateOfBirthDataGridViewTextBoxColumn
-            // 
-            this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "Date Of Birth";
-            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "Date Of Birth";
-            this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
-            // 
-            // socialDataGridViewTextBoxColumn
-            // 
-            this.socialDataGridViewTextBoxColumn.DataPropertyName = "Social";
-            this.socialDataGridViewTextBoxColumn.HeaderText = "Social";
-            this.socialDataGridViewTextBoxColumn.Name = "socialDataGridViewTextBoxColumn";
-            // 
-            // streetAddressDataGridViewTextBoxColumn
-            // 
-            this.streetAddressDataGridViewTextBoxColumn.DataPropertyName = "Street Address";
-            this.streetAddressDataGridViewTextBoxColumn.HeaderText = "Street Address";
-            this.streetAddressDataGridViewTextBoxColumn.Name = "streetAddressDataGridViewTextBoxColumn";
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            // 
-            // zIPDataGridViewTextBoxColumn
-            // 
-            this.zIPDataGridViewTextBoxColumn.DataPropertyName = "ZIP";
-            this.zIPDataGridViewTextBoxColumn.HeaderText = "ZIP";
-            this.zIPDataGridViewTextBoxColumn.Name = "zIPDataGridViewTextBoxColumn";
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            // 
-            // field1DataGridViewTextBoxColumn
-            // 
-            this.field1DataGridViewTextBoxColumn.DataPropertyName = "Field1";
-            this.field1DataGridViewTextBoxColumn.HeaderText = "Field1";
-            this.field1DataGridViewTextBoxColumn.Name = "field1DataGridViewTextBoxColumn";
             // 
             // selectionBindingSource
             // 
@@ -1151,22 +1103,82 @@ namespace Final_Project
             // 
             this.genMedTableAdapter.ClearBeforeFill = true;
             // 
-            // ID_Search
+            // iDDataGridViewTextBoxColumn1
             // 
-            this.ID_Search.Location = new System.Drawing.Point(667, 445);
-            this.ID_Search.Name = "ID_Search";
-            this.ID_Search.Size = new System.Drawing.Size(100, 20);
-            this.ID_Search.TabIndex = 56;
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.MinimumWidth = 2;
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn1.Visible = false;
+            this.iDDataGridViewTextBoxColumn1.Width = 2;
             // 
-            // Search
+            // lastNameDataGridViewTextBoxColumn
             // 
-            this.Search.Location = new System.Drawing.Point(783, 443);
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(89, 23);
-            this.Search.TabIndex = 57;
-            this.Search.Text = "Search by ID";
-            this.Search.UseVisualStyleBackColor = true;
-            this.Search.Click += new System.EventHandler(this.Search_Click);
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // patientIDDataGridViewTextBoxColumn1
+            // 
+            this.patientIDDataGridViewTextBoxColumn1.DataPropertyName = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn1.HeaderText = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn1.Name = "patientIDDataGridViewTextBoxColumn1";
+            this.patientIDDataGridViewTextBoxColumn1.Width = 65;
+            // 
+            // dateOfBirthDataGridViewTextBoxColumn
+            // 
+            this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "Date Of Birth";
+            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "Date Of Birth";
+            this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
+            this.dateOfBirthDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // socialDataGridViewTextBoxColumn
+            // 
+            this.socialDataGridViewTextBoxColumn.DataPropertyName = "Social";
+            this.socialDataGridViewTextBoxColumn.HeaderText = "Social";
+            this.socialDataGridViewTextBoxColumn.Name = "socialDataGridViewTextBoxColumn";
+            // 
+            // streetAddressDataGridViewTextBoxColumn
+            // 
+            this.streetAddressDataGridViewTextBoxColumn.DataPropertyName = "Street Address";
+            this.streetAddressDataGridViewTextBoxColumn.HeaderText = "Street Address";
+            this.streetAddressDataGridViewTextBoxColumn.Name = "streetAddressDataGridViewTextBoxColumn";
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            // 
+            // zIPDataGridViewTextBoxColumn
+            // 
+            this.zIPDataGridViewTextBoxColumn.DataPropertyName = "ZIP";
+            this.zIPDataGridViewTextBoxColumn.HeaderText = "ZIP";
+            this.zIPDataGridViewTextBoxColumn.Name = "zIPDataGridViewTextBoxColumn";
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // field1DataGridViewTextBoxColumn
+            // 
+            this.field1DataGridViewTextBoxColumn.DataPropertyName = "Field1";
+            this.field1DataGridViewTextBoxColumn.HeaderText = "Field1";
+            this.field1DataGridViewTextBoxColumn.MinimumWidth = 2;
+            this.field1DataGridViewTextBoxColumn.Name = "field1DataGridViewTextBoxColumn";
+            this.field1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.field1DataGridViewTextBoxColumn.Visible = false;
+            this.field1DataGridViewTextBoxColumn.Width = 2;
             // 
             // Main_Page
             // 
@@ -1286,17 +1298,6 @@ namespace Final_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn patientIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource selectionBindingSource;
         private MedsDataSetTableAdapters.SelectionTableAdapter selectionTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn socialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn streetAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zIPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn field1DataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource genMedBindingSource;
         private MedsDataSetTableAdapters.GenMedTableAdapter genMedTableAdapter;
         private System.Windows.Forms.ToolStripMenuItem saveAllToolStripMenuItem;
@@ -1321,6 +1322,17 @@ namespace Final_Project
         private System.Windows.Forms.Button Allergy_Save;
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.TextBox ID_Search;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn socialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn streetAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zIPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn field1DataGridViewTextBoxColumn;
     }
 }
 
