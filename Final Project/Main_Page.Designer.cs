@@ -145,6 +145,10 @@ namespace Final_Project
             this.allergiesTableAdapter = new Final_Project.MedsDataSetTableAdapters.AllergiesTableAdapter();
             this.selectionTableAdapter = new Final_Project.MedsDataSetTableAdapters.SelectionTableAdapter();
             this.genMedTableAdapter = new Final_Project.MedsDataSetTableAdapters.GenMedTableAdapter();
+            this.generateReportFilePathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.PathBox = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
@@ -240,6 +244,7 @@ namespace Final_Project
             this.Select_box.DataSource = this.selectionBindingSource;
             this.Select_box.Location = new System.Drawing.Point(6, 208);
             this.Select_box.Name = "Select_box";
+            this.Select_box.RowHeadersWidth = 62;
             this.Select_box.Size = new System.Drawing.Size(887, 205);
             this.Select_box.TabIndex = 55;
             // 
@@ -257,18 +262,23 @@ namespace Final_Project
             // 
             this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
             this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Width = 150;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
             this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Width = 150;
             // 
             // patientIDDataGridViewTextBoxColumn1
             // 
             this.patientIDDataGridViewTextBoxColumn1.DataPropertyName = "Patient_ID";
             this.patientIDDataGridViewTextBoxColumn1.HeaderText = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.patientIDDataGridViewTextBoxColumn1.Name = "patientIDDataGridViewTextBoxColumn1";
             this.patientIDDataGridViewTextBoxColumn1.Width = 65;
             // 
@@ -276,6 +286,7 @@ namespace Final_Project
             // 
             this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "Date Of Birth";
             this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "Date Of Birth";
+            this.dateOfBirthDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
             this.dateOfBirthDataGridViewTextBoxColumn.Width = 75;
             // 
@@ -283,30 +294,39 @@ namespace Final_Project
             // 
             this.socialDataGridViewTextBoxColumn.DataPropertyName = "Social";
             this.socialDataGridViewTextBoxColumn.HeaderText = "Social";
+            this.socialDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.socialDataGridViewTextBoxColumn.Name = "socialDataGridViewTextBoxColumn";
+            this.socialDataGridViewTextBoxColumn.Width = 150;
             // 
             // streetAddressDataGridViewTextBoxColumn
             // 
             this.streetAddressDataGridViewTextBoxColumn.DataPropertyName = "Street Address";
             this.streetAddressDataGridViewTextBoxColumn.HeaderText = "Street Address";
+            this.streetAddressDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.streetAddressDataGridViewTextBoxColumn.Name = "streetAddressDataGridViewTextBoxColumn";
+            this.streetAddressDataGridViewTextBoxColumn.Width = 150;
             // 
             // stateDataGridViewTextBoxColumn
             // 
             this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
             this.stateDataGridViewTextBoxColumn.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.Width = 150;
             // 
             // zIPDataGridViewTextBoxColumn
             // 
             this.zIPDataGridViewTextBoxColumn.DataPropertyName = "ZIP";
             this.zIPDataGridViewTextBoxColumn.HeaderText = "ZIP";
+            this.zIPDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.zIPDataGridViewTextBoxColumn.Name = "zIPDataGridViewTextBoxColumn";
+            this.zIPDataGridViewTextBoxColumn.Width = 150;
             // 
             // cityDataGridViewTextBoxColumn
             // 
             this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
             this.cityDataGridViewTextBoxColumn.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
             this.cityDataGridViewTextBoxColumn.Width = 105;
             // 
@@ -366,6 +386,7 @@ namespace Final_Project
             this.GenMedTable.DataSource = this.genMedBindingSource;
             this.GenMedTable.Location = new System.Drawing.Point(3, 208);
             this.GenMedTable.Name = "GenMedTable";
+            this.GenMedTable.RowHeadersWidth = 62;
             this.GenMedTable.Size = new System.Drawing.Size(578, 196);
             this.GenMedTable.TabIndex = 52;
             // 
@@ -373,103 +394,137 @@ namespace Final_Project
             // 
             this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
+            this.iDDataGridViewTextBoxColumn2.Width = 150;
             // 
             // patientIDDataGridViewTextBoxColumn2
             // 
             this.patientIDDataGridViewTextBoxColumn2.DataPropertyName = "Patient_ID";
             this.patientIDDataGridViewTextBoxColumn2.HeaderText = "Patient_ID";
+            this.patientIDDataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.patientIDDataGridViewTextBoxColumn2.Name = "patientIDDataGridViewTextBoxColumn2";
+            this.patientIDDataGridViewTextBoxColumn2.Width = 150;
             // 
             // reasonForAdmissionReasonDataGridViewTextBoxColumn
             // 
             this.reasonForAdmissionReasonDataGridViewTextBoxColumn.DataPropertyName = "Reason For Admission Reason";
             this.reasonForAdmissionReasonDataGridViewTextBoxColumn.HeaderText = "Reason For Admission Reason";
+            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.reasonForAdmissionReasonDataGridViewTextBoxColumn.Name = "reasonForAdmissionReasonDataGridViewTextBoxColumn";
+            this.reasonForAdmissionReasonDataGridViewTextBoxColumn.Width = 150;
             // 
             // maritalStatusDataGridViewTextBoxColumn
             // 
             this.maritalStatusDataGridViewTextBoxColumn.DataPropertyName = "Marital Status";
             this.maritalStatusDataGridViewTextBoxColumn.HeaderText = "Marital Status";
+            this.maritalStatusDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.maritalStatusDataGridViewTextBoxColumn.Name = "maritalStatusDataGridViewTextBoxColumn";
+            this.maritalStatusDataGridViewTextBoxColumn.Width = 150;
             // 
             // heightDataGridViewTextBoxColumn
             // 
             this.heightDataGridViewTextBoxColumn.DataPropertyName = "Height";
             this.heightDataGridViewTextBoxColumn.HeaderText = "Height";
+            this.heightDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.heightDataGridViewTextBoxColumn.Name = "heightDataGridViewTextBoxColumn";
+            this.heightDataGridViewTextBoxColumn.Width = 150;
             // 
             // weightDataGridViewTextBoxColumn
             // 
             this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
             this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
+            this.weightDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
+            this.weightDataGridViewTextBoxColumn.Width = 150;
             // 
             // Smoker
             // 
             this.Smoker.DataPropertyName = "Smoker";
             this.Smoker.HeaderText = "Smoker";
+            this.Smoker.MinimumWidth = 8;
             this.Smoker.Name = "Smoker";
+            this.Smoker.Width = 150;
             // 
             // bloodTypeDataGridViewTextBoxColumn
             // 
             this.bloodTypeDataGridViewTextBoxColumn.DataPropertyName = "Blood Type";
             this.bloodTypeDataGridViewTextBoxColumn.HeaderText = "Blood Type";
+            this.bloodTypeDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.bloodTypeDataGridViewTextBoxColumn.Name = "bloodTypeDataGridViewTextBoxColumn";
+            this.bloodTypeDataGridViewTextBoxColumn.Width = 150;
             // 
             // bloodPressureDataGridViewTextBoxColumn
             // 
             this.bloodPressureDataGridViewTextBoxColumn.DataPropertyName = "Blood Pressure";
             this.bloodPressureDataGridViewTextBoxColumn.HeaderText = "Blood Pressure";
+            this.bloodPressureDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.bloodPressureDataGridViewTextBoxColumn.Name = "bloodPressureDataGridViewTextBoxColumn";
+            this.bloodPressureDataGridViewTextBoxColumn.Width = 150;
             // 
             // tobaccoDataGridViewTextBoxColumn
             // 
             this.tobaccoDataGridViewTextBoxColumn.DataPropertyName = "Tobacco";
             this.tobaccoDataGridViewTextBoxColumn.HeaderText = "Tobacco";
+            this.tobaccoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.tobaccoDataGridViewTextBoxColumn.Name = "tobaccoDataGridViewTextBoxColumn";
+            this.tobaccoDataGridViewTextBoxColumn.Width = 150;
             // 
             // heartRateDataGridViewTextBoxColumn
             // 
             this.heartRateDataGridViewTextBoxColumn.DataPropertyName = "Heart Rate";
             this.heartRateDataGridViewTextBoxColumn.HeaderText = "Heart Rate";
+            this.heartRateDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.heartRateDataGridViewTextBoxColumn.Name = "heartRateDataGridViewTextBoxColumn";
+            this.heartRateDataGridViewTextBoxColumn.Width = 150;
             // 
             // breathingDataGridViewTextBoxColumn
             // 
             this.breathingDataGridViewTextBoxColumn.DataPropertyName = "Breathing";
             this.breathingDataGridViewTextBoxColumn.HeaderText = "Breathing";
+            this.breathingDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.breathingDataGridViewTextBoxColumn.Name = "breathingDataGridViewTextBoxColumn";
+            this.breathingDataGridViewTextBoxColumn.Width = 150;
             // 
             // surgeryHistoryDataGridViewTextBoxColumn
             // 
             this.surgeryHistoryDataGridViewTextBoxColumn.DataPropertyName = "Surgery History";
             this.surgeryHistoryDataGridViewTextBoxColumn.HeaderText = "Surgery History";
+            this.surgeryHistoryDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.surgeryHistoryDataGridViewTextBoxColumn.Name = "surgeryHistoryDataGridViewTextBoxColumn";
+            this.surgeryHistoryDataGridViewTextBoxColumn.Width = 150;
             // 
             // behavioralHxDataGridViewTextBoxColumn
             // 
             this.behavioralHxDataGridViewTextBoxColumn.DataPropertyName = "BehavioralHx";
             this.behavioralHxDataGridViewTextBoxColumn.HeaderText = "BehavioralHx";
+            this.behavioralHxDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.behavioralHxDataGridViewTextBoxColumn.Name = "behavioralHxDataGridViewTextBoxColumn";
+            this.behavioralHxDataGridViewTextBoxColumn.Width = 150;
             // 
             // drugUseDataGridViewTextBoxColumn
             // 
             this.drugUseDataGridViewTextBoxColumn.DataPropertyName = "Drug Use";
             this.drugUseDataGridViewTextBoxColumn.HeaderText = "Drug Use";
+            this.drugUseDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.drugUseDataGridViewTextBoxColumn.Name = "drugUseDataGridViewTextBoxColumn";
+            this.drugUseDataGridViewTextBoxColumn.Width = 150;
             // 
             // pregnanciesDataGridViewTextBoxColumn
             // 
             this.pregnanciesDataGridViewTextBoxColumn.DataPropertyName = "Pregnancies";
             this.pregnanciesDataGridViewTextBoxColumn.HeaderText = "Pregnancies";
+            this.pregnanciesDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.pregnanciesDataGridViewTextBoxColumn.Name = "pregnanciesDataGridViewTextBoxColumn";
+            this.pregnanciesDataGridViewTextBoxColumn.Width = 150;
             // 
             // alcoholDataGridViewTextBoxColumn
             // 
             this.alcoholDataGridViewTextBoxColumn.DataPropertyName = "Alcohol";
             this.alcoholDataGridViewTextBoxColumn.HeaderText = "Alcohol";
+            this.alcoholDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.alcoholDataGridViewTextBoxColumn.Name = "alcoholDataGridViewTextBoxColumn";
+            this.alcoholDataGridViewTextBoxColumn.Width = 150;
             // 
             // genMedBindingSource
             // 
@@ -489,6 +544,7 @@ namespace Final_Project
             this.AllergyTable.DataSource = this.allergiesBindingSource;
             this.AllergyTable.Location = new System.Drawing.Point(354, 208);
             this.AllergyTable.Name = "AllergyTable";
+            this.AllergyTable.RowHeadersWidth = 62;
             this.AllergyTable.Size = new System.Drawing.Size(542, 150);
             this.AllergyTable.TabIndex = 53;
             // 
@@ -496,31 +552,41 @@ namespace Final_Project
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Width = 150;
             // 
             // medsDataGridViewTextBoxColumn
             // 
             this.medsDataGridViewTextBoxColumn.DataPropertyName = "Meds";
             this.medsDataGridViewTextBoxColumn.HeaderText = "Meds";
+            this.medsDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.medsDataGridViewTextBoxColumn.Name = "medsDataGridViewTextBoxColumn";
+            this.medsDataGridViewTextBoxColumn.Width = 150;
             // 
             // foodsDataGridViewTextBoxColumn
             // 
             this.foodsDataGridViewTextBoxColumn.DataPropertyName = "Foods";
             this.foodsDataGridViewTextBoxColumn.HeaderText = "Foods";
+            this.foodsDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.foodsDataGridViewTextBoxColumn.Name = "foodsDataGridViewTextBoxColumn";
+            this.foodsDataGridViewTextBoxColumn.Width = 150;
             // 
             // commentsDataGridViewTextBoxColumn
             // 
             this.commentsDataGridViewTextBoxColumn.DataPropertyName = "Comments";
             this.commentsDataGridViewTextBoxColumn.HeaderText = "Comments";
+            this.commentsDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
+            this.commentsDataGridViewTextBoxColumn.Width = 150;
             // 
             // patientIdDataGridViewTextBoxColumn
             // 
             this.patientIdDataGridViewTextBoxColumn.DataPropertyName = "Patient_Id";
             this.patientIdDataGridViewTextBoxColumn.HeaderText = "Patient_Id";
+            this.patientIdDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.patientIdDataGridViewTextBoxColumn.Name = "patientIdDataGridViewTextBoxColumn";
+            this.patientIdDataGridViewTextBoxColumn.Width = 150;
             // 
             // allergiesBindingSource
             // 
@@ -536,7 +602,7 @@ namespace Final_Project
             this.TimeLbl.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLbl.Location = new System.Drawing.Point(3, 3);
             this.TimeLbl.Name = "TimeLbl";
-            this.TimeLbl.Size = new System.Drawing.Size(221, 61);
+            this.TimeLbl.Size = new System.Drawing.Size(325, 91);
             this.TimeLbl.TabIndex = 50;
             this.TimeLbl.Text = "00:00:00";
             // 
@@ -570,6 +636,7 @@ namespace Final_Project
             this.ReportBtn.TabIndex = 8;
             this.ReportBtn.Text = "Generate Report";
             this.ReportBtn.UseVisualStyleBackColor = true;
+            this.ReportBtn.Click += new System.EventHandler(this.ReportBtn_Click);
             // 
             // Select_Pt
             // 
@@ -651,7 +718,7 @@ namespace Final_Project
             this.TimeLbl2.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLbl2.Location = new System.Drawing.Point(521, 3);
             this.TimeLbl2.Name = "TimeLbl2";
-            this.TimeLbl2.Size = new System.Drawing.Size(221, 61);
+            this.TimeLbl2.Size = new System.Drawing.Size(325, 91);
             this.TimeLbl2.TabIndex = 51;
             this.TimeLbl2.Text = "00:00:00";
             // 
@@ -673,7 +740,7 @@ namespace Final_Project
             this.CommentsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CommentsLbl.Location = new System.Drawing.Point(725, 435);
             this.CommentsLbl.Name = "CommentsLbl";
-            this.CommentsLbl.Size = new System.Drawing.Size(94, 20);
+            this.CommentsLbl.Size = new System.Drawing.Size(137, 29);
             this.CommentsLbl.TabIndex = 46;
             this.CommentsLbl.Text = "Comments";
             // 
@@ -706,7 +773,7 @@ namespace Final_Project
             this.AlcoholLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AlcoholLbl.Location = new System.Drawing.Point(536, 308);
             this.AlcoholLbl.Name = "AlcoholLbl";
-            this.AlcoholLbl.Size = new System.Drawing.Size(68, 20);
+            this.AlcoholLbl.Size = new System.Drawing.Size(100, 29);
             this.AlcoholLbl.TabIndex = 43;
             this.AlcoholLbl.Text = "Alcohol";
             // 
@@ -717,7 +784,7 @@ namespace Final_Project
             this.PregLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PregLbl.Location = new System.Drawing.Point(513, 256);
             this.PregLbl.Name = "PregLbl";
-            this.PregLbl.Size = new System.Drawing.Size(108, 20);
+            this.PregLbl.Size = new System.Drawing.Size(159, 29);
             this.PregLbl.TabIndex = 42;
             this.PregLbl.Text = "Pregnancies";
             // 
@@ -728,7 +795,7 @@ namespace Final_Project
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(528, 215);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(85, 20);
+            this.label13.Size = new System.Drawing.Size(122, 29);
             this.label13.TabIndex = 41;
             this.label13.Text = "Drug Use";
             // 
@@ -739,7 +806,7 @@ namespace Final_Project
             this.BehaveLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BehaveLbl.Location = new System.Drawing.Point(536, 166);
             this.BehaveLbl.Name = "BehaveLbl";
-            this.BehaveLbl.Size = new System.Drawing.Size(79, 20);
+            this.BehaveLbl.Size = new System.Drawing.Size(116, 29);
             this.BehaveLbl.TabIndex = 40;
             this.BehaveLbl.Text = "Behavior";
             // 
@@ -796,7 +863,7 @@ namespace Final_Project
             this.BreathLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BreathLbl.Location = new System.Drawing.Point(305, 310);
             this.BreathLbl.Name = "BreathLbl";
-            this.BreathLbl.Size = new System.Drawing.Size(87, 20);
+            this.BreathLbl.Size = new System.Drawing.Size(125, 29);
             this.BreathLbl.TabIndex = 33;
             this.BreathLbl.Text = "Breathing";
             // 
@@ -807,7 +874,7 @@ namespace Final_Project
             this.RateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RateLbl.Location = new System.Drawing.Point(305, 258);
             this.RateLbl.Name = "RateLbl";
-            this.RateLbl.Size = new System.Drawing.Size(98, 20);
+            this.RateLbl.Size = new System.Drawing.Size(137, 29);
             this.RateLbl.TabIndex = 32;
             this.RateLbl.Text = "Heart Rate";
             // 
@@ -818,7 +885,7 @@ namespace Final_Project
             this.TobLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TobLbl.Location = new System.Drawing.Point(305, 213);
             this.TobLbl.Name = "TobLbl";
-            this.TobLbl.Size = new System.Drawing.Size(77, 20);
+            this.TobLbl.Size = new System.Drawing.Size(115, 29);
             this.TobLbl.TabIndex = 31;
             this.TobLbl.Text = "Tobacco";
             // 
@@ -839,7 +906,7 @@ namespace Final_Project
             this.BloodLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BloodLbl.Location = new System.Drawing.Point(303, 119);
             this.BloodLbl.Name = "BloodLbl";
-            this.BloodLbl.Size = new System.Drawing.Size(98, 20);
+            this.BloodLbl.Size = new System.Drawing.Size(148, 29);
             this.BloodLbl.TabIndex = 29;
             this.BloodLbl.Text = "Blood Type";
             // 
@@ -850,7 +917,7 @@ namespace Final_Project
             this.SmokeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SmokeLbl.Location = new System.Drawing.Point(79, 312);
             this.SmokeLbl.Name = "SmokeLbl";
-            this.SmokeLbl.Size = new System.Drawing.Size(70, 20);
+            this.SmokeLbl.Size = new System.Drawing.Size(103, 29);
             this.SmokeLbl.TabIndex = 28;
             this.SmokeLbl.Text = "Smoker";
             // 
@@ -861,7 +928,7 @@ namespace Final_Project
             this.WeightLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WeightLbl.Location = new System.Drawing.Point(80, 256);
             this.WeightLbl.Name = "WeightLbl";
-            this.WeightLbl.Size = new System.Drawing.Size(65, 20);
+            this.WeightLbl.Size = new System.Drawing.Size(94, 29);
             this.WeightLbl.TabIndex = 27;
             this.WeightLbl.Text = "Weight";
             // 
@@ -872,7 +939,7 @@ namespace Final_Project
             this.HeightLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeightLbl.Location = new System.Drawing.Point(83, 215);
             this.HeightLbl.Name = "HeightLbl";
-            this.HeightLbl.Size = new System.Drawing.Size(62, 20);
+            this.HeightLbl.Size = new System.Drawing.Size(89, 29);
             this.HeightLbl.TabIndex = 26;
             this.HeightLbl.Text = "Height";
             // 
@@ -883,7 +950,7 @@ namespace Final_Project
             this.MaritalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaritalLbl.Location = new System.Drawing.Point(32, 166);
             this.MaritalLbl.Name = "MaritalLbl";
-            this.MaritalLbl.Size = new System.Drawing.Size(121, 20);
+            this.MaritalLbl.Size = new System.Drawing.Size(171, 29);
             this.MaritalLbl.TabIndex = 25;
             this.MaritalLbl.Text = "Marital Status";
             // 
@@ -1068,7 +1135,7 @@ namespace Final_Project
             this.TimeLbl3.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLbl3.Location = new System.Drawing.Point(521, 3);
             this.TimeLbl3.Name = "TimeLbl3";
-            this.TimeLbl3.Size = new System.Drawing.Size(221, 61);
+            this.TimeLbl3.Size = new System.Drawing.Size(325, 91);
             this.TimeLbl3.TabIndex = 54;
             this.TimeLbl3.Text = "00:00:00";
             // 
@@ -1106,7 +1173,7 @@ namespace Final_Project
             this.AllergCommentsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AllergCommentsLbl.Location = new System.Drawing.Point(724, 445);
             this.AllergCommentsLbl.Name = "AllergCommentsLbl";
-            this.AllergCommentsLbl.Size = new System.Drawing.Size(94, 20);
+            this.AllergCommentsLbl.Size = new System.Drawing.Size(137, 29);
             this.AllergCommentsLbl.TabIndex = 50;
             this.AllergCommentsLbl.Text = "Comments";
             // 
@@ -1117,7 +1184,7 @@ namespace Final_Project
             this.FoodsLbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FoodsLbl2.Location = new System.Drawing.Point(438, 144);
             this.FoodsLbl2.Name = "FoodsLbl2";
-            this.FoodsLbl2.Size = new System.Drawing.Size(151, 20);
+            this.FoodsLbl2.Size = new System.Drawing.Size(221, 29);
             this.FoodsLbl2.TabIndex = 49;
             this.FoodsLbl2.Text = "Foods of Allergen";
             // 
@@ -1139,7 +1206,7 @@ namespace Final_Project
             this.Med2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Med2Lbl.Location = new System.Drawing.Point(55, 144);
             this.Med2Lbl.Name = "Med2Lbl";
-            this.Med2Lbl.Size = new System.Drawing.Size(144, 20);
+            this.Med2Lbl.Size = new System.Drawing.Size(211, 29);
             this.Med2Lbl.TabIndex = 31;
             this.Med2Lbl.Text = "Meds of Allergen";
             // 
@@ -1189,11 +1256,13 @@ namespace Final_Project
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1316, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1316, 33);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1201,16 +1270,17 @@ namespace Final_Project
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveAllToolStripMenuItem,
+            this.generateReportFilePathToolStripMenuItem,
             this.reloadToolStripMenuItem,
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // saveAllToolStripMenuItem
             // 
             this.saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
-            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(312, 34);
             this.saveAllToolStripMenuItem.Text = "Save All";
             this.saveAllToolStripMenuItem.ToolTipText = "May Be Destructive!!!";
             this.saveAllToolStripMenuItem.Click += new System.EventHandler(this.saveAllToolStripMenuItem_Click);
@@ -1218,7 +1288,7 @@ namespace Final_Project
             // reloadToolStripMenuItem
             // 
             this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
-            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(312, 34);
             this.reloadToolStripMenuItem.Text = "Reload Database";
             this.reloadToolStripMenuItem.ToolTipText = "Will refresh all datatables ";
             this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
@@ -1226,7 +1296,7 @@ namespace Final_Project
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(312, 34);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -1241,6 +1311,36 @@ namespace Final_Project
             // genMedTableAdapter
             // 
             this.genMedTableAdapter.ClearBeforeFill = true;
+            // 
+            // generateReportFilePathToolStripMenuItem
+            // 
+            this.generateReportFilePathToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator1,
+            this.PathBox,
+            this.toolStripSeparator2});
+            this.generateReportFilePathToolStripMenuItem.Name = "generateReportFilePathToolStripMenuItem";
+            this.generateReportFilePathToolStripMenuItem.Size = new System.Drawing.Size(312, 34);
+            this.generateReportFilePathToolStripMenuItem.Text = "Generate Report File Path";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
+            // 
+            // PathBox
+            // 
+            this.PathBox.AcceptsReturn = true;
+            this.PathBox.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PathBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.PathBox.Name = "PathBox";
+            this.PathBox.Size = new System.Drawing.Size(100, 32);
+            this.PathBox.Text = "Enter Path";
+            this.PathBox.ToolTipText = "Enter File Path for Patient Report File.\r\nEx: C:\\Users\\Jim\\Desktop\\Report.Txt\r\n";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
             // 
             // Main_Page
             // 
@@ -1397,6 +1497,10 @@ namespace Final_Project
         private System.Windows.Forms.DataGridViewTextBoxColumn zIPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn field1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripMenuItem generateReportFilePathToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox PathBox;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 

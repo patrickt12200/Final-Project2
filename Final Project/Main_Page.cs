@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Final_Project
 {
@@ -123,10 +124,10 @@ namespace Final_Project
             int RowIndex = Select_box.CurrentCell.RowIndex;
 
             // This is a proof of concept to pick what ID is selected to bring up information for the Patient on other pages.
-            MessageBox.Show(Convert.ToString(Select_box.Rows[RowIndex].Cells[2].Value)); // messagebox for debug
             var patientID = (Convert.ToString(Select_box.Rows[RowIndex].Cells[3].Value));
             var FirstName = (Convert.ToString(Select_box.Rows[RowIndex].Cells[2].Value));
             var LastName = (Convert.ToString(Select_box.Rows[RowIndex].Cells[1].Value));
+            MessageBox.Show("Patient: " + Convert.ToString(Select_box.Rows[RowIndex].Cells[2].Value + " " + Convert.ToString(Select_box.Rows[RowIndex].Cells[1].Value +" Has been Selected\n ")));
 
             try
             {
@@ -501,6 +502,72 @@ namespace Final_Project
                 MessageBox.Show("That Value is too high or is not a valid character!");
             }
            
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReportBtn_Click(object sender, EventArgs e) 
+        {
+            //Checks if User has entered A file PAth
+            if(PathBox.Text == "Enter Path")
+            {
+                MessageBox.Show("Please Enter A File Path in the File Tab.");
+            }
+            else
+            {
+
+                int RowIndex = Select_box.CurrentCell.RowIndex;
+                var patientID = (Convert.ToString(Select_box.Rows[RowIndex].Cells[3].Value));
+                var FirstName = (Convert.ToString(Select_box.Rows[RowIndex].Cells[2].Value));
+                var LastName = (Convert.ToString(Select_box.Rows[RowIndex].Cells[1].Value));
+                var AdmitReason = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[2].Value));
+                var MaritalStatus = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[3].Value));
+                var Height = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[4].Value));
+                var Weight = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[5].Value));
+                var Smoker = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[6].Value));
+                var BloodType = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[7].Value));
+                var BP = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[8].Value));
+                var Tobacco = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[9].Value));
+                var HR = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[10].Value));
+                var Breathing = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[11].Value));
+                var SurgHx = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[12].Value));
+                var behave = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[13].Value));
+                var drug = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[14].Value));
+                var preg = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[15].Value));
+                var alcohol = (Convert.ToString(GenMedTable.Rows[RowIndex].Cells[16].Value));
+                //Creates File at user designated path
+                string path = PathBox.Text;
+                StreamWriter Report = File.CreateText(path);
+                MessageBox.Show("Report Generated");
+                {
+                    //Opens file
+                    Report.WriteLine("================\n" +
+                        "Report For: {0}", FirstName, LastName.Length +
+                        "================");
+                    Report.WriteLine("PatientId:{0}", patientID);
+                    Report.WriteLine("Admit Reason:{0}", AdmitReason);
+                    Report.WriteLine("Admit Reason:{0}", AdmitReason);
+                    Report.WriteLine("Marital Status:{0}", MaritalStatus);
+                    Report.WriteLine("Height:{0}", Height);
+                    Report.WriteLine("Weight:{0}", Weight);
+                    Report.WriteLine("Smoker: {0}", Smoker);
+                    Report.WriteLine("BloodType: {0}", BloodType);
+                    Report.WriteLine("Blood Pressure: {0}", BP);
+                    Report.WriteLine("Tobacco Use: {0} ", Tobacco);
+                    Report.WriteLine("Heart Rate: {0} ", HR);
+                    Report.WriteLine("Breathing: {0} ", Breathing);
+                    Report.WriteLine("SurgHX: ", SurgHx);
+                    Report.WriteLine("Behave: {0} ", behave);
+                    Report.WriteLine("Drug Use: {0} ", drug);
+                    Report.WriteLine("Pregnancies: {0} ", preg);
+                    Report.WriteLine("Alcohol: {0} ", alcohol);
+
+                    Report.Close();
+                }
+            }
         }
     }
 }
