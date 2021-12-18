@@ -33,6 +33,7 @@ namespace Final_Project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Page));
             this.New_PatientTb = new System.Windows.Forms.TabControl();
             this.tabSelectAdd = new System.Windows.Forms.TabPage();
+            this.Del_button = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.Button();
             this.ID_Search = new System.Windows.Forms.TextBox();
             this.Select_box = new System.Windows.Forms.DataGridView();
@@ -140,15 +141,15 @@ namespace Final_Project
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generateReportFilePathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.PathBox = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.reloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allergiesTableAdapter = new Final_Project.MedsDataSetTableAdapters.AllergiesTableAdapter();
             this.selectionTableAdapter = new Final_Project.MedsDataSetTableAdapters.SelectionTableAdapter();
             this.genMedTableAdapter = new Final_Project.MedsDataSetTableAdapters.GenMedTableAdapter();
-            this.generateReportFilePathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.PathBox = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.New_PatientTb.SuspendLayout();
             this.tabSelectAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Select_box)).BeginInit();
@@ -182,6 +183,7 @@ namespace Final_Project
             // tabSelectAdd
             // 
             this.tabSelectAdd.AllowDrop = true;
+            this.tabSelectAdd.Controls.Add(this.Del_button);
             this.tabSelectAdd.Controls.Add(this.Search);
             this.tabSelectAdd.Controls.Add(this.ID_Search);
             this.tabSelectAdd.Controls.Add(this.Select_box);
@@ -201,6 +203,16 @@ namespace Final_Project
             this.tabSelectAdd.Text = "Select/Admit_Patient";
             this.tabSelectAdd.UseVisualStyleBackColor = true;
             this.tabSelectAdd.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // Del_button
+            // 
+            this.Del_button.Location = new System.Drawing.Point(298, 448);
+            this.Del_button.Name = "Del_button";
+            this.Del_button.Size = new System.Drawing.Size(75, 23);
+            this.Del_button.TabIndex = 58;
+            this.Del_button.Text = "Delete";
+            this.Del_button.UseVisualStyleBackColor = true;
+            this.Del_button.Click += new System.EventHandler(this.Del_button_Click);
             // 
             // Search
             // 
@@ -242,10 +254,10 @@ namespace Final_Project
             this.cityDataGridViewTextBoxColumn,
             this.field1DataGridViewTextBoxColumn});
             this.Select_box.DataSource = this.selectionBindingSource;
-            this.Select_box.Location = new System.Drawing.Point(6, 208);
+            this.Select_box.Location = new System.Drawing.Point(6, 160);
             this.Select_box.Name = "Select_box";
             this.Select_box.RowHeadersWidth = 62;
-            this.Select_box.Size = new System.Drawing.Size(887, 205);
+            this.Select_box.Size = new System.Drawing.Size(887, 252);
             this.Select_box.TabIndex = 55;
             // 
             // iDDataGridViewTextBoxColumn1
@@ -384,7 +396,7 @@ namespace Final_Project
             this.pregnanciesDataGridViewTextBoxColumn,
             this.alcoholDataGridViewTextBoxColumn});
             this.GenMedTable.DataSource = this.genMedBindingSource;
-            this.GenMedTable.Location = new System.Drawing.Point(3, 208);
+            this.GenMedTable.Location = new System.Drawing.Point(6, 198);
             this.GenMedTable.Name = "GenMedTable";
             this.GenMedTable.RowHeadersWidth = 62;
             this.GenMedTable.Size = new System.Drawing.Size(578, 196);
@@ -542,7 +554,7 @@ namespace Final_Project
             this.commentsDataGridViewTextBoxColumn,
             this.patientIdDataGridViewTextBoxColumn});
             this.AllergyTable.DataSource = this.allergiesBindingSource;
-            this.AllergyTable.Location = new System.Drawing.Point(354, 208);
+            this.AllergyTable.Location = new System.Drawing.Point(361, 198);
             this.AllergyTable.Name = "AllergyTable";
             this.AllergyTable.RowHeadersWidth = 62;
             this.AllergyTable.Size = new System.Drawing.Size(542, 150);
@@ -602,7 +614,7 @@ namespace Final_Project
             this.TimeLbl.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLbl.Location = new System.Drawing.Point(3, 3);
             this.TimeLbl.Name = "TimeLbl";
-            this.TimeLbl.Size = new System.Drawing.Size(325, 91);
+            this.TimeLbl.Size = new System.Drawing.Size(221, 61);
             this.TimeLbl.TabIndex = 50;
             this.TimeLbl.Text = "00:00:00";
             // 
@@ -718,7 +730,7 @@ namespace Final_Project
             this.TimeLbl2.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLbl2.Location = new System.Drawing.Point(521, 3);
             this.TimeLbl2.Name = "TimeLbl2";
-            this.TimeLbl2.Size = new System.Drawing.Size(325, 91);
+            this.TimeLbl2.Size = new System.Drawing.Size(221, 61);
             this.TimeLbl2.TabIndex = 51;
             this.TimeLbl2.Text = "00:00:00";
             // 
@@ -740,7 +752,7 @@ namespace Final_Project
             this.CommentsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CommentsLbl.Location = new System.Drawing.Point(725, 435);
             this.CommentsLbl.Name = "CommentsLbl";
-            this.CommentsLbl.Size = new System.Drawing.Size(137, 29);
+            this.CommentsLbl.Size = new System.Drawing.Size(94, 20);
             this.CommentsLbl.TabIndex = 46;
             this.CommentsLbl.Text = "Comments";
             // 
@@ -773,7 +785,7 @@ namespace Final_Project
             this.AlcoholLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AlcoholLbl.Location = new System.Drawing.Point(536, 308);
             this.AlcoholLbl.Name = "AlcoholLbl";
-            this.AlcoholLbl.Size = new System.Drawing.Size(100, 29);
+            this.AlcoholLbl.Size = new System.Drawing.Size(68, 20);
             this.AlcoholLbl.TabIndex = 43;
             this.AlcoholLbl.Text = "Alcohol";
             // 
@@ -784,7 +796,7 @@ namespace Final_Project
             this.PregLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PregLbl.Location = new System.Drawing.Point(513, 256);
             this.PregLbl.Name = "PregLbl";
-            this.PregLbl.Size = new System.Drawing.Size(159, 29);
+            this.PregLbl.Size = new System.Drawing.Size(108, 20);
             this.PregLbl.TabIndex = 42;
             this.PregLbl.Text = "Pregnancies";
             // 
@@ -795,7 +807,7 @@ namespace Final_Project
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(528, 215);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 29);
+            this.label13.Size = new System.Drawing.Size(85, 20);
             this.label13.TabIndex = 41;
             this.label13.Text = "Drug Use";
             // 
@@ -806,7 +818,7 @@ namespace Final_Project
             this.BehaveLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BehaveLbl.Location = new System.Drawing.Point(536, 166);
             this.BehaveLbl.Name = "BehaveLbl";
-            this.BehaveLbl.Size = new System.Drawing.Size(116, 29);
+            this.BehaveLbl.Size = new System.Drawing.Size(79, 20);
             this.BehaveLbl.TabIndex = 40;
             this.BehaveLbl.Text = "Behavior";
             // 
@@ -863,7 +875,7 @@ namespace Final_Project
             this.BreathLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BreathLbl.Location = new System.Drawing.Point(305, 310);
             this.BreathLbl.Name = "BreathLbl";
-            this.BreathLbl.Size = new System.Drawing.Size(125, 29);
+            this.BreathLbl.Size = new System.Drawing.Size(87, 20);
             this.BreathLbl.TabIndex = 33;
             this.BreathLbl.Text = "Breathing";
             // 
@@ -874,7 +886,7 @@ namespace Final_Project
             this.RateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RateLbl.Location = new System.Drawing.Point(305, 258);
             this.RateLbl.Name = "RateLbl";
-            this.RateLbl.Size = new System.Drawing.Size(137, 29);
+            this.RateLbl.Size = new System.Drawing.Size(98, 20);
             this.RateLbl.TabIndex = 32;
             this.RateLbl.Text = "Heart Rate";
             // 
@@ -885,7 +897,7 @@ namespace Final_Project
             this.TobLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TobLbl.Location = new System.Drawing.Point(305, 213);
             this.TobLbl.Name = "TobLbl";
-            this.TobLbl.Size = new System.Drawing.Size(115, 29);
+            this.TobLbl.Size = new System.Drawing.Size(77, 20);
             this.TobLbl.TabIndex = 31;
             this.TobLbl.Text = "Tobacco";
             // 
@@ -906,7 +918,7 @@ namespace Final_Project
             this.BloodLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BloodLbl.Location = new System.Drawing.Point(303, 119);
             this.BloodLbl.Name = "BloodLbl";
-            this.BloodLbl.Size = new System.Drawing.Size(148, 29);
+            this.BloodLbl.Size = new System.Drawing.Size(98, 20);
             this.BloodLbl.TabIndex = 29;
             this.BloodLbl.Text = "Blood Type";
             // 
@@ -917,7 +929,7 @@ namespace Final_Project
             this.SmokeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SmokeLbl.Location = new System.Drawing.Point(79, 312);
             this.SmokeLbl.Name = "SmokeLbl";
-            this.SmokeLbl.Size = new System.Drawing.Size(103, 29);
+            this.SmokeLbl.Size = new System.Drawing.Size(70, 20);
             this.SmokeLbl.TabIndex = 28;
             this.SmokeLbl.Text = "Smoker";
             // 
@@ -928,7 +940,7 @@ namespace Final_Project
             this.WeightLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WeightLbl.Location = new System.Drawing.Point(80, 256);
             this.WeightLbl.Name = "WeightLbl";
-            this.WeightLbl.Size = new System.Drawing.Size(94, 29);
+            this.WeightLbl.Size = new System.Drawing.Size(65, 20);
             this.WeightLbl.TabIndex = 27;
             this.WeightLbl.Text = "Weight";
             // 
@@ -939,7 +951,7 @@ namespace Final_Project
             this.HeightLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeightLbl.Location = new System.Drawing.Point(83, 215);
             this.HeightLbl.Name = "HeightLbl";
-            this.HeightLbl.Size = new System.Drawing.Size(89, 29);
+            this.HeightLbl.Size = new System.Drawing.Size(62, 20);
             this.HeightLbl.TabIndex = 26;
             this.HeightLbl.Text = "Height";
             // 
@@ -950,7 +962,7 @@ namespace Final_Project
             this.MaritalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaritalLbl.Location = new System.Drawing.Point(32, 166);
             this.MaritalLbl.Name = "MaritalLbl";
-            this.MaritalLbl.Size = new System.Drawing.Size(171, 29);
+            this.MaritalLbl.Size = new System.Drawing.Size(121, 20);
             this.MaritalLbl.TabIndex = 25;
             this.MaritalLbl.Text = "Marital Status";
             // 
@@ -1135,7 +1147,7 @@ namespace Final_Project
             this.TimeLbl3.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLbl3.Location = new System.Drawing.Point(521, 3);
             this.TimeLbl3.Name = "TimeLbl3";
-            this.TimeLbl3.Size = new System.Drawing.Size(325, 91);
+            this.TimeLbl3.Size = new System.Drawing.Size(221, 61);
             this.TimeLbl3.TabIndex = 54;
             this.TimeLbl3.Text = "00:00:00";
             // 
@@ -1173,7 +1185,7 @@ namespace Final_Project
             this.AllergCommentsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AllergCommentsLbl.Location = new System.Drawing.Point(724, 445);
             this.AllergCommentsLbl.Name = "AllergCommentsLbl";
-            this.AllergCommentsLbl.Size = new System.Drawing.Size(137, 29);
+            this.AllergCommentsLbl.Size = new System.Drawing.Size(94, 20);
             this.AllergCommentsLbl.TabIndex = 50;
             this.AllergCommentsLbl.Text = "Comments";
             // 
@@ -1184,7 +1196,7 @@ namespace Final_Project
             this.FoodsLbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FoodsLbl2.Location = new System.Drawing.Point(438, 144);
             this.FoodsLbl2.Name = "FoodsLbl2";
-            this.FoodsLbl2.Size = new System.Drawing.Size(221, 29);
+            this.FoodsLbl2.Size = new System.Drawing.Size(151, 20);
             this.FoodsLbl2.TabIndex = 49;
             this.FoodsLbl2.Text = "Foods of Allergen";
             // 
@@ -1206,7 +1218,7 @@ namespace Final_Project
             this.Med2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Med2Lbl.Location = new System.Drawing.Point(55, 144);
             this.Med2Lbl.Name = "Med2Lbl";
-            this.Med2Lbl.Size = new System.Drawing.Size(211, 29);
+            this.Med2Lbl.Size = new System.Drawing.Size(144, 20);
             this.Med2Lbl.TabIndex = 31;
             this.Med2Lbl.Text = "Meds of Allergen";
             // 
@@ -1256,13 +1268,12 @@ namespace Final_Project
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1316, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1316, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1274,21 +1285,51 @@ namespace Final_Project
             this.reloadToolStripMenuItem,
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // saveAllToolStripMenuItem
             // 
             this.saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
-            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(312, 34);
+            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.saveAllToolStripMenuItem.Text = "Save All";
             this.saveAllToolStripMenuItem.ToolTipText = "May Be Destructive!!!";
             this.saveAllToolStripMenuItem.Click += new System.EventHandler(this.saveAllToolStripMenuItem_Click);
             // 
+            // generateReportFilePathToolStripMenuItem
+            // 
+            this.generateReportFilePathToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator1,
+            this.PathBox,
+            this.toolStripSeparator2});
+            this.generateReportFilePathToolStripMenuItem.Name = "generateReportFilePathToolStripMenuItem";
+            this.generateReportFilePathToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.generateReportFilePathToolStripMenuItem.Text = "Generate Report File Path";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            // 
+            // PathBox
+            // 
+            this.PathBox.AcceptsReturn = true;
+            this.PathBox.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PathBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.PathBox.Name = "PathBox";
+            this.PathBox.Size = new System.Drawing.Size(100, 24);
+            this.PathBox.Text = "Enter Path";
+            this.PathBox.ToolTipText = "Enter File Path for Patient Report File.\r\nEx: C:\\Users\\Jim\\Desktop\\Report.Txt\r\n";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(157, 6);
+            // 
             // reloadToolStripMenuItem
             // 
             this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
-            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(312, 34);
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.reloadToolStripMenuItem.Text = "Reload Database";
             this.reloadToolStripMenuItem.ToolTipText = "Will refresh all datatables ";
             this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
@@ -1296,7 +1337,7 @@ namespace Final_Project
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(312, 34);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -1311,36 +1352,6 @@ namespace Final_Project
             // genMedTableAdapter
             // 
             this.genMedTableAdapter.ClearBeforeFill = true;
-            // 
-            // generateReportFilePathToolStripMenuItem
-            // 
-            this.generateReportFilePathToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1,
-            this.PathBox,
-            this.toolStripSeparator2});
-            this.generateReportFilePathToolStripMenuItem.Name = "generateReportFilePathToolStripMenuItem";
-            this.generateReportFilePathToolStripMenuItem.Size = new System.Drawing.Size(312, 34);
-            this.generateReportFilePathToolStripMenuItem.Text = "Generate Report File Path";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
-            // 
-            // PathBox
-            // 
-            this.PathBox.AcceptsReturn = true;
-            this.PathBox.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PathBox.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.PathBox.Name = "PathBox";
-            this.PathBox.Size = new System.Drawing.Size(100, 32);
-            this.PathBox.Text = "Enter Path";
-            this.PathBox.ToolTipText = "Enter File Path for Patient Report File.\r\nEx: C:\\Users\\Jim\\Desktop\\Report.Txt\r\n";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
             // 
             // Main_Page
             // 
@@ -1501,6 +1512,7 @@ namespace Final_Project
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox PathBox;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.Button Del_button;
     }
 }
 

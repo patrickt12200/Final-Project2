@@ -504,11 +504,6 @@ namespace Final_Project
            
         }
 
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ReportBtn_Click(object sender, EventArgs e) 
         {
             //Checks if User has entered A file PAth
@@ -549,7 +544,7 @@ namespace Final_Project
                         "================");
                     Report.WriteLine("PatientId:{0}", patientID);
                     Report.WriteLine("Admit Reason:{0}", AdmitReason);
-                    Report.WriteLine("Admit Reason:{0}", AdmitReason);
+                    //Report.WriteLine("Admit Reason:{0}", AdmitReason);
                     Report.WriteLine("Marital Status:{0}", MaritalStatus);
                     Report.WriteLine("Height:{0}", Height);
                     Report.WriteLine("Weight:{0}", Weight);
@@ -568,6 +563,75 @@ namespace Final_Project
                     Report.Close();
                 }
             }
+        }
+
+        private void Del_button_Click(object sender, EventArgs e)
+        {
+
+            switch (MessageBox.Show("This action cannot be undone!   continue?", "WARNING", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    int RowIndex = Select_box.CurrentCell.RowIndex;
+                    //Select_box.Rows[RowIndex].Cells[0].Value = "";
+                    Select_box.Rows[RowIndex].Cells[1].Value = "";
+                    Select_box.Rows[RowIndex].Cells[2].Value = "";
+                    Select_box.Rows[RowIndex].Cells[3].Value = "";
+                    Select_box.Rows[RowIndex].Cells[4].Value = "";
+                    Select_box.Rows[RowIndex].Cells[5].Value = "";
+                    Select_box.Rows[RowIndex].Cells[6].Value = "";
+                    Select_box.Rows[RowIndex].Cells[7].Value = "";
+                    Select_box.Rows[RowIndex].Cells[8].Value = "";
+                    Select_box.Rows[RowIndex].Cells[9].Value = "";
+
+                    GenMedTable.Rows[RowIndex].Cells[2].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[3].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[4].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[5].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[6].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[7].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[8].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[9].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[10].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[11].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[12].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[13].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[14].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[15].Value = "";
+                    GenMedTable.Rows[RowIndex].Cells[16].Value = "";
+
+
+                    AllergyTable.Rows[RowIndex].Cells[1].Value = "";
+                    AllergyTable.Rows[RowIndex].Cells[2].Value = "";
+                    AllergyTable.Rows[RowIndex].Cells[3].Value = "";
+
+
+                    Select_box.Rows.RemoveAt(RowIndex);
+
+                    int i = 0;
+                    while (i != 30)
+                    {
+
+                            selectionTableAdapter.Update(medsDataSet.Selection);
+                            this.genMedTableAdapter.Update(this.medsDataSet.GenMed);
+                            this.allergiesTableAdapter.Update(this.medsDataSet.Allergies); ;
+                            i += 1;  
+                    }
+                    MessageBox.Show("Value wiped!");
+                    break;
+
+
+                case DialogResult.No:
+                    break;
+                case DialogResult.Cancel:
+                    MessageBox.Show("Action Canceled!"); 
+                    break;
+            }
+
+           
+
+
+
+
         }
     }
 }
