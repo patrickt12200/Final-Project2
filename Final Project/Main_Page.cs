@@ -617,6 +617,16 @@ namespace Final_Project
                             i += 1;  
                     }
                     MessageBox.Show("Value wiped!");
+
+                    // TODO: This line of code loads data into the 'medsDataSet.Allergies' table. You can move, or remove it, as needed.
+                    this.allergiesTableAdapter.Fill(this.medsDataSet.Allergies);
+                    // TODO: This line of code loads data into the 'medsDataSet.GenMed' table. You can move, or remove it, as needed.
+                    this.genMedTableAdapter.Fill(this.medsDataSet.GenMed);
+                    // TODO: This line of code loads data into the 'medsDataSet.Selection' table. You can move, or remove it, as needed.
+                    this.selectionTableAdapter.Fill(this.medsDataSet.Selection);
+                    this.New_PatientTb.TabPages.Remove(Gen_Hist_Tb);
+                    this.New_PatientTb.TabPages.Remove(tabAllergies);
+
                     break;
 
 
